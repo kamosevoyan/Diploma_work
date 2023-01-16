@@ -1,1 +1,1 @@
-# Diploma_work
+## This repository contains my Thesis. The topic is multidimensional interpolation and variational principle.
