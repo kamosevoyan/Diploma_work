@@ -180,12 +180,6 @@ $$c_{i}+c_{i-1}=\dfrac{1}{h^{2}}\left(f(x_{i+1})-2f(x_{i})+f(x_{i-1})\right) \; 
 Քանի որ համակարը պարունակում է $N-1$ հավասարում, ապա մնում է մեկ ազատ գործակից, որը կարելի գտնել, որևէ $x_{j}$ հանգուցային կետում որոշելով $S_{2}^{(j)''}$֊ն։
 %TODO: Add some equations and a plot
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=1.0\textwidth]{images/one_var_non_hermite_1}
-\captionsetup{labelformat=empty}
-\caption{\hfill Նկար 3}
-\end{figure}
 
 Առավել կիրառելի են խորանարդային սփլայնները։ Այս դեպքում յուրաքանչյուր $\left[x_{i}, x_{i+1}\right]$ ինտերվալում կառուցվում են երրորդ աստիճանի բազմանդամներ այնպիսին, որ դրանց միացման կետերում (հանգույցներում) առաջին և երկրորդ կարգի ածանցյալները լինեն անընդհատ։ 
 
@@ -193,17 +187,93 @@ $$c_{i}+c_{i-1}=\dfrac{1}{h^{2}}\left(f(x_{i+1})-2f(x_{i})+f(x_{i-1})\right) \; 
 
 $$ S^{(i)''}_3(x)=c_{i}\dfrac{x_{i+1}-x}{x-x_{i}}+c_{i+1}\dfrac{x-x_{i}}{x_{i+1}-x_{i}}$$
 
+\noindent որտեղ $c_{i}$ և $c_{i+1}$֊ը $x_{i}$ և $x_{i+1}$ կետերում երկրորդ կարգի ածանցյալների արժենքներն են։ 
+\noindent Հաշվի առնելով նաև հետևյալ պայմանները.
 
+$$\begin{cases}
+				S_{3}^{(i)}(x_{i}) &=f_{i}\\
+				S_{3}^{(i)}(x_{i+1}) &= f_{i+1}\\
+				S_{3}^{(i-1)'}(x_{i}) &= S_{3}^{(i)'}(x_{i})
 
+\end{cases}
+$$
+
+\noindent կստանանք հետևյալ տեսքի խորանարդային սփլայն.
+
+$$
+	S_{3}^{(i)}(x) = \dfrac{c_{i}}{6h}\left(x_{i+1}-x\right)^{3}+\dfrac{c_{i+1}}{6h}\left(x-x_{i}\right)^{3}+\left(\dfrac{f_{i}}{h}-\dfrac{hc_{i}}{6}\right)\left(x_{i+1}-x\right)+\left(\dfrac{f_{i+1}}{h}-\dfrac{hc_{i+1}}{6}\right)\left(x-x_{i}\right)
+$$
+
+$c_{i}$ գործակիցները բավարարում են հետևյալ պայմաններին.
+
+$$c_{i+1}+4c_{i}+c_{i-1} = \dfrac{6}{h^2}\left(f_{i+1}-2f_{i}+f_{i-1}\right)$$
+
+Ստորև ներկայացվում է քառակուսային և խորանարդային ինտերպոլյացիայի օրինակ
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{images/quadratic_and_cubic_interploation}
+\captionsetup{labelformat=empty}
+\caption{\hfill Նկար N}
+\end{figure}
+
+\newpage
+Այժմ դիտարկենք լոկալ կրող ունեցող խորանարդային սփլայները։ Այդպիսի սփլայ առաջարկել է ավստրացի մաթեմատիկոս Առնոլդ Շնեբերգը։
+
+Դիտարկենք հետևյալ ֆունկցիան.
+
+$$\gamma(x)=\dfrac{1}{4}\left[\left(x+2\right)^{3}_{+} - 4\left(x+1\right)^{3}_{+}+ \left(x\right)^{3}_{+} -4\left(x-1\right)^{3}_{+} + \left(x-2\right)^{3}_{+}\right]$$
+ Ստորև ներկայացվում է $\gamma$ ֆունկցիան և նրա մինչև երրորդ կարգի ածանցյալները.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{images/cubic_compact_support_basis}
+\captionsetup{labelformat=empty}
+\caption{\hfill Նկար 3}
+\end{figure}
+
+Ենթադրենք տրված է $\left[x_{0}, x_{N}\right]$ ինտերվալը, և տրոհված է $N$ հավասար մասերի h քայլով։ Յուրաքանչյուր հանգուցային կետի $(i=2, \dots N-2)$ համար բազիսային ֆունկցիան տրվում է հետևյալ բանաձևով.
+
+					$$B_{i}\left(\dfrac{x}{h}\right)=\gamma \left(\frac{x-x_{0}}{h}-i\right)$$
+Այս ֆունկցիաները և նրանց մինչև երկրորդ կարգի ածանցյալները հավասար են զրոյի $\mathbb{R} \textbackslash \left[x_{i-2}, x_{i+2}\right]$ տիրույթում։
+
+Մնացած բազիսային ֆունկիաները պետք է կառուցել այլ կերպ, քանի որ դրանց մի մասը դուրս է ըկած  $\left[x_{0}, x_{N}\right]$ ինտերվալից։
+
+$$B_{0}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right) + \left(\dfrac{h - x}{4h}\right)^{3}_{+} , \; x \in \left[x_{0}, x_{2}\right]$$
+$$B_{1}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right), \; x \in \left[x_{0}, x_{3}\right]$$
+$$B_{N-1}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right), \; x \in \left[x_{N-3}, x_{N}\right]$$
+$$B_{N}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right) + \left(\dfrac{x - (N-1)h}{4h}\right)^{3}_{+} , \; x \in \left[x_{N-2}, x_{N}\right]$$
+
+Ստորև ներկայացվում է $B_{j}$ բազիսների գծագիրը.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{images/all_cubic_compact_support_basis}
+\captionsetup{labelformat=empty}
+\caption{\hfill Նկար 3}
+\end{figure}
+
+Տրված $\left\{f_{j}\right\}$ ինտերպոլյացիոն տվյալնեով կառուցենք սփլայն.
+
+				$$ F(x) = \sum_{i=0}^{N} \alpha_{i}B_{i}\left(\frac{x}{h}\right)$$
+
+Հաշվի առնելով ինտերպոլյացիոն պայմանները.
+
+				$$F(x_{i}) = f_{i}$$
+
+կստանանք հետևյալ հավասարումերի համակարգը.
+ 
+$$\begin{dcases}
+\frac{9}{4}\alpha_{0} + \frac{1}{4}\alpha_{0} &= f_{0}\\
+\frac{1}{4}\alpha_{j-1} + \alpha_{j} + \frac{1}{4}\alpha_{j+1} &= f_{j}\\
+\frac{9}{4}\alpha_{N-1} + \frac{1}{4}\alpha_{N} &= f_{N}\\
+\end{dcases}$$
 \newpage
 \section*{Երկչափ մոտարկում}
 
 Այժմ դիտարկենք երկու փոփոխականի կտոր առ կտոր անընդհատ մոտարկման խնդիրը $\partial R$ եզրով սահմանափակ $R$ տիրությում։ Տիրույթը տրոհվում է որոշակի թվով էլեմենտների։ Կախված $R$ տիրույթից, առանձնացվում են հետևյալ մոտակման ձևերը.
 
 \subsection*{Ուղղանկյուն տիրույթ}
-\subsubsection*{$C^{(0,0)}$ մոտարկում}
 
-Դիցուք տրված են $f:\Omega\mapsto \Theta$,  $\Theta \subset \mathbb{R}$, $\Omega \subset \mathbb{R}^{2} = \left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{M}\right]$,  ուղղանկյուն տիրույթը, որը տրոհված է $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$, ուղղանկյուն էլեմենտների:
+Դիցուք տրված են $f:\Omega\mapsto \Theta$,  $\Theta \subset \mathbb{R}$, $\Omega \subset \mathbb{R}^{2} = \left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{N}\right]$,  ուղղանկյուն տիրույթը, որը տրոհված է $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$, ուղղանկյուն էլեմենտների:
 $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overline{0, N-1}$$
 
 \begin{figure}[h!]
@@ -212,6 +282,9 @@ $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overli
 \captionsetup{labelformat=empty}
 \caption{\hfill Նկար 3}
 \end{figure}
+
+\subsubsection*{$C^{(0,0)}$ մոտարկում}
+
 
 Յուրաքանչյուր  $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$ էլեմենտի վրա $f$ ֆունկցիան մոտարկվում հետևյալ քառակուսային ֆունկցիայով։
 
@@ -298,7 +371,52 @@ $$p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi_{i,j}(x,y)f(x_{i}, y_{j})$$
 \end{figure}
 
 \newpage
+\subsubsection*{$C^{(2,2)}$ մոտարկում}
+Մեկ փոփոխականի մոտարկան խնդրը դիտարկելից քննարկեցինք Շներբերգի կողմից առաջարկված խորանարդային բազիսային սփլայնները։ Այս սփլայնները կարող ենք \newline օգտագործել երկչափ մոտարկման համար։
+Յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ հանգույցի վրա կառուցենք բազիսային ֆունկցիա կազմելով $B_{i}\left(\dfrac{x}{h_{1}}\right)$ և $B_{j}\left(\dfrac{x}{h_{2}}\right)$ ֆունկցիաների թենզորական \newline արտադրյալը։
 
+		$$\varphi^{ij}\left(x, y\right) = B_{i}\left(\dfrac{x}{h_{1}}\right) B_{j}\left(\dfrac{x}{h_{2}}\right)$$
+
+\noindent Տրված $\left\{f_{ij}\right\}$ ինտերպոլյացիոն տվյալնեով կառուցենք սփլայն.
+
+				$$ F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{ji}\left(x, y\right)$$
+
+Հաշվի առնելով ինտերպոլյացիոն պայմանները.
+
+				$$F(x_{ij}) = f_{ij}$$
+
+կստանանք հետևյալ հավասարումերի համակարգը.
+ 
+$$\begin{dcases}
+\alpha_{00}+\frac{5}{16}(\alpha_{01} + \alpha_{10}) +\frac{1}{16}\alpha_{11} &= f_{00}\\
+\alpha_{M0}+\frac{5}{16}(\alpha_{M1} + \alpha_{M-1,0}) +\frac{1}{16}\alpha_{M-1, 1} &= f_{M0}\\
+\alpha_{0N}+\frac{5}{16}(\alpha_{1N} + \alpha_{0,N-1}) +\frac{1}{16}\alpha_{N-1, 1} &= f_{0N}\\
+\alpha_{MN}+\frac{5}{16}(\alpha_{M-1,N} + \alpha_{M,N-1}) +\frac{1}{16}\alpha_{M-1,N-1} &= f_{MN}\\
+\frac{5}{4}\alpha_{i,1}+\frac{5}{16}(\alpha_{i-1,0} + \alpha_{i+1,0}) +\frac{1}{4}\alpha_{i,1} + \frac{1}{16}(\alpha_{i-1,1}+\alpha_{i+1,1}) &= f_{i0}\\
+\frac{5}{4}\alpha_{i,N-1}+\frac{5}{16}(\alpha_{i-1,N} + \alpha_{i+1,N}) +\frac{1}{4}\alpha_{i,N-1} + \frac{1}{16}(\alpha_{i-1,N-1}+\alpha_{i+1,N-1}) &= f_{iN}\\
+\frac{5}{4}\alpha_{1,j}+\frac{5}{16}(\alpha_{0,j-1} + \alpha_{0,j+1}) +\frac{1}{4}\alpha_{1,j} + \frac{1}{16}(\alpha_{1,j-1}+\alpha_{1,j+1}) &= f_{0j}\\
+\frac{5}{4}\alpha_{M-1,j}+\frac{5}{16}(\alpha_{M,j-1} + \alpha_{M,j+1}) +\frac{1}{4}\alpha_{M-1,j} + \frac{1}{16}(\alpha_{M-1,j-1}+\alpha_{M-1,j+1})& = f_{Mj}\\
+\alpha_{ij} + \frac{1}{4}(\alpha_{i,j-1} + \alpha_{i,j+1} + \alpha_{i-1,j} + \alpha_{i+1,j}) + \frac{1}{16}(\alpha_{i-1,j-1} + \alpha_{i-1,j+1} + \alpha_{i+1,j-1} +\alpha_{i+1,j+1}) &= f_{ij}
+\end{dcases}$$
+
+\newpage
+Ստորև ներկայացվում է $\varphi^{ij}$ բազիսային ֆունկցիաների գծագիրը.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{images/two_dimensional_basis}
+\captionsetup{labelformat=empty}
+\caption{\hfill Նկար 5}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{images/two_dimensional_basis_1}
+\captionsetup{labelformat=empty}
+\caption{\hfill Նկար 5}
+\end{figure}
+
+\newpage
 \subsection*{Բազմանկյուն տիրույթ}
 
 Բազմանկյուն տիրույթ ասելով կհասկանանք կամ հենց բազմանկյունաձև տիրույթը, կամ դրա՝ բազմանկյունով մոտարկումը։ 
@@ -585,7 +703,7 @@ $$
 $$
 
 \newpage
-\subsection*{Ծրագրային իրականացում}
+\subsubsection*{Ծրագրային իրականացում}
 
 Պուասոնի հավասարման մոտավուր լուծումը իրականացնելու համար օգտվենք Python ծրագրավորմալ լեզվից, օգտագործելով Numpy գրադարանը, որը հարմար է բազմաչափ զանգվածների հետ մաթեմատիկական գործողություններ իրականացնալու համար։
 
@@ -603,7 +721,7 @@ $$
 
 				$$ D = \left[-\dfrac{\pi}{2}, \phantom{-}\dfrac{\pi}{2}\right] \times \left[-\dfrac{\pi}{2}, \phantom{-}\dfrac{\pi}{2}\right], \; h_{1}=h_{2}=\dfrac{\pi}{200}$$
 
-\noindent խնդրի համար ստացված լուծումը`
+\noindent Խնդրի համար ստացված լուծումը.
 
 \begin{figure}[h!]
 \centering
@@ -612,5 +730,18 @@ $$
 \caption{\hfill Նկար 7}
 \end{figure}
 
+\subsection*{Բիհարմոնիկ հավասարում}
+
+Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
+
+$$\begin{dcases}
+								\Delta^{2} u &=f \\
+								u \Big |_{\partial D} &= 0\\
+								\dfrac{\partial u}{\partial n} \Big |_{\partial D} &= 0
+\end{dcases}$$
+որտեղ $D = \left[x_{0}, x_{N}\right] \times \left[y_{0}, y_{M}\right]$:
+
+Այս դիֆերենցիալ հավասարման  համապատասխան վարիացիոն խնդիրը կլինի.
+			$$I(u) = \frac{1}{2}\iint \limits_{D} \left(\Delta u \right)^{2}dxdy + \iint \limits_{D} fudxdy \longrightarrow min$$
 
 \end{document}
