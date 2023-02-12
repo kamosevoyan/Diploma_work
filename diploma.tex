@@ -34,8 +34,8 @@
 	bottom=25mm
  }
 
-\pagestyle{fancy}
-\fancyhead{}
+%\pagestyle{fancy}
+%\fancyhead{}
 
 \setmainfont{GHEA Grapalat}
 \onehalfspacing
@@ -45,6 +45,7 @@
 \date{}
 
 \begin{document}
+
 \section*{Ներածություն}
 \subsection*{Հերմիթյան ինտերպոլյացիա}
 
@@ -262,9 +263,9 @@ $$B_{N}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right) + \left(\dfrac
 կստանանք հետևյալ հավասարումերի համակարգը.
  
 $$\begin{dcases}
-\frac{9}{4}\alpha_{0} + \frac{1}{4}\alpha_{0} &= f_{0}\\
+\frac{5}{4}\alpha_{0} + \frac{1}{4}\alpha_{0} &= f_{0}\\
 \frac{1}{4}\alpha_{j-1} + \alpha_{j} + \frac{1}{4}\alpha_{j+1} &= f_{j}\\
-\frac{9}{4}\alpha_{N-1} + \frac{1}{4}\alpha_{N} &= f_{N}\\
+\frac{5}{4}\alpha_{N-1} + \frac{1}{4}\alpha_{N} &= f_{N}\\
 \end{dcases}$$
 \newpage
 \section*{Երկչափ մոտարկում}
@@ -303,13 +304,13 @@ $$p_{1}(x,y)=\sum_{i=0}^{m}\sum_{j=0}^{n}\varphi_{i,j}(x,y)f(x_{i},y_{j})$$
 
 %TODO: change 'otherwise' to armenian one, at this moment this is not possible because XeLaTeX can not render armenian letter in math equations
 
-$$\varphi_{i,j}\left(x, y\right)=\begin{cases}
-\frac{1}{h_{1}h_{2}}\left(x-x_{i-1}\right)\left(y-y_{j-1}\right), (x,y)\in \left[x_{i-1}, x_{i}\right]\times\left[y_{j-1}, y_{j}\right]\\
-\frac{1}{h_{1}h_{2}}\left(x-x_{i-1}\right)\left(y_{j+1}-y\right), (x,y)\in \left[x_{i-1}, x_{i}\right]\times\left[y_{j}, y_{j+1}\right]\\
-\frac{1}{h_{1}h_{2}}\left(x_{i+1}-x\right)\left(y-y_{j-1}\right), (x,y)\in \left[x_{i}, x_{i+1}\right]\times\left[y_{j-1}, y_{j}\right]\\
-\frac{1}{h_{1}h_{2}}\left(x_{i+1}-x\right)\left(y_{j+1}-y\right), (x,y)\in \left[x_{i}, x_{i+1}\right]\times\left[y_{j}, y_{j+1}\right]\\
+$$\varphi_{i,j}\left(x, y\right)=\begin{dcases}
+\dfrac{1}{h_{1}h_{2}}\left(x-x_{i-1}\right)\left(y-y_{j-1}\right), (x,y)\in \left[x_{i-1}, x_{i}\right]\times\left[y_{j-1}, y_{j}\right]\\
+\dfrac{1}{h_{1}h_{2}}\left(x-x_{i-1}\right)\left(y_{j+1}-y\right), (x,y)\in \left[x_{i-1}, x_{i}\right]\times\left[y_{j}, y_{j+1}\right]\\
+\dfrac{1}{h_{1}h_{2}}\left(x_{i+1}-x\right)\left(y-y_{j-1}\right), (x,y)\in \left[x_{i}, x_{i+1}\right]\times\left[y_{j-1}, y_{j}\right]\\
+\dfrac{1}{h_{1}h_{2}}\left(x_{i+1}-x\right)\left(y_{j+1}-y\right), (x,y)\in \left[x_{i}, x_{i+1}\right]\times\left[y_{j}, y_{j+1}\right]\\
 0, otherwise\\
-\end{cases}$$
+\end{dcases}$$
 
 Վերը դիտարկված մոտարկումը հանդիսանում է երկչափ Հերմիթյան մոտարկման մասնավոր դեպք։
 
@@ -381,11 +382,11 @@ $$p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi_{i,j}(x,y)f(x_{i}, y_{j})$$
 
 				$$ F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{ji}\left(x, y\right)$$
 
-Հաշվի առնելով ինտերպոլյացիոն պայմանները.
+\noindent Հաշվի առնելով ինտերպոլյացիոն պայմանները.
 
 				$$F(x_{ij}) = f_{ij}$$
 
-կստանանք հետևյալ հավասարումերի համակարգը.
+\noindent կստանանք հետևյալ հավասարումերի համակարգը.
  
 $$\begin{dcases}
 \alpha_{00}+\frac{5}{16}(\alpha_{01} + \alpha_{10}) +\frac{1}{16}\alpha_{11} &= f_{00}\\
@@ -545,9 +546,7 @@ $$\dfrac{\partial F}{\partial f} - \dfrac{d}{dx_{1}}\dfrac{\partial F}{\partial 
 
 \newpage
 \subsubsection*{Եզրային պայմաններ}
-Նախորդիվ դիտարկել էինք այնպիսի խնդիրներ, որտեղ ֆունկցիան արժեքները տրված տիրույթի եզրի տրված են։
-Սակայն որոշ խնդիրնորում ֆունկցիան տիրությոի եզրում տրված չէ, և տրվում են այլ տիպի եզրային պայմաններ։
-Նման դեպքերում որպես եզրային պայման դիտարկվում են հետևյալ պայմանները.
+Նախորդիվ դիտարկել էինք այնպիսի խնդիրներ, որտեղ ֆունկցիան արժեքները տրված տիրույթի եզրի տրված են։Սակայն որոշ խնդիրնորում ֆունկցիան տիրույթի եզրում տրված չէ, և տրվում են այլ տիպի եզրային պայմաններ։Նման դեպքերում որպես եզրային պայման դիտարկվում են հետևյալ պայմանները.
 
 Մեկ փոփոխականի ֆունկցիա
 $$\dfrac{\partial F}{\partial f^{'}}=0$$
@@ -647,9 +646,9 @@ $$\dfrac{\partial I}{ \partial u_{kl}} = \dfrac{\partial}{\partial u_{kl}} I \le
 
 				$$\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi_{y, ij}(x,y)\right)^2 = u_{kl}^2\varphi_{y, kl}^2(x,y) + 2u_{kl}\varphi_{y, kl}(x,y)[\dots] + [\dots]^2$$
 
-	\noindent Այսպիսով ավելի պարզեցված տեսքով համակարգը ունի հետևյալ տեսքը.
+\noindent Այսպիսով ավելի պարզեցված տեսքով համակարգը ունի հետևյալ տեսքը.
 
-$$\scalemath{0.85}{\frac{\partial}{\partial u_{kl}}I \left(u\right)= \iint \limits_{D} \left[2u_{kl}\varphi_{x, kl}^2(x,y) + 2u_{kl}\varphi_{x, kl}(x,y)[\dots] + 2u_{kl}\varphi_{y, kl}^2(x,y) + 2u_{kl}\varphi_{y, kl}(x,y)[\dots] + 2f(x,y)\varphi_{kl}(x,y)\right]dxdy}$$
+$$\scalemath{0.85}{\frac{\partial}{\partial u_{kl}}I \left(u\right)= \iint \limits_{D} \left[2u_{kl}\varphi_{x, kl}^2(x,y) + 2\varphi_{x, kl}(x,y)[\dots] + 2u_{kl}\varphi_{y, kl}^2(x,y) + 2\varphi_{y, kl}(x,y)[\dots] + 2f(x,y)\varphi_{kl}(x,y)\right]dxdy}$$
 
 \noindent Դիտարկենք $\varphi_{x, kl}(x,y) $ և $\varphi_{y, kl}(x,y) $ ֆունկցիաները։
 
@@ -680,17 +679,21 @@ $$  \iint \limits_{D} 2u_{kl}\varphi_{y, kl}^2(x,y)dxdy = 4u_{kl}\dfrac{h_{1}}{h
 
 \noindent Քանի որ յուրաքանչյուր $\varphi_{kl}$ բազիսային ֆունկցիա հատվում Է $\varphi_{k-1, l}$, $\varphi_{k+1, l}$, $\varphi_{k, l-1}$, $\varphi_{k, l+1}$ ֆունկցիաների հետ, ապա
 
-$$\displaylines{
-\scalemath{0.85}{\iint \limits_{D} 2u_{kl}\varphi_{x, kl}(x,y)[\dots]dxdy = 2u_{kl}\iint \limits_{D} \varphi_{x, kl}(x,y)[\varphi_{x, k-1, l}(x,y)+\varphi_{x, k+1, l}(x,y)+\varphi_{x, k, l-1}(x,y)+\varphi_{x, k, l+1}(x,y)]}dxdy = \cr
+$$\displaylines{\iint \limits_{D} 2\varphi_{x, kl}(x,y)[\dots]dxdy = \cr
+\scalemath{0.85}{2\iint \limits_{D} \varphi_{x, kl}(x,y)[u_{k-1,l}\varphi_{x, k-1, l}(x,y)+u_{k+1,l}\varphi_{x, k+1, l}(x,y)+u_{k,l-1}\varphi_{x, k, l-1}(x,y)+u_{k,l+1}\varphi_{x, k, l+1}(x,y)]dxdy =} \cr
 = -2u_{k-1, l}\dfrac{h_{2} }{h_{1}} -2u_{k+1, l}\dfrac{ h_{2}}{h_{1}}}$$
+
+
  \noindent Հանգունորեն՝
 
-			$$\scalemath{0.85}{\iint \limits_{D} 2u_{kl}\varphi_{y, kl}(x,y)[\dots]dxdy =  -2u_{k, l-1}\dfrac{h_{1}} {h_{2}} - 2u_{k, l+1}\dfrac{h_{1}}{ h_{2}}}$$
+			$$\scalemath{0.85}{2 \iint \limits_{D}\varphi_{y, kl}(x,y)[\dots]dxdy =  -2u_{k, l-1}\dfrac{h_{1}} {h_{2}} - 2u_{k, l+1}\dfrac{h_{1}}{ h_{2}}}$$
 
 \noindent Եվ վերջապես
 
-	$$ \iint \limits_{D} 2f(x,y)\varphi_{kl}(x,y)dxdy \approx 2 f_{kl} h_{1} h_{2}$$
+	$$ 2\iint \limits_{D} f(x,y)\varphi_{kl}(x,y)dxdy \approx 2 f_{kl} h_{1} h_{2}$$
 
+\noindent Դիրիխլեի եզրային պայմանների համար կունենանք։
+$$u_{0, l} = u_{N, l} = u_{k, 0} = u_{k, M} = 0$$
 
 \noindent Այսպիսով, ստացանք հետևյալ հավասարումների համակարգը.
 
@@ -742,6 +745,68 @@ $$\begin{dcases}
 որտեղ $D = \left[x_{0}, x_{N}\right] \times \left[y_{0}, y_{M}\right]$:
 
 Այս դիֆերենցիալ հավասարման  համապատասխան վարիացիոն խնդիրը կլինի.
-			$$I(u) = \frac{1}{2}\iint \limits_{D} \left(\Delta u \right)^{2}dxdy + \iint \limits_{D} fudxdy \longrightarrow min$$
+			$$I(u) = \frac{1}{2}\iint \limits_{D} \left[u_{xx}^{2} + 2u_{xy}^{2} + u_{yy}^{2} \right]dxdy + \iint \limits_{D} fudxdy \longrightarrow min$$
+
+$D$ տիրույթը տրոհենք ուղղանկյուների $h_{1}$ և $h_{2}$ քայլերով համապատասխանաբար ըստ $x$ և $y$ կոորդինատների։
+\noindent Որոնելի ֆունկցիան կփնտրենք բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
+
+					$$u(x,y) = \sum_{i=0}^{N} \sum_{j=0}^{M} u_{ij}\varphi^{ij}(x,y)$$
+\noindent Հետևաբար ինտեգրալ ֆունկցիոնալը կունենք հետևյալ տեսքը.
+
+$$\scalemath{0.7}{\frac{1}{2} \iint \limits_{D}\left[\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi^{ij}_{xx}(x,y)\right)^2 +  2\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi^{ij}_{xy}(x,y)\right)^2 + \left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi^{ij}_{yy}(x,y)\right)^2\right]dxdy + \iint \limits_{D}f(x,y)\left[ \sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi^{ij}(x,y)\right]dxdy}$$
+
+
+\noindent  Համաձայն էքստրեմումի անհրաժեշտ պայմանի.
+
+$$\dfrac{\partial I}{ \partial u_{kl}} = \dfrac{\partial}{\partial u_{kl}} I \left(\sum_{j=0}^{M} u_{ij}\varphi^{ij}(x,y)\right) = 0 $$
+
+
+\noindent Դիտարկենք առաջին կրկնակի գումարը.
+$$\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi_{xx}^{ij}(x,y)\right)^2 = \left[u_{kl}\varphi_{xx}^{kl}(x,y)\right]^{2} + 2u_{kl}\varphi_{xx}^{kl}(x,y)[\dots] + [\dots]^2$$
+\noindent որտեղ բազմակետերով արտահայտությունը իր մեջ չի պարունակում $u_{kl}$ ը։
+Հանգունորեն երկրորդ կրկնակի գումարի համար.
+$$\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi_{xy}^{ij}(x,y)\right)^2 = \left[u_{kl}\varphi_{xy}^{kl}(x,y)\right]^{2} + 2u_{kl}\varphi_{xy}^{kl}(x,y)[\dots] + [\dots]^2$$
+Հանգունորեն երրորդ կրկնակի գումարի համար.
+$$\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi_{yy}^{ij}(x,y)\right)^2 = \left[u_{kl}\varphi_{yy}^{kl}(x,y)\right]^{2} + 2u_{kl}\varphi_{yy}^{kl}(x,y)[\dots] + [\dots]^2$$
+
+
+
+\noindent Այսպիսով ավելի պարզեցված տեսքով համակարգը ունի հետևյալ տեսքը.
+
+$$\scalemath{0.65}{\frac{\partial}{\partial u_{kl}}I \left(u\right)= \iint \limits_{D} \left[2u_{kl}\left\{ \varphi_{xx}^{kl}(x,y)\right\}^{2} + 2\varphi_{xx}^{kl}(x,y)[\dots] + 4u_{kl}\left\{ \varphi_{xy}^{kl}(x,y)\right\}^{2} + 4\varphi_{xy}^{kl}(x,y)[\dots] + 2\left\{ \varphi_{yy}^{kl}(x,y)\right\}^{2} + 2u_{kl}\varphi_{yy}^{kl}(x,y)[\dots] + 2f(x,y)\varphi_{kl}(x,y)\right]dxdy}$$
+
+Քանի որ տրված են Դիրիխլեի և Նեյմանի եզրային պայմանները, կդիտարկենք միայն $2 \leq k \leq M-2, 2 \leq l \leq N-2$ դեպքերը։ 
+
+\noindent Ինտեգրալը հաշվենք անդամ առ անդամ։
+
+$$\iint \limits_{D} 2u_{kl}\left\{ \varphi_{xx}^{kl}(x,y)\right\}^{2}dxdy=2u_{kl}\int \limits_{x_{k-2}}^{x_{k+2}}\int \limits_{y_{l-2}}^{y_{l+2}} \left\{ B_{k}^{''}(x)B_{l}(y)\right\}^{2}dxdy=2u_{kl}\cdot \dfrac{6}{h_{1}^{3}} \cdot \dfrac{151}{140}h_{2}$$
+$$\iint \limits_{D} 4u_{kl}\left\{ \varphi_{xy}^{kl}(x,y)\right\}^{2}dxdy=4u_{kl}\int \limits_{x_{k-2}}^{x_{k+2}}\int \limits_{y_{l-2}}^{y_{l+2}} \left\{ B_{k}^{'}(x)B_{l}^{'}(y)\right\}^{2}dxdy=4u_{kl}\cdot \dfrac{3}{2h_{1}} \cdot \dfrac{3}{2h_{2}}$$
+$$\iint \limits_{D} 2u_{kl}\left\{ \varphi_{yy}^{kl}(x,y)\right\}^{2}dxdy=2u_{kl}\int \limits_{x_{k-2}}^{x_{k+2}}\int \limits_{y_{l-2}}^{y_{l+2}} \left\{ B_{k}(x)B_{l}^{''}(y)\right\}^{2}dxdy=2u_{kl}\cdot \dfrac{151}{140}h_{2} \cdot \dfrac{6}{h_{1}^{3}}$$
+
+Քանի որ $\varphi^{ij}$ բազիսային ֆունկցիաները ունեն լոկալ կրողներ $4 \times 4 = 16$ ուղղանկյուն էլեմենտներում, ապա տրված $\varphi^{kl}$ ֆունկցիան հատվում է 49 այլ բազիսային ֆունկցիաների հետ։
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.3\textwidth]{images/two_dimensional_basis_intersection}
+\captionsetup{labelformat=empty}
+\caption{\hfill Նկար 7}
+\end{figure}
+
+Ստորև ներկայացվում են 
+		$$\iint \limits_{D} 2\varphi_{xx}^{kl}(x,y)[\dots]dxdy, \iint \limits_{D} 4\varphi_{xy}^{kl}(x,y)[\dots]dxdy, \iint \limits_{D} 2\varphi_{yy}^{kl}(x,y)[\dots]dxdy$$
+
+\noindent ինտեգրալների արժեքները աղյուսակի տեսքով.
+
+$$\iint \limits_{D} 2\varphi_{xx}^{kl}(x,y)[\dots]dxdy= 2\sum_{\substack{i=k-3\\ i \neq k}}^{k+3}\sum_{\substack{j=l-3\\ j \neq l}}^{l+3} u_{ij}\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{i}^{''}(x)dx \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(x)B_{j}(x)dy$$
+$$\iint \limits_{D} 4\varphi_{xy}^{kl}(x,y)[\dots]dxdy= 4\sum_{\substack{i=k-3\\ i \neq k}}^{k+3}\sum_{\substack{j=l-3\\ j \neq l}}^{l+3}u_{ij}\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{i}^{'}(x)dx \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(x)B_{j}^{'}(x)dy$$
+$$\iint \limits_{D} 2\varphi_{yy}^{kl}(x,y)[\dots]dxdy= 2\sum_{\substack{i=k-3\\ i \neq k}}^{k+3}\sum_{\substack{j=l-3\\ j \neq l}}^{l+3}u_{ij}\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{i}(x)dx \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(x)B_{j}^{''}(x)dy$$
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{images/biharmonic_equation_solution}
+\captionsetup{labelformat=empty}
+\caption{\hfill Նկար 7}
+\end{figure}
+
 
 \end{document}
