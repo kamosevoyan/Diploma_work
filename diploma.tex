@@ -1,6 +1,5 @@
 %Set the document class and font size
 \documentclass[fleqn, bachelor,subf,12pt,notitlepage]{article}
-
 \usepackage[utf8]{inputenc}
 \usepackage{enumerate}
 \usepackage{amsmath}
@@ -19,6 +18,8 @@
 \usepackage{chngcntr}
 \usepackage{caption}
 
+%This package allows to change figure insertion mode (H, etc.)
+\usepackage{float}
 
 %This command puts section number after section name
 %\usepackage[explicit]{titlesec}
@@ -46,18 +47,13 @@
 	bottom=25mm
  ]
 {geometry}
-
 %This command sets the font
 \setmainfont{GHEA Grapalat}
-
 %These commands change linespacing
-\onehalfspacing
-%\linespread{1.5}
-
-
+%\onehalfspacing
+\linespread{1.5}
 \title{Դիպլոմային աշխատանք}
 \author{Կամո Սևոյան}
-
 \begin{document}
 
 %This command allows to correctly
@@ -67,7 +63,7 @@
 %	\tableofcontents
 
 \section*{\centering Գլուխ 1\\ Միաչափ ինտերպոլյացիա}
-\subsection*{Էրմիթյան ինտերպոլյացիա}
+\subsection*{1.1 Էրմիթյան ինտերպոլյացիա}
 \hspace{\parindent}Նախքան անդրադառնալը բազմաչամ ինտերպոլյացիայի խնդրին, քննարկենք մեկ փոփոխականի ֆունկցիայի ինտերպոլյացիայի որոշ դետալներ։
 
 Ենթադրենք տրված են $f:\Omega \mapsto \Theta, \Omega, \Theta \subset \mathbb{R}$ ֆունկցիան,  $\left\{x_{i}\right\}_{i=0}^{N}$ կետերը և դրանց համապատասխան $\left\{y_{i}=f\left(x_{i}\right)\right\}_{i=0}^{N}$ արժեքները։ Յուրաքանչյուր $\left[x_{i}, x_{i+1}\right]$ հատվածում  ինտերպոլացնող ֆունկցիան իրենից ներկայացնում է գխային ֆունկցիա, որը կարելի է ներկայացնել հետևյալ տեսքով.
@@ -122,14 +118,14 @@ p_{3}^{\left(i\right)} = \alpha_{i}(x)f(x_{i})+\beta_{i+1}(x)f(x_{i+1})+\gamma_{
 \end{equation}
 որտեղ 
 \begin{equation}
-\alpha_{i}(x)=\dfrac{\left(x_{i+1}-x\right)^{2}\left[\left(x_{i+1}-x_{i}\right)+2\left(x-x_{i}\right)\right]}{\left(x_{i+1}-x_{i}\right)^{3}}, \beta_{i+1}(x)=\dfrac{\left(x-x_{i}\right)^{2}\left[\left(x_{i+1}-x_{i}\right)+2\left(x_{i+1}-x\right)\right]}{\left(x_{i+1}-x_{i}\right)^{3}}
+\begin{aligned}
+&\alpha_{i}(x)=\dfrac{\left(x_{i+1}-x\right)^{2}\left[\left(x_{i+1}-x_{i}\right)+2\left(x-x_{i}\right)\right]}{\left(x_{i+1}-x_{i}\right)^{3}}\\
+&\beta_{i+1}(x)=\dfrac{\left(x-x_{i}\right)^{2}\left[\left(x_{i+1}-x_{i}\right)+2\left(x_{i+1}-x\right)\right]}{\left(x_{i+1}-x_{i}\right)^{3}}\\
+&\gamma_{i}(x)=\dfrac{\left(x-x_{i}\right)\left(x_{i+1}-x\right)^{2}}{\left(x_{i+1}-x_{i}\right)^{2}}\\
+&\delta_{i+1}(x)=\dfrac{\left(x-x_{i}\right)^2\left(x-x_{i+1}\right)}{\left(x_{i+1}-x_{i}\right)^{2}}
+\end{aligned}
 \end{equation}
-
-\begin{equation}\gamma_{i}(x)=\dfrac{\left(x-x_{i}\right)\left(x_{i+1}-x\right)^{2}}{\left(x_{i+1}-x_{i}\right)^{2}}, \delta_{i+1}(x)=\dfrac{\left(x-x_{i}\right)^2\left(x-x_{i+1}\right)}{\left(x_{i+1}-x_{i}\right)^{2}}
-\end{equation}
-
-Այսպիսով $\left[x_{0}, x_{N}\right]$ հատվածում կտոր առ կտոր մոտարկող ֆունկցիան տրվում է հետևյալ կերպ.
-
+Այսպիսով $\left[x_{0}, x_{N}\right]$ հատվածում կտոր առ կտոր մոտարկող ֆունկցիան ներկայացվում է բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
 \begin{equation}
 p_{3}(x)=\sum_{i=0}^{N}\left[\varphi_{i}^{(0)}f(x_{i})+\varphi_{i}^{(1)}f^{'}(x_{i})\right]
 \end{equation}
@@ -179,7 +175,7 @@ p_{3}(x)=\sum_{i=0}^{N}\left[\varphi_{i}^{(0)}f(x_{i})+\varphi_{i}^{(1)}f^{'}(x_
 \centering
 \includegraphics[width=0.9\textwidth]{images/one_var_quadratic}
 \captionsetup{labelformat=empty}
-\caption{\hfill Նկար 1.2. Էրմիթյան ինտերպոլյացիայի բազիսային ֆունկցիաներ։}
+\caption{\hfill Նկար 1.2. երկրորդ կարգի էրմիթյան ինտերպոլյացիայի բազիսային ֆունկցիաներ։}
 \end{figure}
 Վերը ներկայացված ինտերպոլյացիաների օրինակները հանդիսանում են էրմիթյան ինտերպոլյացիայի մասնովոր դեպքեր համապատասխանաբար 1 և 2 կարգերի դեպքում։
 Ընդհանուր դեպքում m֊րդ կարգի էրմիթյան ինտերպոլյացիայի պայմանը կարելի է գրել հետևյալ կերպ.
@@ -188,10 +184,10 @@ p_{3}(x)=\sum_{i=0}^{N}\left[\varphi_{i}^{(0)}f(x_{i})+\varphi_{i}^{(1)}f^{'}(x_
 \end{equation}
 \newpage
 
-\subsection*{Քառակուսային և խորանարդային ինտերպոլյացիա}
+\subsection*{1.2 Քառակուսային և խորանարդային ինտերպոլյացիա}
 Խնդիրներում, որտեղ անհրաժեշտ է որոշել միայն տրված ֆունկիցիան, ֆունկցիայի ածանցյալներն ինտերպոլացնելու փոխարեն դրվում է դրանց անընդհատության պայման հանգուցային կետերում,  բավականին հեշտացնելով դրված խնդիրը և դրա լուծումը։
 Նման տիպի ինտերպոլյացիայի կառուցման պարզագույն օրինակը հետևյալն է.
-Յուրաքանչյուր $\left[x_{i}, x_{i+1}\right]$ ինտերվալում կառուցենք այպիսի պարաբոլ, որ բոլոր $x_{i}$ հանգուցային կետերում առանջին կարգի ածանցյալները լինեն անընդհատ։
+Յուրաքանչյուր $\left[x_{i}, x_{i+1}\right]$ ինտերվալում կառուցվում է այպիսի պարաբոլ, որ բոլոր $x_{i}$ հանգուցային կետերում առանջին կարգի ածանցյալները լինեն անընդհատ։
 \begin{equation}
 S_{2}^{(i)}(x)=f(x_{i})+\dfrac{f(x_{i+1})-f(x_{i})}{x_{i+1}-x_{i}}\left(x-x_{i}\right)+c_{i}\left(x-x_{i}\right)\left(x-x_{i+1}\right)
 \end{equation}
@@ -239,20 +235,20 @@ c_{N}=B
 \caption{\hfill Նկար 1.3. Քառակուսային և խորանարդային ինտերպոլյացիաների համեմատում։}
 \end{figure}
 \newpage
-Այժմ դիտարկենք լոկալ կրող ունեցող խորանարդային սփլայները։ Այդպիսի սփլայն առաջարկել է ավստրիացի մաթեմատիկոս Առնոլդ Շնեբերգը։
+Այժմ դիտարկենք լոկալ կրող ունեցող խորանարդային սփլայները։ Այդպիսի սփլայններ առաջարկել է ավստրիացի մաթեմատիկոս Առնոլդ Շնեբերգը։
 Դիտարկենք հետևյալ ֆունկցիան.
 \begin{equation}
-\gamma(x)=\dfrac{1}{4}\left[\left(x+2\right)^{3}_{+} - 4\left(x+1\right)^{3}_{+}+ \left(x\right)^{3}_{+} -4\left(x-1\right)^{3}_{+} + \left(x-2\right)^{3}_{+}\right]
+\gamma(x)=\dfrac{1}{4}\left[\left(x+2\right)^{3}_{+} - 4\left(x+1\right)^{3}_{+}+ 6\left(x\right)^{3}_{+} -4\left(x-1\right)^{3}_{+} + \left(x-2\right)^{3}_{+}\right]
 \end{equation}
 որտեղ
 \begin{equation}
 \left(x\right)_{+}=
 \begin{dcases}
-			x, x \ge 0 \\
-			0, x \leq 0		
+x, x > 0 \\
+0, x \leq 0	
 \end{dcases}
 \end{equation}
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{images/cubic_compact_support_basis}
 \captionsetup{labelformat=empty}
@@ -266,10 +262,10 @@ B_{i}\left(\dfrac{x}{h}\right)=\gamma \left(\frac{x-x_{0}}{h}-i\right)
 Մնացած բազիսային ֆունկիաները պետք է կառուցել այլ կերպ, քանի որ դրանց մի մասը դուրս է ըկած  $\left[x_{0}, x_{N}\right]$ ինտերվալից։
 \begin{equation}
 \begin{aligned}
-B_{0}\left(\frac{x}{h}\right) &= \gamma \left(\frac{x}{h}\right) + \left(\dfrac{h - x}{4h}\right)^{3}_{+} , \; x \in \left[x_{0}, x_{2}\right] \\
-B_{1}\left(\frac{x}{h}\right) &= \gamma \left(\frac{x}{h}\right), \; x \in \left[x_{0}, x_{3}\right]\\
-B_{N-1}\left(\frac{x}{h}\right) &= \gamma \left(\frac{x}{h}\right), \; x \in \left[x_{N-3}, x_{N}\right] \\
-B_{N}\left(\frac{x}{h}\right) &= \gamma \left(\frac{x}{h}\right) + \left(\dfrac{x - (N-1)h}{4h}\right)^{3}_{+} , \; x \in \left[x_{N-2}, x_{N}\right]
+&B_{0}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right) + \left(\dfrac{h - x}{4h}\right)^{3}_{+} , \; x \in \left[x_{0}, x_{2}\right] \\
+&B_{1}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right), \; x \in \left[x_{0}, x_{3}\right]\\
+&B_{N-1}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right), \; x \in \left[x_{N-3}, x_{N}\right] \\
+&B_{N}\left(\frac{x}{h}\right) = \gamma \left(\frac{x}{h}\right) + \left(\dfrac{x - (N-1)h}{4h}\right)^{3}_{+} , \; x \in \left[x_{N-2}, x_{N}\right]
 \end{aligned}
 \end{equation}
 \begin{figure}[h!]
@@ -282,11 +278,7 @@ B_{N}\left(\frac{x}{h}\right) &= \gamma \left(\frac{x}{h}\right) + \left(\dfrac{
 \begin{equation}
 F(x) = \sum_{i=0}^{N} \alpha_{i}B_{i}\left(\frac{x}{h}\right)$$
 \end{equation}
-Հաշվի առնելով ինտերպոլյացիոն պայմանները.
-\begin{equation*}
-F(x_{i}) = f_{i}
-\end{equation*}
-կստանանք հետևյալ հավասարումերի համակարգը.
+Հաշվի առնելով ինտերպոլյացիոն պայմանները կստանանք հետևյալ հավասարումերի համակարգը.
 \begin{equation}
 \begin{dcases}
 \frac{5}{4}\alpha_{0} + \frac{1}{4}\alpha_{0} &= f_{0}\\
@@ -296,11 +288,11 @@ F(x_{i}) = f_{i}
 \end{equation}
 \newpage
 \section*{\centering Գլուխ 2 \\ Երկչափ մոտարկում}
-%This command resets the equation's counter
+%This command resets the equation's counter 	
 \setcounter{equation}{0}
-Այժմ դիտարկենք երկու փոփոխականի ֆունկցիայի կտոր առ կտոր անընդհատ մոտարկման խնդիրը $\partial R$ եզրով սահմանափակ $R$ տիրույթում։ Տիրույթը տրոհվում է որոշակի թվով էլեմենտների։ Կախված $R$ տիրույթից, առանձնացվում են հետևյալ մոտակման ձևերը.
-\subsection*{Ուղղանկյուն տիրույթ}
-Դիցուք տրված են $f:\Omega\mapsto \Theta$,  $\Theta \subset \mathbb{R}$, $\Omega \subset \mathbb{R}^{2} = \left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{N}\right]$,  ուղղանկյուն տիրույթը, որը տրոհված է $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$, ուղղանկյուն էլեմենտների:
+Այժմ դիտարկենք երկու փոփոխականի ֆունկցիայի մոտարկման խնդիրը: Ի տարբերություն մեկ փոփոխականի ֆունկիցայի ինտերպոլյացիայի, այս դեպքում տիրույթի տրոհումը կարելի է իրականացնել կամայական ձևով։ Կախված տրված տիրույթի և տրոհման ձևից, առանձնացվում են հետևյալ մոտակման ձևերը.
+\subsection*{2.1 Ուղղանկյուն տիրույթ}
+Դիցուք տրված են $f:\Omega\mapsto \Theta$,  $\Theta \subset \mathbb{R}$, $\Omega \subset \mathbb{R}^{2} = \left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{N}\right]$  ուղղանկյուն տիրույթը, որը տրոհված է $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$, ուղղանկյուն էլեմենտների:
 $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overline{0, N-1}$$
 \begin{figure}[h!]
 \centering
@@ -308,7 +300,9 @@ $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overli
 \captionsetup{labelformat=empty}
 \caption{\hfill Նկար 2.1. Ուղղանկյունաձև տիրույթի տրոհում ուղղանկյուն էլեմենտների։}
 \end{figure}
-\subsubsection*{$C^{(0,0)}$ մոտարկում}
+\subsubsection*{2.1.Էրմիթյան ինտերպոլյացիա}
+$C^{(0,0)}$ մոտարկում
+
 Յուրաքանչյուր  $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$ էլեմենտի վրա $f$ ֆունկցիան մոտարկվում է հետևյալ քառակուսային ֆունկցիայով։
 \begin{equation}
 \scalemath{0.9}{p_{1}^{(i, j)}(x, y)=\alpha_{i,j}(x,y)f(x_{i},y_{j})+\beta_{i+1,j}(x,y)f(x_{i+1},y_{j})\scalemath{0.2}+\gamma_{i,j+1}(x,y) f(x_{i},y_{j+1})+\delta_{i+1, j+1}(x,y)f(x_{i+1},y_{j+1})}
@@ -316,13 +310,13 @@ $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overli
 որտեղ 
 \begin{equation}
 \begin{aligned}
-\alpha_{i,j}(x,y)&=\dfrac{1}{h_{1}h_{2}}\left(x_{i+1}-x\right)\left(y_{j+1}-y\right) \\
-\beta_{i+1,j}(x,y)&=\dfrac{1}{h_{1}h_{2}}\left(x-x_{i}\right)\left(y_{j+1}-y\right) \\
-\gamma_{i,j+1}(x,y)&=\dfrac{1}{h_{1}h_{2}}\left(x_{i+1}-x\right)\left(y-y_{j}\right) \\
-\delta_{i+,j+1}(x,y)&=\dfrac{1}{h_{1}h_{2}}\left(x-x_{i}\right)\left(y-y_{j}\right)
+&\alpha_{i,j}(x,y)=\dfrac{1}{h_{1}h_{2}}\left(x_{i+1}-x\right)\left(y_{j+1}-y\right) \\
+&\beta_{i+1,j}(x,y)=\dfrac{1}{h_{1}h_{2}}\left(x-x_{i}\right)\left(y_{j+1}-y\right) \\
+&\gamma_{i,j+1}(x,y)=\dfrac{1}{h_{1}h_{2}}\left(x_{i+1}-x\right)\left(y-y_{j}\right) \\
+&\delta_{i+,j+1}(x,y)=\dfrac{1}{h_{1}h_{2}}\left(x-x_{i}\right)\left(y-y_{j}\right)
 \end{aligned}
 \end{equation}
-Այսպիսով $\left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{M}\right]$ տիրույթում կտոր առ կտոր մոտարկող ֆունկցիան տրվում է հետևյալ կերպ.
+Այսպիսով $\left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{M}\right]$ տիրույթում կտոր առ կտոր մոտարկող ֆունկցիան տրվում է հետևյալ բանաձևով.
 \begin{equation}
 p_{1}(x,y)=\sum_{i=0}^{m}\sum_{j=0}^{n}\varphi_{i,j}(x,y)f(x_{i},y_{j})
 \end{equation}
@@ -338,13 +332,14 @@ p_{1}(x,y)=\sum_{i=0}^{m}\sum_{j=0}^{n}\varphi_{i,j}(x,y)f(x_{i},y_{j})
 \end{equation}
 Վերը դիտարկված մոտարկումը հանդիսանում է երկչափ Էրմիթյան մոտարկման մասնավոր դեպք։
 
-Ընդհանուր դեպքում, տրված $k\in \mathbb{N}$ թվի և տրված ուղղանկյուն տիրույթի ցանկացած ուղղանկյունաձև տրոհման էլեմենտում կարելի է կառուցել $C^{k-1, k-1}$ կարգի մոտարկող բազմանդամ, որը $2k-1$ ֊րդ կարգի բազմանդամ է ըստ իր յուրաքանչյուր փոփոխականի և, ինտերպոլյացիայի պայմանները կարելի է գրել հետևյալ կերպ.
+Ընդհանուր դեպքում, տրված $k\in \mathbb{N}$ թվի և տրված ուղղանկյուն տիրույթի ցանկացած ուղղանկյունաձև տրոհման էլեմենտում կարելի է կառուցել $C^{k-1, k-1}$ կարգի մոտարկող բազմանդամ, որը $\left(2k-1\right)$ ֊րդ կարգի բազմանդամ է ըստ իր յուրաքանչյուր փոփոխականի և, ինտերպոլյացիայի պայմանները կարելի է գրել հետևյալ կերպ.
 \begin{equation}
 \dfrac{d^{p+q}}{dx^p dy^{q}}f(x_{i}, y_{j})=\dfrac{d^{p+q}}{dx^{p}dy^{q}}p_{2k-1}(x_{i}, y_{j}); \; p, q = \overline{0, k-1}; \;i=\overline{0, M};  \;  j=\overline{0, N}
 \end{equation}
 \newpage
 
-\noindent Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային ֆունկցիաների կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք ինչպես նախորդ դեպքում, ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով երկու ուղղանկյուն եռանկյունների.
+\noindent Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային ֆունկցիաների կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք ինչպես նախորդ դեպքում, ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով երկու ուղղանկյուն եռանկյունների, ինչպես ցույց է տրված Նկար 2.2-ում։
+
 Դիտարկենք հետևյալ ֆունկցիան.
 \begin{equation}
 $$\varphi \left(x,y\right)=\begin{cases}
@@ -372,15 +367,15 @@ $$\varphi \left(x,y\right)=\begin{cases}
   \end{minipage}
 \end{figure}
 
-Պարզ է, որ այն յուրաքանչյուր ուղղանկյուն էլեմենտում $C^{(0, 0)}$ ֆունկցիա է:
-Այժմ յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ կետի վրա կառուցենք հետևյալ ֆունկցիան.
+Պարզ է, որ այն $\left[-1, 1\right] \times \left[-1, 1\right]$ տիրույթում $C^{(0, 0)}$ ֆունկցիա է:
+Այժմ յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ հանգուցային կետի համար կառուցենք բազիսային ֆունկցիա օգտվելով $\left(6\right)$-ից.
 \begin{equation}
-\varphi_{i,j}(x,y)=\varphi \left(\dfrac{x-x_{i}}{h_{1}}, \dfrac{y-y_{j}}{h_{2}}\right)
+\varphi^{ij}(x,y)=\varphi \left(\dfrac{x-x_{i}}{h_{1}}, \dfrac{y-y_{j}}{h_{2}}\right)
 \end{equation}
 \newpage
-Այդ դեպքում $f$ ֆունկցիայի մոտարկման բանաձևը կտվրի հետևյալ կերպ։
+Յուրաքանչյուր կետի համար ունենալով բազիսային ֆունկցիա, $f$ ֆունկցիայի մոտարկման բանաձևը կտվրի հետևյալ կերպ.
 \begin{equation}
-p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi_{i,j}(x,y)f(x_{i}, y_{j})
+p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{ij}(x,y)f(x_{i}, y_{j})
 \end{equation}
 \begin{figure}[h!]
 \centering
