@@ -21,8 +21,6 @@
 %This package allows to change figure insertion mode (H, etc.)
 \usepackage{float}
 
-
-
 %This command puts section number after section name
 %\usepackage[explicit]{titlesec}
 %\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\ \thesection}
@@ -34,11 +32,11 @@
 %\renewcommand\thesection{}
 %\renewcommand\thesubsection{}
 
+%Change command to armenian
+%\addto\captionsenglish{\renewcommand{\figurename}{Նկար}}
+
 %This is a command for creating new command for reducing the size of the given math equation
 \newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
-
-%Change command to armenian
-\addto\captionsenglish{\renewcommand{\figurename}{Նկար}}
 
 \usepackage
 [
@@ -49,13 +47,20 @@
 	bottom=25mm
  ]
 {geometry}
+
 %This command sets the font
 \setmainfont{GHEA Grapalat}
-%These commands change linespacing
+
+%These commands change line spacing
 %\onehalfspacing
 \linespread{1.5}
+
 \title{Դիպլոմային աշխատանք}
 \author{Կամո Սևոյան}
+
+%This command allows to change page counter.
+\setcounter{page}{4}
+
 \begin{document}
 
 %This command allows to correctly
@@ -293,8 +298,6 @@ $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overli
 \end{figure}
 \newpage
 \subsubsection*{2.1.Էրմիթյան ինտերպոլյացիա}
-$C^{(0,0)}$ մոտարկում
-
 Յուրաքանչյուր  $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$ էլեմենտի վրա $f$ ֆունկցիան մոտարկվում է հետևյալ քառակուսային ֆունկցիայով։
 \begin{equation}
 \scalemath{0.9}{p_{1}^{(i, j)}(x, y)=\alpha_{i,j}(x,y)f(x_{i},y_{j})+\beta_{i+1,j}(x,y)f(x_{i+1},y_{j})\scalemath{0.2}+\gamma_{i,j+1}(x,y) f(x_{i},y_{j+1})+\delta_{i+1, j+1}(x,y)f(x_{i+1},y_{j+1})}
@@ -370,7 +373,7 @@ p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{ij}(x,y)f(x_{i}, y_{j})
 \caption{Նկար 2.4. Տիրույթի տրոհումը ուղղանկյուն եռանկյունների}
 \end{figure}
 \newpage
-\subsubsection*{$C^{(2,2)}$ մոտարկում}
+\subsubsection*{2.2. Խորանարդային մոտարկում}
 Մեկ փոփոխականի մոտարկան խնդրը դիտարկելից քննարկեցինք Շներբերգի կողմից առաջարկված խորանարդային բազիսային սփլայնները։ Այս սփլայնները կարող ենք  օգտագործել երկչափ մոտարկման համար։
 Յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ հանգույցի վրա կառուցենք բազիսային ֆունկցիա կազմելով $B_{i}\left(\dfrac{x}{h_{1}}\right)$ և $B_{j}\left(\dfrac{x}{h_{2}}\right)$ ֆունկցիաների թենզորական  արտադրյալը։
 \begin{equation}
@@ -380,11 +383,7 @@ p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{ij}(x,y)f(x_{i}, y_{j})
 \begin{equation}
 F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{ji}\left(x, y\right)$$
 \end{equation}
-Հաշվի առնելով ինտերպոլյացիոն պայմանները
-\begin{equation*}
-F(x_{ij}) = f_{ij}
-\end{equation*}
-կստանանք հետևյալ հավասարումերի համակարգը.
+Հաշվի առնելով ինտերպոլյացիոն պայմանները կստանանք հետևյալ հավասարումերի համակարգը.
 \begin{equation}
 \begin{dcases}
 \alpha_{00}+\frac{5}{16}(\alpha_{01} + \alpha_{10}) +\frac{1}{16}\alpha_{11} &= f_{00}\\
@@ -498,6 +497,9 @@ F_{3}(x, y) = \dfrac{1}{S^{3}}\sum_{i=1}^{10} p^{(3)}_{i}(x,y)f(x_{i}, y_{i})
 \end{enumerate}
 Բնական է, որ որևէ կետի նկատմամբ լրիվ բազիսային ֆունկցիայի կառուցելու համար անհրաժեշտ է իրար գումարել այն բոլոր եռանկյուն էլեմենտների այդ կետին համապատասխան ֆունկցիաները, որոնց համար տվյալ կետը գագաթ է։
 \newpage
+\subsubsection*{2.2 Էրմիթյան ինտերպոլյացիա}
+To be continued
+\newpage
 \section*{\centering Գլուխ 3 \\ Վարիացիոն մեթոդ}
 \setcounter{equation}{0}
 Վարիացիոն մեթոդները հանդիպում են բազմաթիվ ֆիզիկական խնդիրներում, և այդ խնդիրների մոտավոր լուծումը հիմնված է համապատասխան վարիացիոն մեթոդների վրա։
@@ -518,7 +520,7 @@ $$\left|f-g\right| < \epsilon$$
 I\left(f\right)=\iint \limits_{\Omega} F\left(x, y, f, f_{x}, f_{y}\right)dxdy
 \end{equation}
 որտեղ $f \in C^{2}(\Omega)$,  $\Omega\subset \mathbb{R}^{2}$ և որի արժեքները որոշված են $\partial \Omega$ ում:
-Այս դեպքում մինիմումի անհրաժեշտ պայման է, որ $f(x,y)$ ֆունկցիան բավարարի Էյլեր֊Լագրանժի հավասարմանը, հավելելով համապատասխան եզրային պայմանները։
+Այս դեպքում, որպեսզի $f$ ֆունկցիան $\left(1\right)$ ֆունկցիոնալի համարա հանդիսանա մինիմում, անհրաժեշտ է, որ $f(x,y)$ ֆունկցիան բավարարի Էյլեր֊Լագրանժի հավասարմանը, հավելելով համապատասխան եզրային պայմանները։
 \begin{equation}
 \dfrac{\partial}{\partial x}F_{u_{x}} + \dfrac{\partial}{\partial y}F_{u_{y}} - F_{u} = 0
 \end{equation}
@@ -528,9 +530,9 @@ I\left(f\right)=\iint \limits_{\Omega} F\left(x, y, f, f_{x}, f_{y}\right)dxdy
 \end{equation}
 Այժմ պարզ է, որ երկրորդ կարգի ածանցյալների անընդհատությունը անհրաժեշտ է Էյլեր֊Լագրանժի հավասարման գոյության համար։ Բայց վարիացիոն մեթոդը պահանջում է միայն $f$ ի անընդհատություն և առաջին կարգի մասնակի ածանցյալների կտոր առ կտոր անընդհատություն։
 \subsection*{Ստացիոնար խնդիրներ}
-Դիֆերենցիալ հավասարումը, որը կապված է վարիացիոն խնդրի հետ, կոչվում է Էյլեր֊Լագրանժի հավասարում։ Այս միայն անհրաժեշտ պայման է, որին պետք է բավարարի ֆունկցիան, որը մինիմիզացնում (մաքսիմիզացնում) է ֆունկցիոնալը։ 
-Դիտարկենք հետևյալ օրինակները.
+Դիֆերենցիալ հավասարումը, որը կապված է վարիացիոն խնդրի հետ, կոչվում է Էյլեր֊Լագրանժի հավասարում։ Այս միայն անհրաժեշտ պայման է, որին պետք է բավարարի ֆունկցիան, որը մինիմիզացնում (մաքսիմիզացնում) է ֆունկցիոնալը։
 
+Ստորև դիտարկվում են խնդիրների մի քանի տարբերակներ.
 \begin{enumerate}
 \item Մեկ փոփոխականի ֆունկցիա.
 $$f \in \Omega \mapsto \Theta, \; \Omega, \Theta \subset \mathbb{R}$$
@@ -583,7 +585,7 @@ $$\dfrac{\partial F}{\partial f} - \dfrac{d}{dx_{1}}\dfrac{\partial F}{\partial 
 \subsubsection*{Եզրային պայմաններ}
 Նախորդիվ դիտարկել էինք այնպիսի խնդիրներ, որտեղ ֆունկցիան արժեքները տրված տիրույթի եզրի տրված են։Սակայն որոշ խնդիրնորում ֆունկցիան տիրույթի եզրում տրված չէ, և տրվում են այլ տիպի եզրային պայմաններ։Նման դեպքերում որպես եզրային պայման դիտարկվում են հետևյալ պայմանները.
 
-Մեկ փոփոխականի ֆունկցիա
+\noindent Մեկ փոփոխականի ֆունկցիա
 $$\dfrac{\partial F}{\partial f^{'}}=0$$
 Երկու անհայտ ֆունկցիա
 $$\dfrac{\partial F}{\partial f^{'}}=\dfrac{\partial F}{\partial g^{'}}$$
@@ -608,7 +610,7 @@ $$\dfrac{\partial \left(F+\lambda G\right)}{\partial f} - \dfrac{d}{dx} \dfrac{\
 
 %TODO: add description of finite elements
 
-\section*{\centering Գլուխ 4 \\ Մոտավոր մեթոդներ. Վերջավոր էլեմենտների մեթոդ}
+\section*{\centering Գլուխ 4 \\ Մոտավոր մեթոդներ։ Վերջավոր էլեմենտների մեթոդ}
 \setcounter{equation}{0}
 Խնդիրների վարիացիոն մեթոդով ձևակերպումը, և վարիացիոն մեթոդների ավելի թույլ պայմանները թույլ են տալիս այդ խնդիրները լուծել մոտավոր մեթոդներով, որոնք հաճախ անվանվում են ուղիղ մեթոդներ։ Ուղիղ մեթոդներից է Ռիտցի մինիմիզացնող հաջորդականության մեթոդը, որը քննության կառնենք։ 
 
@@ -644,11 +646,11 @@ f_{0}=\sum_{j=1}^{N}\gamma_{j}\varphi_{j}, \; \gamma_{j} \in \mathbb{R}
 \end{cases}
 \end{equation}
 որտեղ $D = \left[x_{0}, x_{N}\right] \times \left[y_{0}, y_{M}\right]$:
+
 Այս դիֆերենցիալ հավասարման  համապատասխան վարիացիոն խնդիրը կլինի.
 \begin{equation}
 I(u) = \frac{1}{2}\iint \limits_{D} \left[u_x^2 + u_y^2 \right]dxdy + \iint \limits_{D} fudxdy \longrightarrow min
 \end{equation}
-%TODO: add reference to Courant basis functions
 D տիրույթը տրոհենք ուղղանկյուն եղանկյունների, և որպես բազիսային ֆունկցիաներ վերցնենք Կուրանտի ֆունկցիաները $\left(2.7\right)$։
 Որոնելի ֆունկցիան կփնտրենք բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
 \begin{equation}
@@ -703,9 +705,13 @@ $$\scalemath{0.85}{\frac{\partial}{\partial u_{kl}}I \left(u\right)= \iint \limi
 \iint \limits_{D} 2u_{kl}\left\{\varphi_{y}^{kl}(x,y)\right\}^{2}dxdy = 4u_{kl}\dfrac{h_{1}}{h_{2}}
 \end{equation}
 Քանի որ յուրաքանչյուր $\varphi_{kl}$ բազիսային ֆունկցիա հատվում Է $\varphi_{k-1, l}$, $\varphi_{k+1, l}$, $\varphi_{k, l-1}$, $\varphi_{k, l+1}$ ֆունկցիաների հետ, ապա
-$$\displaylines{\iint \limits_{D} 2\varphi_{x}^{kl}(x,y)[\dots]dxdy = \cr
-\scalemath{0.85}{2\iint \limits_{D} \varphi_{x}^{kl}(x,y)[u_{k-1,l}\varphi_{x}^{k-1, l}(x,y)+u_{k+1,l}\varphi_{x}^{k+1, l}(x,y)+u_{k,l-1}\varphi_{x}^{k, l-1}(x,y)+u_{k,l+1}\varphi_{x}^{k, l+1}(x,y)]dxdy =} \cr
-= -2u_{k-1, l}\dfrac{h_{2} }{h_{1}} -2u_{k+1, l}\dfrac{ h_{2}}{h_{1}}}$$
+\begin{equation}
+\begin{gathered}
+\iint \limits_{D} 2\varphi_{x}^{kl}(x,y)[\dots]dxdy = \cr
+=\scalemath{0.85}{2\iint \limits_{D} \varphi_{x}^{kl}(x,y)[u_{k-1,l}\varphi_{x}^{k-1, l}(x,y)+u_{k+1,l}\varphi_{x}^{k+1, l}(x,y)+u_{k,l-1}\varphi_{x}^{k, l-1}(x,y)+u_{k,l+1}\varphi_{x}^{k, l+1}(x,y)]dxdy =} \cr
+= -2u_{k-1, l}\dfrac{h_{2} }{h_{1}} -2u_{k+1, l}\dfrac{ h_{2}}{h_{1}}
+\end{gathered}
+\end{equation}
 Հանգունորեն՝
 \begin{equation}
 \scalemath{0.85}{2 \iint \limits_{D}\varphi_{y}^{kl}(x,y)[\dots]dxdy =  -2u_{k, l-1}\dfrac{h_{1}} {h_{2}} - 2u_{k, l+1}\dfrac{h_{1}}{ h_{2}}}$$
@@ -749,16 +755,144 @@ $$u_{0, l} = u_{N, l} = u_{k, 0} = u_{k, M} = 0$$
 \caption{Նկար 4.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
 \end{figure}
 \newpage
-\subsection*{4.1 Պուասոնի հավասարման լուծում ուղղանկյուն տիրույթում}
-\newpage
+\subsection*{4.2 Պուասոնի հավասարման լուծում շրջանում}
 
+Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
+\begin{equation}
+\begin{cases}
+			\Delta u =f \\
+			u \Big |_{\partial D} = 0
+\end{cases}
+\end{equation}
+որտեղ $D$֊ն կամայական տիրույթ է։
+
+Այս դիֆերենցիալ հավասարման  համապատասխան վարիացիոն խնդիրը կլինի.
+\begin{equation}
+I(u) = \frac{1}{2}\iint \limits_{D} \left[u_x^2 + u_y^2 \right]dxdy + \iint \limits_{D} fudxdy \longrightarrow min
+\end{equation}
+
+D տիրույթը տրոհենք $N$ եռանկյունների։ Գագաթների համարակալումը կկատարենք հետևյալ կերպ. յուրաքանչյուր եռանկյան ներսում գագաթները կհամարակալենք $1, 2, 3$ թվերով ժամսլաքին հակառակ ուղղությամբ, որին կանվանենք լոկալ համարակալում, միևնույն ժամանակ գագաթները համարակալելով ամբողջ տիրույթի համար, որին կանվանենք գլոբալ համարակալում։ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{images/global_and_local_numbering}
+\captionsetup{labelformat=empty}
+\caption{Նկար 4.2. Գագաթների լոկալ (թավ տառատեսակ) և գլոբալ համարակալման օրինակ։}
+\end{figure}
+Յուրաքանչյուր $\Delta_{n}$ եռանկյան վրա ($n=\overline{1, N}$) որպես բազիսային ֆունկցիաներ վերցնենք $\left(2.13\right)$֊ում ներկայացված ֆունկցիաները, և որոնելի ֆունկցիան կփնտրենք բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
+\begin{equation}
+u(x, y) = \dfrac{1}{S_{n}}\sum_{i=1}^{3}u_{ni}p^{(ni)}(x,y)
+\end{equation}
+որտեղ $ni$֊ն $n$֊րդ եռանկյան $i$֊րդ գագաթի համապատասխան ինդեքսն է, իսկ $p^{(ni)}(x,y)$֊ն այդ գագաթի համապատասխան բազիսային ֆունկցիան է։
+Ուստի ինտեգրալային ֆունկցիոնալը կունենա հետևյալ տեսքը.
+\begin{equation}
+$$\scalemath{0.9}{\frac{1}{2S_{n}^{2}} \iint \limits_{\Delta_{n}}\left[\left(\sum_{i=1}^{3}u_{ni}p^{(ni)}_{x}(x,y)\right)^2 + \left(\sum_{i=1}^{3}u_{ni}p^{(ni)}_{y}(x,y)\right)^2 \right]dxdy + \dfrac{1}{S_{n}}\iint \limits_{D}f(x,y)\left[ \sum_{i=1}^{3}u_{ni}p^{(ni)}(x,y)\right]dxdy}
+\end{equation}
+Համաձայն էքստրեմումի անհրաժեշտ պայմանի.
+\begin{equation}
+\dfrac{\partial I}{ \partial u_{nk}} = \dfrac{\partial}{\partial u_{nk}} I \left(\dfrac{1}{S_{n}}\sum_{i=1}^{3}u_{ni}p^{(i)}(x,y)\right) = 0
+\end{equation}
+Դիտարկենք $\left(4.18\right)$ ինտեգրալի ենթաինտեգրալային արտահայտության ձախ մասի երկու մասերը.
+
+\begin{equation}
+\begin{aligned}
+&\left(\sum_{i=1}^{3}u_{ni}p^{(ni)}_{x}(x,y)\right)^2=\left(u_{nk}p_{x}^{(nk)}\right)^{2}+2u_{nk}u_{nl}p_{x}^{(nk)}p_{x}^{(nl)}+2u_{nk}u_{nm}p_{x}^{(nk)}p_{x}^{(nm)} \\
+&\left(\sum_{i=1}^{3}u_{ni}p^{(ni)}_{y}(x,y)\right)^2=\left(u_{nk}p_{y}^{(nk)}\right)^{2}+2u_{nk}u_{nl}p_{y}^{(nk)}p_{y}^{(nl)}+2u_{nk}u_{nm}p_{y}^{(nk)}p_{y}^{(nm)} \\
+\end{aligned}
+\end{equation}
+
+\noindent որտեղ $k, l, m$֊ը գագաթների հաջորդականությունն է լոկալ համարակալման մեջ։
+
+Այսպիսով ավելի պարզեցված տեսքով համակարգը ունի հետևյալ տեսքը.
+\begin{equation}
+\scalemath{0.70}{\frac{\partial}{\partial u_{nk}}I \left(u\right)= \iint \limits_{\Delta_{n}} \left[u_{nk}\left(p_{x}^{(nk)}\right)^{2}+u_{nl}p_{x}^{(nk)}p_{x}^{(nl)}+u_{nm}p_{x}^{(nk)}p_{x}^{(nm)}+u_{nk}\left(p_{y}^{(nk)}\right)^{2}+u_{nl}p_{y}^{(nk)}p_{y}^{(nl)}+u_{nm}p_{y}^{(nk)}p_{y}^{(nm)} + S_{n}u_{nk}p^{(nk)}\right]dxdy=0}
+\end{equation}
+Քանի որ
+$$p_{x}^{(nk)} = \left(y_{nl}-y_{nm}\right)$$
+$$p_{y}^{(nk)} = -\left(x_{nl}-x_{nm}\right)$$
+ապա
+\begin{equation}
+\begin{aligned}
+&\iint \limits_{\Delta_{n}}2u_{nk}\left(p_{x}^{(nk)}\right)^{2}dxdy = 2u_n{k} S_{n} \left(y_{nl}-y_{nm}\right)^{2} \\
+&\iint \limits_{\Delta_{n}}2u_{nl}p_{x}^{(nk)}p_{x}^{(l)}dxdy = 2u_{nl} S_{n} \left(y_{nl}-y_{nm}\right)\left(y_{nm}-y_{nk}\right) \\
+&\iint \limits_{\Delta_{n}}2u_{nm}p_{x}^{(nk)}p_{x}^{(nm)}dxdy = 2u_{nm} S_{n} \left(y_{nl}-y_{nm}\right)\left(y_{nk}-y_{nl}\right) \\
+&\iint \limits_{\Delta_{n}}2u_{nk}\left(p_{y}^{(nk)}\right)^{2}dxdy = 2u_{nk} S_{n} \left(x_{nl}-x_{nm}\right)^{2} \\
+&\iint \limits_{\Delta_{n}}2u_{nl}p_{y}^{(nk)}p_{y}^{(nl)}dxdy = 2u_{nl} S_{n} \left(x_{nl}-x_{nm}\right)\left(x_{nm}-x_{nk}\right) \\
+&\iint \limits_{\Delta_{n}}2u_{nm}p_{y}^{(nk)}p_{y}^{(nm)}dxdy = 2u_{nm} S_{n} \left(x_{nl}-x_{nm}\right)\left(x_{nk}-x_{nl}\right) \\
+&\iint \limits_{\Delta_{n}}2S_{n}p^{(nk)}dxdy \approx \dfrac{2}{3}u_{nk} S_{n}^{2}f_{nk} \\
+\end{aligned}
+\end{equation}
+Նշանակենք
+$$\begin{aligned}
+y_{ni}-y_{nj} = y_{nij} \\
+x_{ni}-y_{nj} = x_{nij} \\
+\end{aligned}$$
+Այսպիսով, $\Delta_{n}$ եռանկյան համար ստացանք հետևյալ հավասարումների համակարգը.
+\begin{equation}
+\scalemath{0.9}
+{
+\begin{cases}
+2u_{nk}S_{n}\left(y_{nlm}^{2}+x_{nlm}^{2}\right)+2u_{nl}S_{n}\left(y_{nlm}y_{nmk}+x_{nlm}x_{nmk}\right)+2u_{m}S_{n}\left(y_{nlm}y_{nkl}+x_{nlm}x_{nkl}\right)=-\dfrac{2}{3}u_{nk} S_{n}^{2}f_{nk} \\
+u_{nk} = 0, \text{եթե } u_{nk}\text{֊ն տիրույթի եզրի գագաթ է}
+\end{cases}
+}
+\end{equation}
+Համախմբելով բոլոր եռանկյունների համար ստացված հավասարումները, կստանանք գլխավոր համակարգը, և յուրաքանչյուր $n$֊րդ գագաթի համար կունենանք.
+\begin{equation}
+\scalemath{0.8}
+{
+\begin{cases}
+\sum_{r: P_{n} \in \Delta{r}}u_{nk}S_{r}\left(y_{rlm}^{2}+x_{rlm}^{2}\right)+u_{nl}S_{r}\left(y_{rlm}y_{rmk}+x_{rlm}x_{rmk}\right)+u_{m}S_{r}\left(y_{rlm}y_{rkl}+x_{rlm}x_{rkl}\right)=-\dfrac{1}{3}\sum_{r: P_{n} \in \Delta{r}}u_{nk} S_{r}^{2}f_{nk} \\
+u_{nk} = 0, \text{եթե } u_{nk}\text{֊ն տիրույթի եզրի գագաթ է}
+\end{cases}
+}
+\end{equation}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{images/assembling_equation}
+\captionsetup{labelformat=empty}
+\caption{Նկար 4.2. Գլխավոր համակարգի համախմբում։}
+\end{figure}
+\newpage
+\subsubsection*{Ծրագրային իրականացում}
+
+Ինչպես ուղղանկյուն տիրույթի դեպքում, այնպես էլ այս դեպքում կօգտվենք նույն գործիքներից։ Տիրույթի եռանկյունացման համար կօգտվենք $Python$ ծրագրավորման լեզվի triangle գրադարանից.
+
+Ծրագրի սկզբում տրվում է տիրույթի եզրագծի կետերը, եզրագծերի կետերի միացման հաջորդականությունը, եռանկյունացման պարամետրերը և $f$ ֆունկցիան։ Հաջորդիվ յուրաքանչյուր եռանկյան համար կազմվում է հավասարումների համակարգը, հընթացս կառուցելով գլխավոր հավասարումների համակարգը։ Այնուհետև կանչվում այն լուծող ֆունկցիան։ Այնուհետև բազիսային ֆունկցիաների միջոցով կառուցվում է մոտարկող ֆունկցիան։
+
+Օրինակ
+
+
+				$$
+					\begin{cases}
+								\Delta u =2 \\
+								u \Big |_{\partial D} = 0
+					\end{cases}
+				$$
+
+				$$ D = \left\{\left(x,y\right): x^{2}+y^{2} \leq 1\right\}$$
+Տիրույթի եռանկյունացումը
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/circle_mesh}
+\captionsetup{labelformat=empty}
+\caption{Նկար 4.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
+\end{figure}
+Խնդրի համար ստացված լուծումը.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{images/poisson_equation_on_unit_circle_solution}
+\captionsetup{labelformat=empty}
+\caption{Նկար 4.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
+\end{figure}
+\newpage
 \subsection*{4.3 Բիհարմոնիկ հավասարման լուծում ուղղանկյուն տիրույթում}
 Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
 \begin{equation}
 \begin{dcases}
-\Delta^{2} u &=f \\
-u \Big |_{\partial D} &= 0\\
-\dfrac{\partial u}{\partial n} \Big |_{\partial D} &= 0
+&\Delta^{2} u =f \\
+&u \Big |_{\partial D} = 0\\
+&\dfrac{\partial u}{\partial n} \Big |_{\partial D} = 0
 \end{dcases}
 \end{equation}
 որտեղ $D = \left[x_{0}, x_{N}\right] \times \left[y_{0}, y_{M}\right]$:
@@ -776,7 +910,9 @@ u(x,y) = \sum_{i=0}^{N} \sum_{j=0}^{M} u_{ij}\varphi^{ij}(x,y)
 $$\scalemath{0.7}{\frac{1}{2} \iint \limits_{D}\left[\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi^{ij}_{xx}(x,y)\right)^2 +  2\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi^{ij}_{xy}(x,y)\right)^2 + \left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi^{ij}_{yy}(x,y)\right)^2\right]dxdy - \iint \limits_{D}f(x,y)\left[ \sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi^{ij}(x,y)\right]dxdy}
 \end{equation}
 Համաձայն էքստրեմումի անհրաժեշտ պայմանի.
-$$\dfrac{\partial I}{ \partial u_{kl}} = \dfrac{\partial}{\partial u_{kl}} I \left(\sum_{j=0}^{M} u_{ij}\varphi^{ij}(x,y)\right) = 0 $$
+\begin{equation}
+\dfrac{\partial I}{ \partial u_{kl}} = \dfrac{\partial}{\partial u_{kl}} I \left(\sum_{j=0}^{M} u_{ij}\varphi^{ij}(x,y)\right) = 0
+\end{equation}
 Դիտարկենք $\left(18\right)$֊ի առաջին կրկնակի գումարը.
 $$\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi_{xx}^{ij}(x,y)\right)^2 = \left[u_{kl}\varphi_{xx}^{kl}(x,y)\right]^{2} + 2u_{kl}\varphi_{xx}^{kl}(x,y)[\dots] + [\dots]^2$$
 \noindent որտեղ բազմակետերով արտահայտությունը իր մեջ չի պարունակում $u_{kl}$ ը։
@@ -834,42 +970,67 @@ $\left(19\right)$ ինտեգրալը հաշվենք անդամ առ անդամ։
 \begin{equation}
 \iint \limits_{D} 2\varphi_{yy}^{kl}(x,y)[\dots]dxdy= 2\sum_{\substack{i=k-3\\ i \neq k}}^{k+3}\sum_{\substack{j=l-3\\ j \neq l}}^{l+3}u_{ij}\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{i}(x)dx \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{j}^{''}(y)dy
 \end{equation}
+\newpage
 Դիտարկենք  հետևյալ դեպքերը.
 \begin{enumerate}
 \item{Երբ $3 \leq k \leq M-3, \; 3 \leq l \leq N-3$ }
 
 Առաջին ինտեգրալի համար
-$$\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k-3}^{''}(x)dx = \dfrac{3}{8h_{1}^3}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k-2}^{''}(x)dx = 0, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k-1}^{''}(x)dx = -\dfrac{27}{8h_{1}^3}$$
-$$\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k+1}^{''}(x)dx =-\dfrac{27}{8h_{1}^3}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k+2}^{''}(x)dx = 0, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k+3}^{''}(x)dx =  \dfrac{3}{8h_{1}^3}$$
-$$\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l-3}(y)dy=\dfrac{h_{2}}{2240}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l-2}(y)dy=\dfrac{3h_{2}}{56}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l-1}(y)dy=\dfrac{1991h_{2}}{2240}$$
-$$\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l+1}(y)dy=\dfrac{1991h_{2}}{2240}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l+2}(y)dy=\dfrac{3h_{2}}{56}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l+3}(y)dy=\dfrac{h_{2}}{2240}$$
+\begin{equation}
+\begin{aligned}
+&\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k-3}^{''}(x)dx = \dfrac{3}{8h_{1}^3}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k-2}^{''}(x)dx = 0, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k-1}^{''}(x)dx = -\dfrac{27}{8h_{1}^3} \\
+&\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k+1}^{''}(x)dx =-\dfrac{27}{8h_{1}^3}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k+2}^{''}(x)dx = 0, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{''}(x)B_{k+3}^{''}(x)dx =  \dfrac{3}{8h_{1}^3} \\
+&\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l-3}(y)dy=\dfrac{h_{2}}{2240}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l-2}(y)dy=\dfrac{3h_{2}}{56}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l-1}(y)dy=\dfrac{1991h_{2}}{2240} \\
+&\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l+1}(y)dy=\dfrac{1991h_{2}}{2240}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l+2}(y)dy=\dfrac{3h_{2}}{56}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}(y)B_{l+3}(y)dy=\dfrac{h_{2}}{2240}
+\end{aligned}
+\end{equation}
 Երկրորդ ինտեգրալի համար
-$$\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k-3}^{'}(x)dx=\dfrac{-3}{160h_{1}}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k-2}^{'}(x)dx=\dfrac{-9}{20h_{1}}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k-1}^{'}(x)dx=\dfrac{-9}{32h_{1}}, \;$$
-$$\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k+1}^{'}(x)dx=\dfrac{-9}{32h_{1}}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k+2}^{'}(x)dx=\dfrac{-9}{20h_{1}}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k+3}^{'}(x)dx=\dfrac{-3}{160h_{1}}, \;$$
-$$\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l-3}^{'}(y)dy=\dfrac{-3}{160h_{2}}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l-2}^{'}(y)dy=\dfrac{-9}{20h_{2}}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l-1}^{'}(y)dy=\dfrac{-9}{32h_{2}}, \;$$
-$$\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l+1}^{'}(y)dy=\dfrac{-9}{32h_{2}}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l+2}^{'}(y)dy=\dfrac{-9}{20h_{2}}, \; \int \limits_{y_{l+2}}^{y_{l+2}}B_{l}^{'}(y)B_{l+3}^{'}(y)dy=\dfrac{-3}{160h_{2}}, \;$$
+\begin{equation}
+\begin{aligned}
+&\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k-3}^{'}(x)dx=\dfrac{-3}{160h_{1}}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k-2}^{'}(x)dx=\dfrac{-9}{20h_{1}}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k-1}^{'}(x)dx=\dfrac{-9}{32h_{1}} \\
+&\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k+1}^{'}(x)dx=\dfrac{-9}{32h_{1}}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k+2}^{'}(x)dx=\dfrac{-9}{20h_{1}}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}^{'}(x)B_{k+3}^{'}(x)dx=\dfrac{-3}{160h_{1}} \\
+&\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l-3}^{'}(y)dy=\dfrac{-3}{160h_{2}}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l-2}^{'}(y)dy=\dfrac{-9}{20h_{2}}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l-1}^{'}(y)dy=\dfrac{-9}{32h_{2}} \\
+&\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l+1}^{'}(y)dy=\dfrac{-9}{32h_{2}}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{'}(y)B_{l+2}^{'}(y)dy=\dfrac{-9}{20h_{2}}, \; \int \limits_{y_{l+2}}^{y_{l+2}}B_{l}^{'}(y)B_{l+3}^{'}(y)dy=\dfrac{-3}{160h_{2}}
+\end{aligned}
+\end{equation}
 Երրորդ ինտեգրալի համար
-$$\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k-3}(x)dx=\dfrac{h_{1}}{2240}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k-2}(x)dx=\dfrac{3h_{1}}{56}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k-1}(x)dx=\dfrac{1991h_{1}}{2240}$$
-$$\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k+1}(x)dx=\dfrac{1991h_{1}}{2240}, \; \int \limits_{x_{k-2}}^{x_{l+2}}B_{k}(x)B_{k+2}(x)dx=\dfrac{3h_{1}}{56}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k+3}(x)dx=\dfrac{h_{1}}{2240}$$
-$$\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l-3}^{''}(y)dy = \dfrac{3}{8h_{2}^3}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l-2}^{''}(y)dy = 0, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l-1}^{''}(y)dy = -\dfrac{27}{8h_{2}^3}$$
-$$\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l+1}^{''}(y)dy =-\dfrac{27}{8h_{2}^3}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l+2}^{''}(y)dy = 0, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l+3}^{''}(y)dy =  \dfrac{3}{8h_{2}^3}$$
+\begin{equation}
+\begin{aligned}
+&\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k-3}(x)dx=\dfrac{h_{1}}{2240}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k-2}(x)dx=\dfrac{3h_{1}}{56}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k-1}(x)dx=\dfrac{1991h_{1}}{2240} \\
+&\int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k+1}(x)dx=\dfrac{1991h_{1}}{2240}, \; \int \limits_{x_{k-2}}^{x_{l+2}}B_{k}(x)B_{k+2}(x)dx=\dfrac{3h_{1}}{56}, \; \int \limits_{x_{k-2}}^{x_{k+2}}B_{k}(x)B_{k+3}(x)dx=\dfrac{h_{1}}{2240} \\
+&\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l-3}^{''}(y)dy = \dfrac{3}{8h_{2}^3}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l-2}^{''}(y)dy = 0, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l-1}^{''}(y)dy = -\dfrac{27}{8h_{2}^3} \\
+&\int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l+1}^{''}(y)dy =-\dfrac{27}{8h_{2}^3}, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l+2}^{''}(y)dy = 0, \; \int \limits_{y_{l-2}}^{y_{l+2}}B_{l}^{''}(y)B_{l+3}^{''}(y)dy =  \dfrac{3}{8h_{2}^3}
+\end{aligned}
+\end{equation}
 \item{$k=2,  l =2 $}
 
 Առաջին ինտեգրալի համար
-$$\int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{0}^{''}(x)dx = \dfrac{3}{8h_{1}^3}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{1}^{''}(x)dx = -\dfrac{27}{8h_{1}^3}$$
-$$\int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{3}^{''}(x)dx =-\dfrac{27}{8h_{1}^3}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{4}^{''}(x)dx = 0, \; \int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{5}^{''}(x)dx =  \dfrac{3}{8h_{1}^3}$$
-$$ \int \limits_{y_{0}}^{y_{4}}B_{2}(y)B_{0}(y)dy=\dfrac{121h_{2}}{2240}, \; \int \limits_{y_{0}}^{y_{4}}B_{2}(y)B_{1}(y)dy=\dfrac{1991h_{2}}{2240}$$
-$$\int \limits_{y_{0}}^{y_{4}}B_{2}(y)B_{3}(y)dy=\dfrac{1991h_{2}}{2240}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}(y)B_{4}(y)dy=\dfrac{3h_{2}}{56}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}(y)B_{l+3}(y)dy=\dfrac{h_{2}}{2240}$$
+\begin{equation}
+\begin{aligned}
+&\int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{0}^{''}(x)dx = \dfrac{3}{8h_{1}^3}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{1}^{''}(x)dx = -\dfrac{27}{8h_{1}^3} \\
+&\int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{3}^{''}(x)dx =-\dfrac{27}{8h_{1}^3}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{4}^{''}(x)dx = 0, \; \int \limits_{x_{0}}^{x_{4}}B_{2}^{''}(x)B_{5}^{''}(x)dx =  \dfrac{3}{8h_{1}^3} \\
+&\int \limits_{y_{0}}^{y_{4}}B_{2}(y)B_{0}(y)dy=\dfrac{121h_{2}}{2240}, \; \int \limits_{y_{0}}^{y_{4}}B_{2}(y)B_{1}(y)dy=\dfrac{1991h_{2}}{2240} \\
+&\int \limits_{y_{0}}^{y_{4}}B_{2}(y)B_{3}(y)dy=\dfrac{1991h_{2}}{2240}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}(y)B_{4}(y)dy=\dfrac{3h_{2}}{56}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}(y)B_{l+3}(y)dy=\dfrac{h_{2}}{2240}
+\end{aligned}
+\end{equation}
 Երկրորդ ինտեգրալի համար
-$$\int \limits_{x_{0}}^{x_{4}}B_{2}^{'}(x)B_{0}^{'}(x)dx=-\dfrac{15}{32h_{1}}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}^{'}(x)B_{1}^{'}(x)dx=-\dfrac{9}{32h_{1}}, \;$$
-$$\int \limits_{x_{0}}^{x_{4}}B_{2}^{'}(x)B_{3}^{'}(x)dx=\dfrac{-9}{32h_{1}}, \; \int \limits_{x_{0}}^{x_{4}}B_{k}^{'}(x)B_{3}^{'}(x)dx=\dfrac{-9}{20h_{1}}, \; \int \limits_{x_{0}}^{x_{4}}B_{k}^{'}(x)B_{5}^{'}(x)dx=\dfrac{-3}{160h_{1}}, \;$$
-$$\int \limits_{y_{0}}^{y_{4}}B_{2}^{'}(y)B_{0}^{'}(y)dy=-\dfrac{9}{32h_{2}}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}^{'}(y)B_{1}^{'}(y)dy=-\dfrac{9}{32h_{2}}, \;$$
-$$\int \limits_{y_{0}}^{y_{4}}B_{2}^{'}(y)B_{3}^{'}(y)dy=\dfrac{-9}{32h_{2}}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}^{'}(y)B_{3}^{'}(y)dy=\dfrac{-9}{20h_{2}}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}^{'}(y)B_{5}^{'}(y)dy=\dfrac{-3}{160h_{2}}, \;$$
+\begin{equation}
+\begin{aligned}
+&\int \limits_{x_{0}}^{x_{4}}B_{2}^{'}(x)B_{0}^{'}(x)dx=-\dfrac{15}{32h_{1}}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}^{'}(x)B_{1}^{'}(x)dx=-\dfrac{9}{32h_{1}} \\
+&\int \limits_{x_{0}}^{x_{4}}B_{2}^{'}(x)B_{3}^{'}(x)dx=\dfrac{-9}{32h_{1}}, \; \int \limits_{x_{0}}^{x_{4}}B_{k}^{'}(x)B_{3}^{'}(x)dx=\dfrac{-9}{20h_{1}}, \; \int \limits_{x_{0}}^{x_{4}}B_{k}^{'}(x)B_{5}^{'}(x)dx=\dfrac{-3}{160h_{1}} \\
+&\int \limits_{y_{0}}^{y_{4}}B_{2}^{'}(y)B_{0}^{'}(y)dy=-\dfrac{9}{32h_{2}}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}^{'}(y)B_{1}^{'}(y)dy=-\dfrac{9}{32h_{2}} \\
+&\int \limits_{y_{0}}^{y_{4}}B_{2}^{'}(y)B_{3}^{'}(y)dy=\dfrac{-9}{32h_{2}}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}^{'}(y)B_{3}^{'}(y)dy=\dfrac{-9}{20h_{2}}, \; \int \limits_{y_{0}}^{y_{4}}B_{l}^{'}(y)B_{5}^{'}(y)dy=\dfrac{-3}{160h_{2}}
+\end{aligned}
+\end{equation}
 Երրորդ ինտեգրալի համար
-$$\int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{0}(x)dx=\dfrac{121h_{1}}{2240}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{1}(x)dx=\dfrac{1991h_{1}}{2240}$$
-$$\int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{3}(x)dx=\dfrac{1991h_{1}}{2240}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{4}(x)dx=\dfrac{3h_{1}}{56}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{5}(x)dx=\dfrac{h_{1}}{2240}$$
-$$\int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{0}^{''}(y)dy = -\dfrac{3}{8h_{1}^{2}}, \; \int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{1}^{''}(y)dy = -\dfrac{27}{8h_{2}^3}$$
-$$\int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{3}^{''}(y)dy =-\dfrac{27}{8h_{2}^3}, \; \int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{4}^{''}(y)dy = 0, \; \int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{5}^{''}(y)dy =  \dfrac{3}{8h_{2}^3}$$
+\begin{equation}
+\begin{aligned}
+&\int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{0}(x)dx=\dfrac{121h_{1}}{2240}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{1}(x)dx=\dfrac{1991h_{1}}{2240} \\
+&\int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{3}(x)dx=\dfrac{1991h_{1}}{2240}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{4}(x)dx=\dfrac{3h_{1}}{56}, \; \int \limits_{x_{0}}^{x_{4}}B_{2}(x)B_{5}(x)dx=\dfrac{h_{1}}{2240} \\
+&\int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{0}^{''}(y)dy = -\dfrac{3}{8h_{1}^{2}}, \; \int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{1}^{''}(y)dy = -\dfrac{27}{8h_{2}^3} \\
+&\int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{3}^{''}(y)dy =-\dfrac{27}{8h_{2}^3}, \; \int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{4}^{''}(y)dy = 0, \; \int \limits_{y_{0}}^{y_{4}}B_{2}^{''}(y)B_{5}^{''}(y)dy =  \dfrac{3}{8h_{2}^3}
+\end{aligned}
+\end{equation}
 \item{$k=M-2, l=N-2$}
 Քանի որ բազիսային ֆունկցիաները սիմետրիկ են, ապա այդ դեպքում կատարվում են նույն հաշվարկները, ինչ նախորդ կետում։
 \end{enumerate}
@@ -894,8 +1055,8 @@ u_{MN}+\frac{5}{16}(u_{M-1,N} + u_{M,N-1}) +\frac{1}{16}u_{M-1,N-1} &= 0
 \end{equation}
 Մինիմումի պայմաններ.
 \begin{equation}
-\begin{split}
-\scalemath{0.55}{
+\begin{gathered}
+\scalemath{0.6}{
 \left(
  \begin{bmatrix}
            \sfrac{3}{8h_{1}^{2}} \\
@@ -960,14 +1121,14 @@ u_{k-3,l+1} & u_{k-2,l+1} & u_{k-1,l+1} & u_{k,l+1} & u_{k+1,l+1} & u_{k+2,l+1} 
 u_{k-3,l+2} & u_{k-2,l+2} & u_{k-1,l+2} & u_{k,l+2} & u_{k+1,l+2} & u_{k+2,l+2} & u_{k+3,l+2}\\
 u_{k-3,l+3} & u_{k-2,l+3} & u_{k-1,l+3} & u_{k,l+3} & u_{k+1,l+3} & u_{k+2,l+3} & u_{k+3,l+3}\\
 \end{bmatrix}}=\\ 
-\dfrac{2}{9} h_{1}h_{2} \left[f_{k-1,l}+2f_{k,l}+f_{k+1,l}\right] \left[f_{k,l-1}+2f_{k,l}+f_{k,l+1}\right] 
-\end{split}
+=\dfrac{2}{9} h_{1}h_{2} \left[f_{k-1,l}+2f_{k,l}+f_{k+1,l}\right] \left[f_{k,l-1}+2f_{k,l}+f_{k,l+1}\right] 
+\end{gathered}
 \end{equation}
-=$k=2, M-2$, ինչպես նաև $l=2, N-2$ ֊ի համար կազմվում է նույն հավասարումը, փոխելով միայն համապասխան գործակիցները և դրանց քանակը։
+$k=2, M-2$, ինչպես նաև $l=2, N-2$ ֊ի համար կազմվում է նույն հավասարումը, փոխելով միայն համապասխան գործակիցները և դրանց քանակը։
 \newpage
 \subsubsection*{Ծրագրային իրականացում}
 Ինչպես Պուասոնի հավասարման դեպքում, այնպես էլ այս դեպքում կօգտվենք նույն գործիքներից։
-Որպես օրինակ լուծենք հետևյալ հավասարումը տրված կոնկրոտ տիրույթով և $f$ ֆունկցիայով։
+Որպես օրինակ լուծենք հետևյալ հավասարումը տրված կոնկրետ տիրույթով և $f$ ֆունկցիայով։
 $$\begin{dcases}
 								\Delta^{2} u &=1 \\
 								u \Big |_{\partial D} &= 0\\
