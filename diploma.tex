@@ -21,6 +21,10 @@
 %This package allows to change figure insertion mode (H, etc.)
 \usepackage{float}
 
+%This package is used for big sum symbol
+\usepackage{relsize}
+
+
 %This command puts section number after section name
 %\usepackage[explicit]{titlesec}
 %\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\ \thesection}
@@ -149,7 +153,6 @@ p_{3}(x)=\sum_{i=0}^{N}\left[\varphi_{i}^{(0)}f(x_{i})+\varphi_{i}^{(1)}f^{'}(x_
 \end{aligned}
 \end{equation}
 
-
 \begin{equation}
 \begin{aligned}
 \varphi^{(1)}_{0}\left(x\right)&=\begin{cases}
@@ -168,7 +171,6 @@ p_{3}(x)=\sum_{i=0}^{N}\left[\varphi_{i}^{(0)}f(x_{i})+\varphi_{i}^{(1)}f^{'}(x_
 \end{cases}
 \end{aligned}
 \end{equation}
-
 
 \begin{figure}[h]
 \centering
@@ -298,6 +300,8 @@ $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overli
 \end{figure}
 \newpage
 \subsubsection*{2.1.Էրմիթյան ինտերպոլյացիա}
+Երկգծային ինտերպոլյացիա։
+
 Յուրաքանչյուր  $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$ էլեմենտի վրա $f$ ֆունկցիան մոտարկվում է հետևյալ քառակուսային ֆունկցիայով։
 \begin{equation}
 \scalemath{0.9}{p_{1}^{(i, j)}(x, y)=\alpha_{i,j}(x,y)f(x_{i},y_{j})+\beta_{i+1,j}(x,y)f(x_{i+1},y_{j})\scalemath{0.2}+\gamma_{i,j+1}(x,y) f(x_{i},y_{j+1})+\delta_{i+1, j+1}(x,y)f(x_{i+1},y_{j+1})}
@@ -313,7 +317,7 @@ $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overli
 \end{equation}
 Այսպիսով $\left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{M}\right]$ տիրույթում կտոր առ կտոր մոտարկող ֆունկցիան տրվում է հետևյալ բանաձևով.
 \begin{equation}
-p_{1}(x,y)=\sum_{i=0}^{m}\sum_{j=0}^{n}\varphi_{i,j}(x,y)f(x_{i},y_{j})
+p_{1}(x,y)=\sum_{i=0}^{M}\sum_{j=0}^{N}\varphi_{i,j}(x,y)f(x_{i},y_{j})
 \end{equation}
 որտեղ
 \begin{equation}
@@ -325,12 +329,87 @@ p_{1}(x,y)=\sum_{i=0}^{m}\sum_{j=0}^{n}\varphi_{i,j}(x,y)f(x_{i},y_{j})
 0, \text{մնացած դեպքերում}
 \end{dcases}
 \end{equation}
-Վերը ներկայացված ինտերպոլյացիան էրմիթյան ինտերպոլյացիայի մասնովոր դեպք է։
+
+\newpage 
+
+Երկխորանարդային ինտերպոլյացիա։
+
+Միավոր քառակուսու վրա կառուցենք մոտարկող ֆունկցիա, որը լրիվ խորանարդային բազմանդամ է ըստ երկու փոփոխականի.
+
+\begin{equation}
+			p_{3}^{(i, j)}(x, y)=\sum_{i, j=0}^{3}\alpha_{ij}x^{i}y^{j}
+\end{equation}
+
+որտեղ $\alpha_{ij}$ գործակիցները միարժեքորեն որոշվում են $f, \dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y}, \dfrac{\partial^{2} f}{\partial x \partial y}$ ֆունկցիաների արժեքներով գագաթների վրա։ Դրանք որոշելով $\left(5\right)$ գումարը կարող ենք ներկայացնել հետևյալ տեսքով.
+
+\begin{equation}
+			p_{3}^{(i, j)}(x, y)= \mathlarger{\sum_{0 \leq i, j, k, l \leq 1}} \dfrac{\partial^{k+l}}{\partial x^{k} \partial y^{l}}  \psi_{i}^{(k)}(x)\psi_{j}^{(l)}(y)
+\end{equation}
+որտեղ
+\begin{equation*}
+\begin{aligned}
+&\psi_{0}^{(0)}(t) = \left(1-t\right)^{2}\left(1+2t\right) \\
+&\psi_{0}^{(1)}(t) = \left(1-t\right)^{2}t \\
+&\psi_{1}^{(0)}(t) = t^{2}\left(3-2t\right) \\
+&\psi_{1}^{(1)}(t) = t^{2}\left(t-1\right) \\
+\end{aligned}
+\end{equation*}
+Այժմ օգտվելով $\left(5\right)$ բանաձևից և ունենալով տրված տիրույթի տրոհման $h_{1}$ և $h_{2}$ քայլերը, յուրաքանչյուր գագաթի համար կարող ենք կազմել բազիսային ֆունկցիա, և ամբող տիրույթում ինտերպոլացնող ֆունկցիան կունենա հետևյալ տեսքը.
+\begin{equation}
+\scalemath{0.70}{
+p_{3}(x)=\sum_{i=0}^{M}\sum_{j=0}^{N}\left[f_{ij}\varphi^{(0)}\left(\frac{x}{h_{1}}\right)\varphi^{(0)}\left(\frac{y}{h_{2}}\right)+\dfrac{\partial f_{ij}}{\partial x}\varphi^{(1)}\left(\frac{x}{h_{1}}\right)\varphi^{(0)}\left(\frac{y}{h_{2}}\right) +\dfrac{\partial f_{ij}}{\partial y}\varphi^{(0)}\left(\frac{x}{h_{1}}\right)\varphi^{(1)}\left(\frac{y}{h_{2}}\right) +\dfrac{\partial^{2} f_{ij}}{\partial x\partial y}\varphi^{(1)}\left(\frac{x}{h_{1}}\right)\varphi^{(1)}\left(\frac{y}{h_{2}}\right)\right]}
+\end{equation}
+
+որտեղ
+
+\begin{equation}
+\begin{aligned}
+&\varphi^{(0)}=\begin{dcases}
+\left(1+t\right)^{2}\left(1-2t\right), \; -1\leq x \leq 0 \\
+\left(1-t\right)^{2}\left(1+2t\right), \; 0\leq  x \leq  1 \\
+\end{dcases}
+\\
+&\varphi^{(1)}=\begin{dcases}
+\left(1+t\right)^{2}t, \; -1\leq  x \leq 0 \\
+\left(1-t\right)^{2}t, \; 0\leq  x \leq 1 \\
+\end{dcases}
+\end{aligned}
+\end{equation}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/two_dimensional_ermite_1}
+    %\captionsetup{labelformat=empty}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/two_dimensional_ermite_2}
+    %\captionsetup{labelformat=empty}
+  \end{minipage}
+\\
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/two_dimensional_ermite_3}
+    %\captionsetup{labelformat=empty}
+  \end{minipage}
+\hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/two_dimensional_ermite_4}
+    %\captionsetup{labelformat=empty}
+  \end{minipage}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.2 Երկխորանարդային ինտերպոլյացիայի բազիսային ֆունկցիաների գծապատկեր։}
+\end{figure}
+
+Վերը ներկայացված երկու ինտերպոլյացիաները էրմիթյան ինտերպոլյացիայի մասնովոր դեպքեր են։
 Ընդհանուր դեպքում ցանկացած $k$ բնական թվի և տրված ուղղանկյունաձև տրոհման յուրաքանչյուր էլեմենտի վրա կարելի է կառուցել $C^{\left(k-1, k-1\right)}$ ինտերպոլացնող ֆունկցիա, որը ըստ յուրաքանչյուր փոփոխականի $\left(2k-1\right)$֊րդ կարգի բազմանդամ է և բավարարում է հետևյալ պայմաններին.
 \begin{equation}
-\dfrac{\partial^{p+q}}{\partial x^{p} \partial x^{q}}f\left(x_{i}, y_{j}\right)=\dfrac{\partial^{p+q}}{\partial x^{p} \partial x^{q}}p_{2k-1}\left(x_{i}, y_{j}\right), \; p,q=\overline{0, k-1}, \;  i=\overline{0, M-1}, \; j=\overline{0, N-1}
+\dfrac{\partial^{p+q}}{\partial x^{p} \partial x^{q}}f\left(x_{i}, y_{j}\right)=\dfrac{\partial^{p+q}}{\partial x^{p} \partial x^{q}}p_{2k-1}\left(x_{i}, y_{j}\right), \; p,q=\overline{0, k-1}, \;  i=\overline{0, M}, \; j=\overline{0, N}
 \end{equation}
-\noindent Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային ֆունկցիաների կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք ինչպես նախորդ դեպքում, ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով երկու ուղղանկյուն եռանկյունների, ինչպես ցույց է տրված Նկար 2.2-ում։
+
+\noindent Գծային ինտերպոլյացիա։
+
+Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային ֆունկցիաների կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք ինչպես նախորդ դեպքում, ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով երկու ուղղանկյուն եռանկյունների, ինչպես ցույց է տրված Նկար 2.2-ում։
 Դիտարկենք հետևյալ ֆունկցիան.
 \begin{equation}
 $$\varphi \left(x,y\right)=\begin{cases}
@@ -348,40 +427,43 @@ $$\varphi \left(x,y\right)=\begin{cases}
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{images/two_var_courant_1}
     \captionsetup{labelformat=empty}
-    \caption{Նկար 2.2. Ուղղանկյուն էլեմենտի տրոհումը եռանկյունների։}
+    \caption{Նկար 2.3. Ուղղանկյուն էլեմենտի տրոհումը եռանկյունների։}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{images/two_var_courant_2}
     \captionsetup{labelformat=empty}
-    \caption{Նկար 2.3. Բազիսային ֆունկցիայի տեսքը}
+    \caption{Նկար 2.4. Բազիսային ֆունկցիայի տեսքը}
   \end{minipage}
 \end{figure}
 Պարզ է, որ այն $\left[-1, 1\right] \times \left[-1	, 1\right]$ տիրույթում $C^{(0, 0)}$ ֆունկցիա է: Այն հայտնի է որպես Կուրանտի բազիսային ֆունկցիա, ի պատիվ գերմանացի մաթեմատիկոս Ռիխարդ Կուրանտի։
 Այժմ յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ հանգուցային կետի համար կառուցենք բազիսային ֆունկցիա օգտվելով $\left(6\right)$-ից.
 \begin{equation}
-\varphi^{ij}(x,y)=\varphi \left(\dfrac{x-x_{i}}{h_{1}}, \dfrac{y-y_{j}}{h_{2}}\right)
+\varphi^{(ij)}(x,y)=\varphi \left(\dfrac{x-x_{i}}{h_{1}}, \dfrac{y-y_{j}}{h_{2}}\right)
 \end{equation}
 Յուրաքանչյուր կետի համար ունենալով բազիսային ֆունկցիա, $f$ ֆունկցիայի մոտարկման բանաձևը կտվրի հետևյալ կերպ.
 \begin{equation}
-p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{ij}(x,y)f(x_{i}, y_{j})
+p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{(ij)}(x,y)f(x_{i}, y_{j})
 \end{equation}
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{images/two_var_courant_3}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.4. Տիրույթի տրոհումը ուղղանկյուն եռանկյունների}
+\caption{Նկար 2.5. Տիրույթի տրոհումը ուղղանկյուն եռանկյունների}
 \end{figure}
 \newpage
 \subsubsection*{2.2. Խորանարդային մոտարկում}
+
+Երկխորանարդային սփլայն։
+
 Մեկ փոփոխականի մոտարկան խնդրը դիտարկելից քննարկեցինք Շներբերգի կողմից առաջարկված խորանարդային բազիսային սփլայնները։ Այս սփլայնները կարող ենք  օգտագործել երկչափ մոտարկման համար։
 Յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ հանգույցի վրա կառուցենք բազիսային ֆունկցիա կազմելով $B_{i}\left(\dfrac{x}{h_{1}}\right)$ և $B_{j}\left(\dfrac{x}{h_{2}}\right)$ ֆունկցիաների թենզորական  արտադրյալը։
 \begin{equation}
-\varphi^{ij}\left(x, y\right) = B_{i}\left(\dfrac{x}{h_{1}}\right) B_{j}\left(\dfrac{x}{h_{2}}\right)$$
+\varphi^{(ij)}\left(x, y\right) = B_{i}\left(\dfrac{x}{h_{1}}\right) B_{j}\left(\dfrac{x}{h_{2}}\right)$$
 \end{equation}
 \noindent Տրված $\left\{\left(x_{ij}, y_{ij}, f_{ij}\right)\right\}$ ինտերպոլյացիոն տվյալնեով կառուցենք սփլայն.
 \begin{equation}
-F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{ji}\left(x, y\right)$$
+F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{(ij)}\left(x, y\right)$$
 \end{equation}
 Հաշվի առնելով ինտերպոլյացիոն պայմանները կստանանք հետևյալ հավասարումերի համակարգը.
 \begin{equation}
@@ -402,13 +484,13 @@ F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{ji}\left(x, y\right)$$
 \centering
 \includegraphics[width=1.0\textwidth]{images/two_dimensional_basis}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.5. $\varphi^{ij}$ բազիսային ֆունկցիաների պատկեր։}
+\caption{Նկար 2.6. $\varphi^{ij}$ բազիսային ֆունկցիաների պատկեր։}
 \end{figure}
 \begin{figure}[h!]
 \centering
 \includegraphics[width=1.0\textwidth]{images/two_dimensional_basis_1}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.6 Տիրույթի եզրի վրա գտնվող բազիսային ֆունկցիա։}
+\caption{Նկար 2.7 Տիրույթի եզրի վրա գտնվող բազիսային ֆունկցիա։}
 \end{figure}
 \newpage
 \subsection*{Բազմանկյուն տիրույթ}
@@ -418,7 +500,7 @@ F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{ji}\left(x, y\right)$$
 \centering
 \includegraphics[width=0.4\textwidth]{images/two_var_triangular}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.7. Տիրույթի եռանկյունաձև տրոհման օրինակ։}
+\caption{Նկար 2.8. Տիրույթի եռանկյունաձև տրոհման օրինակ։}
 \end{figure}
 \subsubsection*{2.2 Լագրանժի ինտերպոլյացիա}
 Յուրաքանչուր եռանկյուն էլեմենտի վրա դիտարկենք $m$֊րդ կարգի լրիվ բազմանդամ
@@ -506,8 +588,7 @@ To be continued
 \subsection*{Սահմանումներ}
 $f : \Omega \mapsto \Theta, \; \Omega \subset \mathbb{R}^{n}, \; \Theta \subset \mathbb{R}$ ֆունկցիայի $\epsilon$ շրջակայք ասելով կհասկանանք այն բոլոր $g$ ֆունկցիաների բազմությունը, որոնց համար տեղի ունի
 \setcounter{equation}{0}
-$$\left|f-g\right| < \epsilon$$
-պայմանը։
+$$\left|f-g\right| < \epsilon$$պայմանը։
 \subsection*{Խնդրի դրվածքը}
 \hspace{\parindent}Վարիացիոն մեթոդի սկզբունքն այն է, որ դիտարկվող ֆունկցիայի ինտեգրալը տրված տիրույթում ընդունում է մեծագույն (փոքրագույն) արժեք տվյալ համակարգի իրական վիճակի համար, համեմատած բոլոր հնարավոր վիճակների բազմության հետ։  Ենթաինտեգրալային ֆունկցիան կախված է տրված կոորդինատներից, ֆունկցիայի արժեքից, նրա ածանցյալներից, իսկ ինտեգրումը կատարվում է տրված կոորդինատական համակարգում, որը կարող է ներառել նաև ժամանակը։ Մինիմումի որոշման խնդիրը հաճախ բերվում է մի քանի դիֆերենցիալ հավասարումների, համապատասխան եզրային պայմաններով։  Այն իրական փոփոխականի ֆունկցիայի էքստրեմումի որոնման խնդրի ընդհանրացումն է, որտեղ տրված ֆունկցիայի համար կոմպակտ տիրույթում անհրաժեշտ է գտնել այպիսի կետեր, որոնք մինիմում (մաքսիմում) են իրենց որևէ շրջակայքում։
 Վարիացիոն մեթոդում ֆունկցիոնալը ինտեգրալ է, որը կախված է ֆուկցիայից, որի որոշման տիրույթը թույլատրելի ֆունկցիաների  տարածությունն է։
@@ -532,6 +613,7 @@ I\left(f\right)=\iint \limits_{\Omega} F\left(x, y, f, f_{x}, f_{y}\right)dxdy
 \subsection*{Ստացիոնար խնդիրներ}
 Դիֆերենցիալ հավասարումը, որը կապված է վարիացիոն խնդրի հետ, կոչվում է Էյլեր֊Լագրանժի հավասարում։ Այս միայն անհրաժեշտ պայման է, որին պետք է բավարարի ֆունկցիան, որը մինիմիզացնում (մաքսիմիզացնում) է ֆունկցիոնալը։
 
+\newpage
 Ստորև դիտարկվում են խնդիրների մի քանի տարբերակներ.
 \begin{enumerate}
 \item Մեկ փոփոխականի ֆունկցիա.
@@ -755,7 +837,7 @@ $$u_{0, l} = u_{N, l} = u_{k, 0} = u_{k, M} = 0$$
 \caption{Նկար 4.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
 \end{figure}
 \newpage
-\subsection*{4.2 Պուասոնի հավասարման լուծում շրջանում}
+\subsection*{4.2 Պուասոնի հավասարման լուծում եռանկյունացվող}
 
 Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
 \begin{equation}
@@ -851,7 +933,7 @@ u_{nk} = 0, \text{եթե } u_{nk}\text{֊ն տիրույթի եզրի գագաթ
 \centering
 \includegraphics[width=0.7\textwidth]{images/assembling_equation}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.2. Գլխավոր համակարգի համախմբում։}
+\caption{Նկար 4.3. Գլխավոր համակարգի համախմբում։}
 \end{figure}
 \newpage
 \subsubsection*{Ծրագրային իրականացում}
@@ -862,28 +944,27 @@ u_{nk} = 0, \text{եթե } u_{nk}\text{֊ն տիրույթի եզրի գագաթ
 
 Օրինակ
 
+$$
+  \begin{cases}
+        \Delta u =2 \\
+        u \Big |_{\partial D} = 0
+  \end{cases}
+$$
 
-				$$
-					\begin{cases}
-								\Delta u =2 \\
-								u \Big |_{\partial D} = 0
-					\end{cases}
-				$$
-
-				$$ D = \left\{\left(x,y\right): x^{2}+y^{2} \leq 1\right\}$$
+$$ D = \left\{\left(x,y\right): x^{2}+y^{2} \leq 1\right\}$$
 Տիրույթի եռանկյունացումը
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{images/circle_mesh}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
+\caption{Նկար 4.4. Շրջանաձև տիրույթի եռանկյունացման երկրաչափական ներկայացում։}
 \end{figure}
 Խնդրի համար ստացված լուծումը.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{images/poisson_equation_on_unit_circle_solution}
+\includegraphics[width=0.8\textwidth]{images/poisson_equation_on_unit_circle_solution}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
+\caption{Նկար 4.4. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
 \end{figure}
 \newpage
 \subsection*{4.3 Բիհարմոնիկ հավասարման լուծում ուղղանկյուն տիրույթում}
@@ -1143,5 +1224,4 @@ $$\begin{dcases}
 \captionsetup{labelformat=empty}
 \caption{Նկար 4.3. Բիհարմոնիկ հավասարման լուծման գրաֆիկական ներկայացում։}
 \end{figure}
-
 \end{document}
