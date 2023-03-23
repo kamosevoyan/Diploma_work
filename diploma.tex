@@ -291,7 +291,7 @@ F(x) = \sum_{i=0}^{N} \alpha_{i}B_{i}\left(\frac{x}{h}\right)$$
 Այժմ դիտարկենք երկու փոփոխականի ֆունկցիայի մոտարկման խնդիրը: Ի տարբերություն մեկ փոփոխականի ֆունկցիայի ինտերպոլյացիայի, այս դեպքում տիրույթի տրոհումը կարելի է իրականացնել կամայական ձևով։
 
 \vspace{1.5mm}
-\noindent \textbf{Սահմանումներ.}
+\noindent \textbf{Սահմանում.}
 
 \noindent Կասենք, որ տրված $f\left(x, y\right)$ ֆունկցիան  $C^{\left(p, q\right)}$ կարգի ֆունկցիա է, եթե 
 \begin{equation*}
@@ -483,15 +483,15 @@ F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{(ij)}\left(x, y\right)$$
 Հաշվի առնելով ինտերպոլյացիոն պայմանները կստանանք հետևյալ հավասարումերի համակարգը.
 \begin{equation}
 \begin{dcases}
-\alpha_{00}+\frac{5}{16}(\alpha_{01} + \alpha_{10}) +\frac{1}{16}\alpha_{11} &= f_{00}\\
-\alpha_{M0}+\frac{5}{16}(\alpha_{M1} + \alpha_{M-1,0}) +\frac{1}{16}\alpha_{M-1, 1} &= f_{M0}\\
-\alpha_{0N}+\frac{5}{16}(\alpha_{1N} + \alpha_{0,N-1}) +\frac{1}{16}\alpha_{N-1, 1} &= f_{0N}\\
-\alpha_{MN}+\frac{5}{16}(\alpha_{M-1,N} + \alpha_{M,N-1}) +\frac{1}{16}\alpha_{M-1,N-1} &= f_{MN}\\
-\frac{5}{4}\alpha_{i,1}+\frac{5}{16}(\alpha_{i-1,0} + \alpha_{i+1,0}) +\frac{1}{4}\alpha_{i,1} + \frac{1}{16}(\alpha_{i-1,1}+\alpha_{i+1,1}) &= f_{i0}\\
-\frac{5}{4}\alpha_{i,N-1}+\frac{5}{16}(\alpha_{i-1,N} + \alpha_{i+1,N}) +\frac{1}{4}\alpha_{i,N-1} + \frac{1}{16}(\alpha_{i-1,N-1}+\alpha_{i+1,N-1}) &= f_{iN}\\
-\frac{5}{4}\alpha_{1,j}+\frac{5}{16}(\alpha_{0,j-1} + \alpha_{0,j+1}) +\frac{1}{4}\alpha_{1,j} + \frac{1}{16}(\alpha_{1,j-1}+\alpha_{1,j+1}) &= f_{0j}\\
-\frac{5}{4}\alpha_{M-1,j}+\frac{5}{16}(\alpha_{M,j-1} + \alpha_{M,j+1}) +\frac{1}{4}\alpha_{M-1,j} + \frac{1}{16}(\alpha_{M-1,j-1}+\alpha_{M-1,j+1})& = f_{Mj}\\
-\alpha_{ij} + \frac{1}{4}(\alpha_{i,j-1} + \alpha_{i,j+1} + \alpha_{i-1,j} + \alpha_{i+1,j}) + \frac{1}{16}(\alpha_{i-1,j-1} + \alpha_{i-1,j+1} + \alpha_{i+1,j-1} +\alpha_{i+1,j+1}) &= f_{ij}
+\alpha_{00}+\frac{5}{16}(\alpha_{01} + \alpha_{10}) +\frac{1}{16}\alpha_{11} = f_{00}\\
+\alpha_{M0}+\frac{5}{16}(\alpha_{M1} + \alpha_{M-1,0}) +\frac{1}{16}\alpha_{M-1, 1} = f_{M0}\\
+\alpha_{0N}+\frac{5}{16}(\alpha_{1N} + \alpha_{0,N-1}) +\frac{1}{16}\alpha_{N-1, 1} = f_{0N}\\
+\alpha_{MN}+\frac{5}{16}(\alpha_{M-1,N} + \alpha_{M,N-1}) +\frac{1}{16}\alpha_{M-1,N-1} = f_{MN}\\
+\frac{5}{4}\alpha_{i,1}+\frac{5}{16}(\alpha_{i-1,0} + \alpha_{i+1,0}) +\frac{1}{4}\alpha_{i,1} + \frac{1}{16}(\alpha_{i-1,1}+\alpha_{i+1,1}) = f_{i0}\\
+\frac{5}{4}\alpha_{i,N-1}+\frac{5}{16}(\alpha_{i-1,N} + \alpha_{i+1,N}) +\frac{1}{4}\alpha_{i,N-1} + \frac{1}{16}(\alpha_{i-1,N-1}+\alpha_{i+1,N-1}) = f_{iN}\\
+\frac{5}{4}\alpha_{1,j}+\frac{5}{16}(\alpha_{0,j-1} + \alpha_{0,j+1}) +\frac{1}{4}\alpha_{1,j} + \frac{1}{16}(\alpha_{1,j-1}+\alpha_{1,j+1}) = f_{0j}\\
+\frac{5}{4}\alpha_{M-1,j}+\frac{5}{16}(\alpha_{M,j-1} + \alpha_{M,j+1}) +\frac{1}{4}\alpha_{M-1,j} + \frac{1}{16}(\alpha_{M-1,j-1}+\alpha_{M-1,j+1}) = f_{Mj}\\
+\alpha_{ij} + \frac{1}{4}(\alpha_{i,j-1} + \alpha_{i,j+1} + \alpha_{i-1,j} + \alpha_{i+1,j}) + \frac{1}{16}(\alpha_{i-1,j-1} + \alpha_{i-1,j+1} + \alpha_{i+1,j-1} +\alpha_{i+1,j+1}) = f_{ij}
 \end{dcases}
 \end{equation}
 \newpage
@@ -837,7 +837,7 @@ $$u_{0, l} = u_{N, l} = u_{k, 0} = u_{k, M} = 0$$
 \caption{Նկար 4.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
 \end{figure}
 \newpage
-\subsection*{4.2 Պուասոնի հավասարման լուծում եռանկյունացվող}
+\subsection*{4.2 Պուասոնի հավասարման լուծում եռանկյունացվող տիրույթի համար}
 
 Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
 \begin{equation}
