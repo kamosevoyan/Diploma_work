@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2023.2.15)  17 APR 2023 19:51
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2023.2.15)  17 APR 2023 20:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -934,68 +934,68 @@ Underfull \hbox (badness 2698) in paragraph at lines 605--606
  []
 
 [24] [25]
-Underfull \hbox (badness 1377) in paragraph at lines 616--620
+Underfull \hbox (badness 1377) in paragraph at lines 622--626
 \TU/GHEAGrapalat(0)/m/n/12 իրական վիճակի համար, համեմատած բոլոր հնարավոր վիճակն
 երի բազմության
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--620
+Underfull \hbox (badness 10000) in paragraph at lines 622--626
 \TU/GHEAGrapalat(0)/m/n/12 հետ։ Ենթաինտեգրալային ֆունկցիան կախված է տրված կոորդ
 ինատներից,
  []
 
 
-Underfull \hbox (badness 3713) in paragraph at lines 616--620
+Underfull \hbox (badness 3713) in paragraph at lines 622--626
 \TU/GHEAGrapalat(0)/m/n/12 որոշման խնդիրը հաճախ բերվում է մի քանի դիֆերենցիալ հ
 ավասարումների,
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 616--620
+Underfull \hbox (badness 2359) in paragraph at lines 622--626
 \TU/GHEAGrapalat(0)/m/n/12 են իրենց որևէ շրջակայքում։ Վարիացիոն մեթոդում ֆունկց
 իոնալը ինտեգրալ է,
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 616--620
+Underfull \hbox (badness 2452) in paragraph at lines 622--626
 \TU/GHEAGrapalat(0)/m/n/12 որը կախված է ֆուկցիայից, որի որոշման տիրույթը թույլա
 տրելի ֆունկցիաների
  []
 
 [26]
-Underfull \hbox (badness 4647) in paragraph at lines 634--636
+Underfull \hbox (badness 4647) in paragraph at lines 640--642
 \TU/GHEAGrapalat(0)/m/n/12 է Էյլեր֊Լագրանժի հավասարման գոյության համար։ Բայց վա
 րիացիոն մեթոդը
  []
 
 [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 677--678
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
 \TU/GHEAGrapalat(0)/m/n/12 Մինիմիմում գոյության անհրաժեշտ պայման է հետևյալ դիֆե
 րենցիալ
  []
 
 [29]
-Underfull \hbox (badness 1838) in paragraph at lines 696--697
+Underfull \hbox (badness 1838) in paragraph at lines 701--702
 \TU/GHEAGrapalat(0)/m/n/12 Այսպիսի վարիացիոն խնդիրներում անհրաշետ է մինիմիզացնե
 լ (մաքսիմիզացնել)
  []
 
 
-Underfull \hbox (badness 4205) in paragraph at lines 696--697
+Underfull \hbox (badness 4205) in paragraph at lines 701--702
 \TU/GHEAGrapalat(0)/m/n/12 տրված ֆունկցիոնալը, պայմանով, որ մեկ այլ ֆունկցիոնալ
  ընդունում է որևէ
  []
 
 [30]
-Underfull \hbox (badness 1348) in paragraph at lines 719--722
+Underfull \hbox (badness 1348) in paragraph at lines 724--727
 \TU/GHEAGrapalat(0)/m/n/12 նշանակենք այն $\OML/cmm/m/it/12 ^^K[]$ \TU/GHEAGrapa
 lat(0)/m/n/12 ով։ Այդ դեպքում գոյություն ունի $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/
 12 f[]\OMS/cmsy/m/n/12 g[]$ \TU/GHEAGrapalat(0)/m/n/12 հաջորդականություն
  []
 
 [31] [32] [33]
-Underfull \hbox (badness 1168) in paragraph at lines 796--797
+Underfull \hbox (badness 1168) in paragraph at lines 801--802
 []\TU/GHEAGrapalat(0)/m/n/12 Քանի որ $\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML
 /cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$ \TU/GHEAGrapalat(0)/m/n/12 և $\OML/cmm/m/it
 /12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$ \TU/GHEAGrapala
@@ -1003,7 +1003,7 @@ t(0)/m/n/12 ֆունկցիաները ոչ զրոյական են $[] \OMS/cmsy/m/
  []
 
 [34]
-Overfull \hbox (2.54005pt too wide) detected at line 807
+Overfull \hbox (2.54005pt too wide) detected at line 812
  $[] \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; 
 y\OT1/cmr/m/n/12 )[[] ]\OML/cmm/m/it/12 dxdy \OT1/cmr/m/n/12 = 2 [] [] \OML/cmm
 /m/it/12 dxdy \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2\OML/cmm/m
@@ -1011,7 +1011,7 @@ y\OT1/cmr/m/n/12 )[[] ]\OML/cmm/m/it/12 dxdy \OT1/cmr/m/n/12 = 2 [] [] \OML/cmm
  []
 
 
-Overfull \hbox (2.54005pt too wide) detected at line 811
+Overfull \hbox (2.54005pt too wide) detected at line 816
  $[] \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; 
 y\OT1/cmr/m/n/12 )[[] ]\OML/cmm/m/it/12 dxdy \OT1/cmr/m/n/12 = 2 [] [] \OML/cmm
 /m/it/12 dxdy \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2\OML/cmm/m
@@ -1019,13 +1019,13 @@ y\OT1/cmr/m/n/12 )[[] ]\OML/cmm/m/it/12 dxdy \OT1/cmr/m/n/12 = 2 [] [] \OML/cmm
  []
 
 [35]
-Underfull \hbox (badness 1558) in paragraph at lines 828--829
+Underfull \hbox (badness 1558) in paragraph at lines 833--834
 \TU/GHEAGrapalat(0)/m/n/12 զանգվածների հետ մաթեմատիկական գործողություններ իրակա
 նացնալու համար։
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 830--831
+Underfull \hbox (badness 1769) in paragraph at lines 835--836
 \TU/GHEAGrapalat(0)/m/n/12 կանչվում այն լուծող ֆունկցիան։ Այսնուհետև բազիսային 
 ֆունկցիաների միջոցով
  []
@@ -1033,7 +1033,7 @@ Underfull \hbox (badness 1769) in paragraph at lines 830--831
 File: images/poisson_solution.png Graphic file (type bmp)
 <images/poisson_solution.png>
 [36]
-Underfull \hbox (badness 5331) in paragraph at lines 851--851
+Underfull \hbox (badness 5331) in paragraph at lines 856--856
 []\TU/GHEAGrapalat(0)/b/n/14.4 4.2 Պուասոնի հավասարման լուծում եռանկյունացվող տ
 իրույթի
  []
@@ -1041,32 +1041,30 @@ Underfull \hbox (badness 5331) in paragraph at lines 851--851
 File: images/global_and_local_numbering.png Graphic file (type bmp)
 <images/global_and_local_numbering.png>
 [37]
-Underfull \hbox (badness 1527) in paragraph at lines 877--880
+Underfull \hbox (badness 1527) in paragraph at lines 882--885
 \TU/GHEAGrapalat(0)/m/n/12 այդ գագաթի համապատասխան բազիսային ֆունկցիան է։ Ուստի
  ինտեգրալային
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 886--888
+Underfull \hbox (badness 1168) in paragraph at lines 891--893
 \TU/GHEAGrapalat(0)/m/n/12 Դիտարկենք $[]$ ինտեգրալի ենթաինտեգրալային արտահայտու
 թյան ձախ մասի
  []
 
 [38]
-File: images/assembling_equation.png Graphic file (type bmp)
-<images/assembling_equation.png>
- [39] [40]
-Underfull \hbox (badness 1052) in paragraph at lines 951--952
+Underfull \hbox (badness 1052) in paragraph at lines 949--950
 \TU/GHEAGrapalat(0)/m/n/12 Ինչպես ուղղանկյուն տիրույթի դեպքում, այնպես էլ այս դ
 եպքում կօգտվենք նույն
  []
 
+[39]
 File: images/circle_mesh.png Graphic file (type bmp)
 <images/circle_mesh.png>
 File: images/poisson_equation_on_unit_circle_solution.png Graphic file (type bm
 p)
 <images/poisson_equation_on_unit_circle_solution.png>
-[41] [42] [43]
+ [40] [41] [42]
 File: images/two_dimensional_basis_intersection.png Graphic file (type bmp)
 <images/two_dimensional_basis_intersection.png>
 File: images/two_dimensional_basis_intersection_edge_1.png Graphic file (type b
@@ -1075,42 +1073,42 @@ mp)
 File: images/two_dimensional_basis_intersection_edge_2.png Graphic file (type b
 mp)
 <images/two_dimensional_basis_intersection_edge_2.png>
- [44] [45] [46] [47] [48]
-LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 1213.
+ [43] [44] [45] [46] [47]
+LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 1211.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.2> not available
-(Font)              size <5> substituted on input line 1213.
+(Font)              size <5> substituted on input line 1211.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 1213.
+(Font)              size <5> substituted on input line 1211.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 1213.
+(Font)              size <5> substituted on input line 1211.
 
-[49]
-Underfull \hbox (badness 3260) in paragraph at lines 1220--1222
+[48]
+Underfull \hbox (badness 3260) in paragraph at lines 1218--1220
 \TU/GHEAGrapalat(0)/m/n/12 Ինչպես Պուասոնի հավասարման դեպքում, այնպես էլ այս դե
 պքում կօգտվենք
  []
 
 File: images/biharmonic_equation_solution.png Graphic file (type bmp)
 <images/biharmonic_equation_solution.png>
-[50] (diploma.aux)
+[49] (diploma.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.90001pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 10351 strings out of 411566
- 238434 string characters out of 2820793
+ 10333 strings out of 411566
+ 237818 string characters out of 2820793
  1883979 words of memory out of 3000000
- 30315 multiletter control sequences out of 15000+600000
+ 30298 multiletter control sequences out of 15000+600000
  525578 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  70i,28n,76p,781b,529s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on diploma.pdf (47 pages).
+Output written on diploma.pdf (46 pages).

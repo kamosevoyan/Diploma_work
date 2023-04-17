@@ -64,7 +64,7 @@ def run_approximation_gui():
     root.update()
     root.withdraw()
 
-    top = tk.Toplevel(root)
+    top = tk.Toplevel(root, background="#00FF00", highlightbackground="#00FF00")
     top.update()
     
     x = (root.winfo_width()) // 2  - top.winfo_width()
@@ -81,6 +81,7 @@ def run_approximation_gui():
                                      minvalue=0, 
                                      maxvalue=35,
                                      initialvalue=5,
+                                     bg="black"
                                      )
     run_approximation(degree)
 
