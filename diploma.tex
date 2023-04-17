@@ -300,6 +300,7 @@ F(x) = \sum_{i=0}^{N} \alpha_{i}B_{i}\left(\frac{x}{h}\right)$$
 ֆունկցիաները անընդհատ են։
 
 Կախված տրված տիրույթից և դրա տրոհման ձևից, առանձնացվում են հետևյալ մոտակման ձևերը.
+\newpage
 \subsection*{2.1 Ուղղանկյուն տիրույթ}
 Դիցուք տրված են $f:\Omega\mapsto \Theta$,  $\Theta \subset \mathbb{R}$, $\Omega \subset \mathbb{R}^{2} = \left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{N}\right]$  ուղղանկյուն տիրույթը, որը տրոհված է $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$, ուղղանկյուն էլեմենտների:
 $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overline{0, N-1}$$
@@ -341,7 +342,61 @@ p_{1}(x,y)=\sum_{i=0}^{M}\sum_{j=0}^{N} f_{ij} \varphi^{(ij)}(x,y)
 \end{dcases}
 \end{equation}
 Պարզ է, որ ստացված բազիսային ֆունկցիան $C^{(0, 0)}$ ֆունկցիա է։
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/bilinear_basis_function}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.5. Երկգծային ինտերպոլյացիայի բազիսային ֆունկցիայի գրաֆիկ։}
+\end{figure}
+
 \newpage 
+
+
+\noindent Կուրանտի գծային ֆունկցիա։
+
+Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային ֆունկցիաների կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք ինչպես նախորդ դեպքում, ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով երկու ուղղանկյուն եռանկյունների, ինչպես ցույց է տրված Նկար 2.2-ում։
+Դիտարկենք հետևյալ ֆունկցիան.
+\begin{equation}
+$$\varphi \left(x,y\right)=\begin{cases}
+1-y, &(x,y) \in S_{1} \\
+1+x-y, &(x,y) \in S_{2} \\
+1+x, &(x,y) \in S_{3} \\
+1+y, &(x,y) \in S_{4} \\
+1-x+y, &(x,y) \in S_{5} \\
+1-x, &(x,y) \in S_{6}\\
+0, \text{մնացած դեպքերում}\\
+\end{cases}
+\end{equation}
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/two_var_courant_1}
+    \captionsetup{labelformat=empty}
+    \caption{Նկար 2.3. Ուղղանկյուն էլեմենտի տրոհումը եռանկյունների։}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/two_var_courant_2}
+    \captionsetup{labelformat=empty}
+    \caption{Նկար 2.4. Բազիսային ֆունկցիայի տեսքը}
+  \end{minipage}
+\end{figure}
+Պարզ է, որ այն $\left[-1, 1\right] \times \left[-1	, 1\right]$ տիրույթում $C^{(0, 0)}$ ֆունկցիա է: Այն հայտնի է որպես Կուրանտի բազիսային ֆունկցիա, ի պատիվ գերմանացի մաթեմատիկոս Ռիխարդ Կուրանտի։
+Այժմ յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ հանգուցային կետի համար կառուցենք բազիսային ֆունկցիա օգտվելով $\left(6\right)$-ից.
+\begin{equation}
+\varphi^{(ij)}(x,y)=\varphi \left(\dfrac{x-x_{i}}{h_{1}}, \dfrac{y-y_{j}}{h_{2}}\right)
+\end{equation}
+Յուրաքանչյուր կետի համար ունենալով բազիսային ֆունկցիա, $f$ ֆունկցիայի մոտարկման բանաձևը կտվրի հետևյալ կերպ.
+\begin{equation}
+p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{(ij)}(x,y)f(x_{i}, y_{j})
+\end{equation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/two_var_courant_3}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.5. Տիրույթի տրոհումը ուղղանկյուն եռանկյունների}
+\end{figure}
 
 Երկխորանարդային ինտերպոլյացիա։
 
@@ -419,50 +474,6 @@ p_{3}(x)=\sum_{i=0}^{M}\sum_{j=0}^{N}\left[f_{ij}\alpha^{(ij)}\left(x,y\right)+\
 \dfrac{\partial^{p+q}}{\partial x^{p} \partial y^{q}}f\left(x_{i}, y_{j}\right)=\dfrac{\partial^{p+q}}{\partial x^{p} \partial y^{q}}p_{2k-1}\left(x_{i}, y_{j}\right), \; p,q=\overline{0, k-1}, \;  i=\overline{0, M}, \; j=\overline{0, N}
 \end{equation}
 
-\noindent Գծային ինտերպոլյացիա։
-
-Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային ֆունկցիաների կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք ինչպես նախորդ դեպքում, ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով երկու ուղղանկյուն եռանկյունների, ինչպես ցույց է տրված Նկար 2.2-ում։
-Դիտարկենք հետևյալ ֆունկցիան.
-\begin{equation}
-$$\varphi \left(x,y\right)=\begin{cases}
-1-y, &(x,y) \in S_{1} \\
-1+x-y, &(x,y) \in S_{2} \\
-1+x, &(x,y) \in S_{3} \\
-1+y, &(x,y) \in S_{4} \\
-1-x+y, &(x,y) \in S_{5} \\
-1-x, &(x,y) \in S_{6}\\
-0, \text{մնացած դեպքերում}\\
-\end{cases}
-\end{equation}
-\begin{figure}[H]
-  \centering
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{images/two_var_courant_1}
-    \captionsetup{labelformat=empty}
-    \caption{Նկար 2.3. Ուղղանկյուն էլեմենտի տրոհումը եռանկյունների։}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{images/two_var_courant_2}
-    \captionsetup{labelformat=empty}
-    \caption{Նկար 2.4. Բազիսային ֆունկցիայի տեսքը}
-  \end{minipage}
-\end{figure}
-Պարզ է, որ այն $\left[-1, 1\right] \times \left[-1	, 1\right]$ տիրույթում $C^{(0, 0)}$ ֆունկցիա է: Այն հայտնի է որպես Կուրանտի բազիսային ֆունկցիա, ի պատիվ գերմանացի մաթեմատիկոս Ռիխարդ Կուրանտի։
-Այժմ յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ հանգուցային կետի համար կառուցենք բազիսային ֆունկցիա օգտվելով $\left(6\right)$-ից.
-\begin{equation}
-\varphi^{(ij)}(x,y)=\varphi \left(\dfrac{x-x_{i}}{h_{1}}, \dfrac{y-y_{j}}{h_{2}}\right)
-\end{equation}
-Յուրաքանչյուր կետի համար ունենալով բազիսային ֆունկցիա, $f$ ֆունկցիայի մոտարկման բանաձևը կտվրի հետևյալ կերպ.
-\begin{equation}
-p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{(ij)}(x,y)f(x_{i}, y_{j})
-\end{equation}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.6\textwidth]{images/two_var_courant_3}
-\captionsetup{labelformat=empty}
-\caption{Նկար 2.5. Տիրույթի տրոհումը ուղղանկյուն եռանկյունների}
-\end{figure}
 \newpage
 \subsubsection*{2.2. Խորանարդային մոտարկում}
 
@@ -622,7 +633,7 @@ I\left(f\right)=\iint \limits_{\Omega} F\left(x, y, f, f_{x}, f_{y}\right)dxdy
 \dfrac{\partial^{2}f}{\partial x^{2}} + \dfrac{\partial^{2}f}{\partial y^{2}} = 0
 \end{equation}
 Այժմ պարզ է, որ երկրորդ կարգի ածանցյալների անընդհատությունը անհրաժեշտ է Էյլեր֊Լագրանժի հավասարման գոյության համար։ Բայց վարիացիոն մեթոդը պահանջում է միայն $f$ ի անընդհատություն և առաջին կարգի մասնակի ածանցյալների կտոր առ կտոր անընդհատություն։
-\subsection*{Ստացիոնար խնդիրներ}
+
 Դիֆերենցիալ հավասարումը, որը կապված է վարիացիոն խնդրի հետ, կոչվում է Էյլեր֊Լագրանժի հավասարում։ Այս միայն անհրաժեշտ պայման է, որին պետք է բավարարի ֆունկցիան, որը մինիմիզացնում (մաքսիմիզացնում) է ֆունկցիոնալը։
 
 \newpage
@@ -704,7 +715,7 @@ $$\dfrac{\partial \left(F+\lambda G\right)}{\partial f} - \dfrac{d}{dx} \dfrac{\
 Դիտարկենք որևէ վարիացիոն մեթոդով տրված մինիմիզացիայի խնդիր.
 		$$I\left(f\right) \longrightarrow min, \; f \in \Gamma$$
 որտեղ $I$ ֆունկցիոնալը տրված տիրույթում որոշյալ ինտեգրալ է։
-Մոտավոր լուծում կարելի է ստանալ, եթե ֆունկցիոնալի արժեքների բազմությունը սահմանափակենք որևէ վերջավոր չափանի ենթատարածությունով, որն ունի $\{\varphi_{j}\}_{j=1}^{N}$ բազիս։, 
+Մոտավոր լուծում կարելի է ստանալ, եթե ֆունկցիոնալի արժեքների բազմությունը սահմանափակենք որևէ վերջավոր չափանի ենթատարածությունով, որն ունի $\{\varphi_{j}\}_{j=1}^{N}$ բազիս։
 			  $$\Gamma_{N} \in \Gamma $$
 Ենթադրենք, որ $I$ ֆունկցիոնալի արժեքների տիրույթը ունի ճշգրիտ ստորին եզր, նշանակենք այն $\alpha_{0}$ ով։
 Այդ դեպքում գոյություն ունի $\{f_{j}\}_{j=1}^{\infty}$ հաջորդականություն այնպիսին, որ
