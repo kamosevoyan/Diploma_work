@@ -18,6 +18,10 @@
 \usepackage{chngcntr}
 \usepackage{caption}
 
+%This package allows to modify enumerations
+\usepackage{enumitem}
+
+
 %This package allows to change figure insertion mode (H, etc.)
 \usepackage{float}
 
@@ -53,7 +57,7 @@
 {geometry}
 
 %This command sets the font
-\setmainfont{GHEA Grapalat}
+\setmainfont{Sylfaen}
 
 %These commands change line spacing
 %\onehalfspacing
@@ -63,7 +67,7 @@
 \author{Կամո Սևոյան}
 
 %This command allows to change page counter.
-\setcounter{page}{4}
+\setcounter{page}{5}
 
 \begin{document}
 
@@ -73,9 +77,10 @@
 %This command builds content automatically
 %	\tableofcontents
 
-\section*{\centering Գլուխ 1\\ Միաչափ ինտերպոլյացիա}
-\subsection*{1.1 Էրմիթյան ինտերպոլյացիա}
+\section*{\centering {\addfontfeatures{FakeBold=2.0}Գլուխ 1\\ Միաչափ մոտարկում}}
+\subsection*{{\addfontfeatures{FakeBold=2.0}1.1 Էրմիթյան ինտերպոլյացիա}}
 \hspace{\parindent}Նախքան անդրադառնալը բազմաչամ ինտերպոլյացիայի խնդրին, քննարկենք մեկ փոփոխականի ֆունկցիայի ինտերպոլյացիայի որոշ դետալներ։
+
 
 Ենթադրենք տրված են $f:\Omega \mapsto \Theta, \Omega, \Theta \subset \mathbb{R}$ ֆունկցիան,  $\left\{x_{i}\right\}_{i=0}^{N}$ կետերը և դրանց համապատասխան $\left\{y_{i}=f\left(x_{i}\right)\right\}_{i=0}^{N}$ արժեքները։ Յուրաքանչյուր $\left[x_{i}, x_{i+1}\right]$ հատվածում  ինտերպոլացնող ֆունկցիան իրենից ներկայացնում է գխային ֆունկցիա, որը կարելի է ներկայացնել հետևյալ տեսքով.
 \begin{equation}
@@ -179,13 +184,13 @@ p_{3}(x)=\sum_{i=0}^{N}\left[\varphi_{i}^{(0)}f(x_{i})+\varphi_{i}^{(1)}f^{'}(x_
 \caption{Նկար 1.2. երկրորդ կարգի էրմիթյան ինտերպոլյացիայի բազիսային ֆունկցիաներ։}
 \end{figure}
 Վերը ներկայացված ինտերպոլյացիաների օրինակները էրմիթյան ինտերպոլյացիայի մասնավոր դեպքեր են համապատասխանաբար 1 և 2 կարգերի դեպքում։
-Ընդհանուր դեպքում m֊րդ կարգի էրմիթյան ինտերպոլյացիայի պայմանը կարելի է գրել հետևյալ կերպ.
+Ընդհանուր դեպքում m-րդ կարգի էրմիթյան ինտերպոլյացիայի պայմանը կարելի է գրել հետևյալ կերպ.
 \begin{equation}
 \dfrac{d^{k}}{dx^{k}}f\left(x_{i}\right)=\dfrac{d^{k}}{dx^{k}}p_{2m-1}\left(x_{i}\right), \;  i=\overline{0, N}, \;  k=\overline{0, m-1}
 \end{equation}
 \newpage
 
-\subsection*{1.2 Քառակուսային և խորանարդային ինտերպոլյացիա}
+\subsection*{{\addfontfeatures{FakeBold=2.0}1.2 Քառակուսային և խորանարդային ինտերպոլյացիա}}
 Խնդիրներում, որտեղ անհրաժեշտ է որոշել միայն տրված ֆունկիցիան, ֆունկցիայի ածանցյալներն ինտերպոլացնելու փոխարեն դրվում է դրանց անընդհատության պայման հանգուցային կետերում,  բավականին հեշտացնելով դրված խնդիրը և դրա լուծումը։
 Նման տիպի ինտերպոլյացիայի կառուցման պարզագույն օրինակը հետևյալն է.
 Յուրաքանչյուր $\left[x_{i}, x_{i+1}\right]$ ինտերվալում կառուցվում է այպիսի պարաբոլ, որ բոլոր $x_{i}$ հանգուցային կետերում առանջին կարգի ածանցյալները լինեն անընդհատ։
@@ -196,14 +201,14 @@ S_{2}^{(i)}(x)=f(x_{i})+\dfrac{f(x_{i+1})-f(x_{i})}{x_{i+1}-x_{i}}\left(x-x_{i}\
 \begin{equation}
 c_{i}+c_{i-1}=\dfrac{1}{h^{2}}\left(f(x_{i+1})-2f(x_{i})+f(x_{i-1})\right) \; i=\overline{1, N-1}
 \end{equation}
-Քանի որ համակարը պարունակում է $N-1$ հավասարում, ապա մնում է մեկ ազատ գործակից, որը կարելի գտնել, որևէ $x_{j}$ հանգուցային կետում որոշելով $S_{2}^{(j)''}$֊ն։
+Քանի որ համակարը պարունակում է $N-1$ հավասարում, ապա մնում է մեկ ազատ գործակից, որը կարելի գտնել, որևէ $x_{j}$ հանգուցային կետում որոշելով $S_{2}^{(j)''}$-ն։
 
 Առավել կիրառելի են խորանարդային սփլայնները։ Այս դեպքում յուրաքանչյուր $\left[x_{i}, x_{i+1}\right]$ ինտերվալում կառուցվում են երրորդ աստիճանի բազմանդամներ այնպես, որ հանգույցներում առաջին և երկրորդ կարգի ածանցյալները լինեն անընդհատ։ 
 Բազմանդամը դիտարկելու փոխարեն դիտարկենք նրա երկրորդ կարգի ածանցյալը: Այն գծային ֆունկցիա է, հետևաբար այն կարելի է ներկայացնել հետևյալ տեսքով.
 \begin{equation}
 S^{(i)''}_3(x)=c_{i}\dfrac{x_{i+1}-x}{x-x_{i}}+c_{i+1}\dfrac{x-x_{i}}{x_{i+1}-x_{i}}
 \end{equation}
-\noindent որտեղ $c_{i}$ և $c_{i+1}$֊ը $x_{i}$ և $x_{i+1}$ կետերում երկրորդ կարգի ածանցյալների արժենքներն են։ 
+\noindent որտեղ $c_{i}$ և $c_{i+1}$-ը $x_{i}$ և $x_{i+1}$ կետերում երկրորդ կարգի ածանցյալների արժենքներն են։ 
 \noindent Հաշվի առնելով ինտերպոլյացիոն և անընդհատության պայմանները.
 
 \begin{equation}
@@ -285,13 +290,13 @@ F(x) = \sum_{i=0}^{N} \alpha_{i}B_{i}\left(\frac{x}{h}\right)$$
 \end{dcases}
 \end{equation}
 \newpage
-\section*{\centering Գլուխ 2 \\ Երկչափ մոտարկում}
+\section*{\centering {\addfontfeatures{FakeBold=2.0}Գլուխ 2 \\ Երկչափ մոտարկում}}
 %This command resets the equation's counter 	
 \setcounter{equation}{0}
 Այժմ դիտարկենք երկու փոփոխականի ֆունկցիայի մոտարկման խնդիրը: Ի տարբերություն մեկ փոփոխականի ֆունկցիայի ինտերպոլյացիայի, այս դեպքում տիրույթի տրոհումը կարելի է իրականացնել կամայական ձևով։
 
 \vspace{1.5mm}
-\noindent \textbf{Սահմանում.}
+\noindent {\addfontfeatures{FakeBold=2.0}{Սահմանում.}}
 
 \noindent Կասենք, որ տրված $f\left(x, y\right)$ ֆունկցիան  $C^{\left(p, q\right)}$ կարգի ֆունկցիա է, եթե 
 \begin{equation*}
@@ -300,8 +305,7 @@ F(x) = \sum_{i=0}^{N} \alpha_{i}B_{i}\left(\frac{x}{h}\right)$$
 ֆունկցիաները անընդհատ են։
 
 Կախված տրված տիրույթից և դրա տրոհման ձևից, առանձնացվում են հետևյալ մոտակման ձևերը.
-\newpage
-\subsection*{2.1 Ուղղանկյուն տիրույթ}
+\subsection*{{\addfontfeatures{FakeBold=2.0}2.1. Ուղղանկյուն տիրույթ}}
 Դիցուք տրված են $f:\Omega\mapsto \Theta$,  $\Theta \subset \mathbb{R}$, $\Omega \subset \mathbb{R}^{2} = \left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{N}\right]$  ուղղանկյուն տիրույթը, որը տրոհված է $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$, ուղղանկյուն էլեմենտների:
 $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overline{0, N-1}$$
 \begin{figure}[h!]
@@ -311,10 +315,10 @@ $$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \; i=\overline{0, M-1}, j=\overli
 \caption{Նկար 2.1. Ուղղանկյունաձև տիրույթի տրոհում ուղղանկյուն էլեմենտների։}
 \end{figure}
 \newpage
-\subsubsection*{2.1.Էրմիթյան ինտերպոլյացիա}
-Երկգծային ինտերպոլյացիա։
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}2.1.1. Էրմիթյան մոտարկում}}
+{\addfontfeatures{FakeBold=2.0}Երկգծային ինտերպոլյացիա}։
 
-Յուրաքանչյուր  $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$ էլեմենտի վրա $f$ ֆունկցիան մոտարկվում է հետևյալ քառակուսային ֆունկցիայով։
+Յուրաքանչյուր  $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right]$ էլեմենտի վրա $f$ ֆունկցիան մոտարկվում է հետևյալ քառակուսային ֆունկցիայով.
 \begin{equation}
 p_{1}^{(i, j)}(x, y)=f_{ij}\alpha_{i,j}(x,y)+f_{i+1,j}\beta_{i+1,j}(x,y)+f_{i,j+1}\gamma_{i,j+1}(x,y)+f_{i+1, j+1}\delta_{i+1, j+1}(x,y)
 \end{equation}
@@ -347,15 +351,11 @@ p_{1}(x,y)=\sum_{i=0}^{M}\sum_{j=0}^{N} f_{ij} \varphi^{(ij)}(x,y)
 \centering
 \includegraphics[width=0.6\textwidth]{images/bilinear_basis_function}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.5. Երկգծային ինտերպոլյացիայի բազիսային ֆունկցիայի գրաֆիկ։}
+\caption{Նկար 2.2. Երկգծային ինտերպոլյացիայի բազիսային ֆունկցիայի գրաֆիկ։}
 \end{figure}
+\noindent {\addfontfeatures{FakeBold=2.0}Կուրանտի գծային ֆունկցիա}
 
-\newpage 
-
-
-\noindent Կուրանտի գծային ֆունկցիա։
-
-Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային ֆունկցիաների կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք ինչպես նախորդ դեպքում, ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով երկու ուղղանկյուն եռանկյունների, ինչպես ցույց է տրված Նկար 2.2-ում։
+Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային ֆունկցիաների կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք ինչպես նախորդ դեպքում, ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով երկու ուղղանկյուն եռանկյունների, ինչպես ցույց է տրված նկ. 2.3-ում։
 Դիտարկենք հետևյալ ֆունկցիան.
 \begin{equation}
 $$\varphi \left(x,y\right)=\begin{cases}
@@ -398,16 +398,14 @@ p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{(ij)}(x,y)f(x_{i}, y_{j})
 \caption{Նկար 2.5. Տիրույթի տրոհումը ուղղանկյուն եռանկյունների}
 \end{figure}
 
-Երկխորանարդային ինտերպոլյացիա։
+\newpage
+{\addfontfeatures{FakeBold=2.0}Երկխորանարդային ինտերպոլյացիա}
 
 Միավոր քառակուսու վրա կառուցենք մոտարկող ֆունկցիա, որը լրիվ խորանարդային բազմանդամ է ըստ երկու փոփոխականի.
-
 \begin{equation}
 			p_{3}^{(i, j)}(x, y)=\sum_{i, j=0}^{3}\alpha_{ij}x^{i}y^{j}
 \end{equation}
-
-որտեղ $\alpha_{ij}$ գործակիցները միարժեքորեն որոշվում են գագաթների վրա $f, \dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y}, \dfrac{\partial^{2} f}{\partial x \partial y}$ ֆունկցիաների արժեքներով։ Դրանք որոշելով $\left(5\right)$ գումարը կարող ենք ներկայացնել հետևյալ տեսքով.
-
+որտեղ $\alpha_{ij}$ գործակիցները միարժեքորեն որոշվում են գագաթների վրա $f, \dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y}, \dfrac{\partial^{2} f}{\partial x \partial y}$ ֆունկցիաների արժեքներով։ Դրանք որոշելով $\left(8\right)$ գումարը կարող ենք ներկայացնել հետևյալ տեսքով.
 \begin{equation}
 			p_{3}^{(i, j)}(x, y)= \mathlarger{\sum_{0 \leq i, j, k, l \leq 1}} \dfrac{\partial^{k+l}}{\partial x^{k} \partial y^{l}}  \psi_{i}^{(k)}(x)\psi_{j}^{(l)}(y)
 \end{equation}
@@ -420,29 +418,24 @@ p_{1}(x,y)=\sum_{i=0}^{N}\sum_{j=0}^{M}\varphi^{(ij)}(x,y)f(x_{i}, y_{j})
 &\psi_{1}^{(1)}(t) = t^{2}\left(t-1\right) \\
 \end{aligned}
 \end{equation*}
-Այժմ օգտվելով $\left(5\right)$ բանաձևից և ունենալով տրված տիրույթի տրոհման $h_{1}$ և $h_{2}$ քայլերը, յուրաքանչյուր գագաթի համար կարող ենք կազմել բազիսային ֆունկցիա, և ամբող տիրույթում ինտերպոլացնող ֆունկցիան կունենա հետևյալ տեսքը.
+Այժմ օգտվելով $\left(8\right)$ բանաձևից և ունենալով տրված տիրույթի տրոհման $h_{1}$ և $h_{2}$ քայլերը, յուրաքանչյուր գագաթի համար կարող ենք կազմել բազիսային ֆունկցիա, և ամբողջ տիրույթում ինտերպոլացնող ֆունկցիան կունենա հետևյալ տեսքը.
 \begin{equation}
 p_{3}(x)=\sum_{i=0}^{M}\sum_{j=0}^{N}\left[f_{ij}\alpha^{(ij)}\left(x,y\right)+\dfrac{\partial f_{ij}}{\partial x}\beta^{(ij)}\left(x,y\right) +\dfrac{\partial f_{ij}}{\partial y}\gamma^{(ij)}\left(x,y\right) +\dfrac{\partial^{2} f_{ij}}{\partial x\partial y}\delta^{(ij)}\left(x,y\right)\right]
 \end{equation}
 որտեղ
 \begin{equation}
 \begin{aligned}
-&\alpha^{(ij)} = \varphi^{(0)}\left(\dfrac{x-x_{0}}{h_{1}}-i\right) \varphi^{(0)}\left(\dfrac{y-y_{0}}{h_{2}}-j\right), \\
-&\beta^{(ij)} = \varphi^{(1)}\left(\dfrac{x-x_{0}}{h_{1}}-i\right) \varphi^{(0)}\left(\dfrac{y-y_{0}}{h_{2}}-j\right), \\
-&\gamma^{(ij)} = \varphi^{(0)}\left(\dfrac{x-x_{0}}{h_{1}}-i\right) \varphi^{(1)}\left(\dfrac{y-y_{0}}{h_{2}}-j\right), \\
-&\delta^{(ij)} = \varphi^{(1)}\left(\dfrac{x-x_{0}}{h_{1}}-i\right) \varphi^{(1)}\left(\dfrac{y-y_{0}}{h_{2}}-j\right)\\
+&\alpha^{(ij)} = \varphi^{(0)}\left(\dfrac{x-x_{0}}{h_{1}}-i\right) \varphi^{(0)}\left(\dfrac{y-y_{0}}{h_{2}}-j\right),  \beta^{(ij)} = \varphi^{(1)}\left(\dfrac{x-x_{0}}{h_{1}}-i\right) \varphi^{(0)}\left(\dfrac{y-y_{0}}{h_{2}}-j\right), \\
+&\gamma^{(ij)} = \varphi^{(0)}\left(\dfrac{x-x_{0}}{h_{1}}-i\right) \varphi^{(1)}\left(\dfrac{y-y_{0}}{h_{2}}-j\right), \delta^{(ij)} = \varphi^{(1)}\left(\dfrac{x-x_{0}}{h_{1}}-i\right) \varphi^{(1)}\left(\dfrac{y-y_{0}}{h_{2}}-j\right)\\
 &\varphi^{(0)}=\begin{dcases}
 \left(1+t\right)^{2}\left(1-2t\right), \; -1\leq x \leq 0 \\
 \left(1-t\right)^{2}\left(1+2t\right), \; 0\leq  x \leq  1 \\
-\end{dcases}
-\\
-&\varphi^{(1)}=\begin{dcases}
+\end{dcases}, \varphi^{(1)}=\begin{dcases}
 \left(1+t\right)^{2}t, \; -1\leq  x \leq 0 \\
 \left(1-t\right)^{2}t, \; 0\leq  x \leq 1 \\
 \end{dcases}
 \end{aligned}
 \end{equation}
-
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
@@ -465,19 +458,18 @@ p_{3}(x)=\sum_{i=0}^{M}\sum_{j=0}^{N}\left[f_{ij}\alpha^{(ij)}\left(x,y\right)+\
     %\captionsetup{labelformat=empty}
   \end{minipage}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.2 Երկխորանարդային ինտերպոլյացիայի բազիսային ֆունկցիաների գծապատկեր։}
+\caption{Նկար 2.6 Երկխորանարդային ինտերպոլյացիայի բազիսային ֆունկցիաների գծապատկեր։}
 \end{figure}
+Նկատենք, որ ինտերպոլյացիան կարելի էր ստանալ նաև միաչափ խորանարդային էրմիթյան բազիսային ֆունկցիաների թենզորական արտադրյալի միջոցով։
 
 Վերը ներկայացված երկու ինտերպոլյացիաները էրմիթյան ինտերպոլյացիայի մասնովոր դեպքեր են։
-Ընդհանուր դեպքում ցանկացած $k$ բնական թվի և տրված ուղղանկյունաձև տրոհման յուրաքանչյուր էլեմենտի վրա կարելի է կառուցել $C^{\left(k-1, k-1\right)}$ ինտերպոլացնող ֆունկցիա, որը ըստ յուրաքանչյուր փոփոխականի $\left(2k-1\right)$֊րդ կարգի բազմանդամ է և բավարարում է հետևյալ պայմաններին.
+Ընդհանուր դեպքում ցանկացած $k$ բնական թվի և տրված ուղղանկյունաձև տրոհման յուրաքանչյուր էլեմենտի վրա կարելի է կառուցել $C^{\left(k-1, k-1\right)}$ ինտերպոլացնող ֆունկցիա, որը ըստ յուրաքանչյուր փոփոխականի $\left(2k-1\right)$-րդ կարգի բազմանդամ է և բավարարում է հետևյալ պայմաններին.
 \begin{equation}
 \dfrac{\partial^{p+q}}{\partial x^{p} \partial y^{q}}f\left(x_{i}, y_{j}\right)=\dfrac{\partial^{p+q}}{\partial x^{p} \partial y^{q}}p_{2k-1}\left(x_{i}, y_{j}\right), \; p,q=\overline{0, k-1}, \;  i=\overline{0, M}, \; j=\overline{0, N}
 \end{equation}
 
 \newpage
-\subsubsection*{2.2. Խորանարդային մոտարկում}
-
-Երկխորանարդային սփլայն։
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}2.1.2 Խորանարդային մոտարկում: Երկխորանարդային սփլայն}}
 
 Մեկ փոփոխականի մոտարկան խնդրը դիտարկելից քննարկեցինք Շներբերգի կողմից առաջարկված խորանարդային բազիսային սփլայնները։ Այս սփլայնները կարող ենք  օգտագործել երկչափ մոտարկման համար։
 Յուրաքանչյուր $\left(x_{i}, y_{j}\right)$ հանգույցի վրա կառուցենք բազիսային ֆունկցիա կազմելով $B_{i}\left(\dfrac{x}{h_{1}}\right)$ և $B_{j}\left(\dfrac{x}{h_{2}}\right)$ ֆունկցիաների թենզորական  արտադրյալը։
@@ -510,43 +502,48 @@ F(x,y) = \sum_{i=0}^{N} \alpha_{ij}\varphi^{(ij)}\left(x, y\right)$$
 \centering
 \includegraphics[width=1.0\textwidth]{images/two_dimensional_basis}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.6. $\varphi^{(ij)}$ բազիսային ֆունկցիաների պատկեր։}
+\caption{Նկար 2.7. $\varphi^{(ij)}$ բազիսային ֆունկցիաների պատկեր։}
 \end{figure}
 \begin{figure}[h!]
 \centering
 \includegraphics[width=1.0\textwidth]{images/two_dimensional_basis_1}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.7 Տիրույթի եզրի վրա գտնվող բազիսային ֆունկցիա։}
+\caption{Նկար 2.8 Տիրույթի եզրի վրա գտնվող բազիսային ֆունկցիա։}
 \end{figure}
 \newpage
-\subsection*{Բազմանկյուն տիրույթ}
+\subsection*{{\addfontfeatures{FakeBold=2.0}2.2 Բազմանկյուն տիրույթ}}
 Բազմանկյուն տիրույթ ասելով կհասկանանք կամ հենց բազմանկյունաձև տիրույթը, կամ դրա բազմանկյուններով մոտարկումը։
 Դիցուք տրված են $f:\Omega\mapsto \Theta, \Theta \subset \mathbb{R}, \Omega \subset \mathbb{R}^{2} $ բազմանկյուն տիրույթը, որը կամայական ձևով տրոհված է եռանկյուն էլեմենտների։
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\textwidth]{images/two_var_triangular}
 \captionsetup{labelformat=empty}
-\caption{Նկար 2.8. Տիրույթի եռանկյունաձև տրոհման օրինակ։}
+\caption{Նկար 2.9. Տիրույթի եռանկյունաձև տրոհման օրինակ։}
 \end{figure}
-\subsubsection*{2.2 Լագրանժի ինտերպոլյացիա}
-Յուրաքանչուր եռանկյուն էլեմենտի վրա դիտարկենք $m$֊րդ կարգի լրիվ բազմանդամ
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}2.2.1 Լագրանժի ինտերպոլյացիա}}
+Յուրաքանչուր եռանկյուն էլեմենտի վրա դիտարկենք $m$-րդ կարգի լրիվ բազմանդամ
 \begin{equation}
 				F_{m}\left(x,y\right)=\sum_{k+l=0}^{m}\alpha_{kl}x^{k}y^{l}
 \end{equation}
 որը կարող է օգտագործվել որպես ինտերպոլյացիոն ֆունկցիա $\dfrac{1}{2}\left(m+1\right)\left(m+2\right)$ սիմետրիկ դասավորված կետերի վրա։
 Դիտարկենք հետևյալ մասնավոր դեպքերը.
-\begin{enumerate}
+
+%This command allows to indent only the first line of enumeration
+\setlist[enumerate]{itemindent=\dimexpr\labelwidth+\labelsep\relax,leftmargin=0pt}
+
+\begin{enumerate}[leftmargin=0.0cm]
 \item{Գծային ինտերպոլյացիա (m=1)}
 
 Յուրաքանչյուր $P_{1}, P_{2}, P_{3}$ գագաթներով եռանկյուն էլեմենտի համար դիտարկենք հետևյալ մոտարկող ֆունկցիան.
 \begin{equation}
 F_{1}(x, y) = \dfrac{1}{S}\sum_{i=1}^{3} p^{(1)}_{i}(x,y)f(x_{i}, y_{i})
 \end{equation}
-որտեղ $S$֊ը $P_{1}, P_{2}, P_{3}$ կետերով կազմված եռանկյան մակերեսի կրկնապատիկն է, իսկ $p^{(1)}_{i}$ ֆունկցիաները սահմանվում են հետևյալ կերպ.
+որտեղ $S$-ը $P_{1}, P_{2}, P_{3}$ կետերով կազմված եռանկյան մակերեսի կրկնապատիկն է, իսկ $p^{(1)}_{i}$ ֆունկցիաները սահմանվում են հետևյալ կերպ.
 \begin{equation}
-p^{(1)}_{i}(x,y) = x_{j}y_{k}-x_{k}y_{j}+x(y_{j}-y_{k})-y(x_{j}-x_{k})
+p^{(1)}_{i}(x,y) = x_{j}y_{k}-x_{k}y_{j} + \eta_{kl}x - \xi_{kl}y
 \end{equation}
-
+որտեղ
+			$$\eta_{kl}=y_{k}-y_{l},\; \xi_{kl} = x_{k}-x_{l}$$
 $$S = \begin{vmatrix}
      1 & x_1 & y_1\\ 
      1 & x_2 & y_2\\
@@ -603,24 +600,353 @@ F_{3}(x, y) = \dfrac{1}{S^{3}}\sum_{i=1}^{10} p^{(3)}_{i}(x,y)f(x_{i}, y_{i})
 
 \end{enumerate}
 Բնական է, որ որևէ կետի նկատմամբ լրիվ բազիսային ֆունկցիայի կառուցելու համար անհրաժեշտ է իրար գումարել այն բոլոր եռանկյուն էլեմենտների այդ կետին համապատասխան ֆունկցիաները, որոնց համար տվյալ կետը գագաթ է։
-\newpage
-\subsubsection*{2.2 Էրմիթյան ինտերպոլյացիա}
-To be continued
-\newpage
 
+\newpage
+\noindent{\addfontfeatures{FakeBold=2.0}Ստանդարտ եռանկյուն}
 
-\section*{\centering Գլուխ 3 \\ Եռաչափ մոտարկում}
+ $\left(2.17\right)$ ից կարելի է հեշտորեն ստանալ, որ 
+
+%This command allows to indent only the first line of enumeration
+\setlist[enumerate]{itemindent=\dimexpr\labelwidth+\labelsep\relax,leftmargin=0pt}
+\begin{enumerate}[leftmargin=0.0cm]
+\item
+$\sum_{i=1}^{3}p_{i}\left(x,y\right)=1$
+\item
+$p_{i}\left(x,y\right)=0$ գծային հավասարումները եռանկյան համապատասխանաբար $P_{2}P_{3}$, $P_{3}P_{1}$ և $P_{1}P_{2}$ կողերն են։
+\item
+$p_{i}\left(x,y\right)=1$ գծային հավասարումները եռանկյան համապատասխանաբար $P_{1}$, $P_{2}$ և $P_{3}$ գագաթներն են։
+\end{enumerate}
+
+Այսինքն, կարող ենք ասել, որ $P_{1}P_{2}P_{3}$ եռանկյունը $(x, y)$ կոորդինատական հարթությունից ձևափոխվում է այսպես կոչված ստանդարտ եռանկյունի, որ գագաթներն են $(0, 1)$, $(1, 0)$ և $(0, 0)$ կետերը։ Հակադարձ ձևափոխությունը տրվում է հետևյալ բանաձևերով.
+\begin{equation}
+\begin{aligned}
+&x = x_{3} + \xi_{13}p_{1}+\xi_{23}p_{2}\\
+&y = y_{3} + \eta_{13}p_{1}+\eta_{23}p_{2}
+\end{aligned}
+\end{equation}
+Հաշվարկները և բանաձևրը հեշտանցնելու համար գետագայում կօգտվենք այս ձևափոխությունից։
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/standard_triangle_transformation}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.10. Կամայական եռանկյան ձևափոխում ստանդարտ եռանկյան։}
+\end{figure}
+Նշենք սակայն, որ որոշ գրականություններում հանդիպում են ստանդարտ եռանկյան գագաթների համարակալման այլ հաջորդականություն, բայց անցումը մի եղանակից մյուսը տրիվիալ է։
+\newpage
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}2.2.2 Էրմիթյան ինտերպոլյացիա}}
+Նախորդ ենթագլխում տեսանք, որ ավելի բարձր կարգի ինտերպոլյացիա իրականացնելու համար անհրաժեշտ է մեկ եռանկյան վրա դիտարկել մեծ քանակությամբ կետեր։ Որպես այլընտրանք դիտարկենք Էրմիթի ինտերպոլյացիան, որի դեպքում դիտարկվող կետերի քանակը ավելի քիչ է։ k րդ աստիճանի բազմանդամների դասը նշանակենք $G_{k}$-ով։ $\left(2.12\right)$-ի նմանությամբ, այս դեպքում ևս տրված եռանկյուն էլեմենտի վրա ընդհանուր դեպքում $2k+1$-րդ կարգի Էրմիթյան ինտերպոլյացիայի գործակիցները որոշվում են հետևյալ բանաձևերով։
+\begin{equation}
+\dfrac{\partial^{k} G_{n}}{\partial p_{1}^{k_{1}} \partial p_{2}^{k_{2}}}\left(P_{i}\right), i = \overline{1, 3}\\
+\end{equation}
+որտեղ $P_{1}, P_{2}, P_{3}$ տրված եռանկյան գագաթներն են։
+
+Դիտարկենք երրորդ աստիճանի (k=1) դեպքը։
+
+Այս դեպքում տրված եռանկյուն ելեմենտի վրա ինտերպոլացնող բազմանդամը ունի 9 պարամետր, որոնք միարժեքորեն որոշվում են գագաթներում ֆունկցիայի և նրա առաջին կարգի ածանցյալների արժեքներով։ Ըստ այդմ ինտերպոլացնող ֆունկցիան կներկայացնենք հետևյալ տեսքով.
+\begin{equation}
+				G_{1}\left(p_{1},p_{2}\right)=\sum_{j=1}^{3}\left[U_{j}q^{(3)}_{j}+\left(\dfrac{\partial U}{\partial p_{1}}\right)_{j}r^{(3)}_{j}+\left(\dfrac{\partial U}{\partial p_{1}}\right)_{j}s^{(3)}_{j}\right]
+\end{equation}
+որտեղ
+\begin{equation}
+\begin{aligned}
+&q_{j}^{(3)}\left(x,y\right)=p_{j}^{2}\left(3 - 2p_{j}\right) + 2p_{1}p_{2}p_{3} \\
+&r^{(3)}_{1} = p_{1}^{2}\left(p_{1} - 1\right) - p_{1}p_{2}p_{3} \\
+&r^{(3)}_{2} = p_{2}^{2}p_{1} + \dfrac{p_{1}p_{2}p_{3}}{2} \\
+&r^{(3)}_{3} = p_{3}^{2}p_{1} + \dfrac{p_{1}p_{2}p_{3}}{2}\\
+&s^{(3)}_{1} = p_{1}^{2}p_{2}+\dfrac{p_{1}p_{2}p_{3}}{2}\\
+&s^{(3)}_{2} = p_{2}^{2}\left(p_{2}-1\right) -p_{1}p_{2}p_{3}\\
+&s^{(3)}_{3} = p_{3}^{2}p_{2}+\dfrac{p_{1}p_{2}p_{3}}{2}
+\end{aligned}
+\end{equation}
+Ստորև ներկայացված են կառուցված բազիսային ֆունկցիաներ հինգ եռանկյուն էլեմենտների վրա $U, \dfrac{\partial U}{\partial p_{1}}, \dfrac{\partial U}{\partial p_{2}}$ հերթականությամբ։
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.43\textwidth}
+    \includegraphics[width=\textwidth]{images/hermite_cubic_func}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.43\textwidth}
+    \includegraphics[width=\textwidth]{images/hermite_cubic_fx}
+  \end{minipage}
+\\
+  \begin{minipage}[b]{0.43\textwidth}
+    \includegraphics[width=\textwidth]{images/hermite_cubic_fy}
+  \end{minipage}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.10. Երրորդ կարգի Էրմիթի ինտերպոլյացիոն բազիսային ֆունկցիաները կառուցված հինգ եռանկյունների վրա։}
+\end{figure}
+
+Նկատենք սակայն, որ նախորդիվ դիտարկված ինտերպոլյացիան $C^{0}$ կարգի է։ Այժ դիտարկենք $C^{1}$ կարգի ինտերպոլյացիայի մի եղանակ, որն անվանում են Արգիրիսի էլեմենտ։
+
+Այս դեպքում ստանդարտ եռանյան գագաթների համարակալման հաջորդականությունը հետևյալն է՝ $\left(0,0\right), \left(0,1\right), \left(1,0\right)$։
+
+Ստանդարտ եռանկյան վրա դիտարկենք հիգերորդ աստիճանի լրիվ բազմանդամ, որն ունի 21 պարամետր։
+\begin{equation}
+				U\left(p_{1}, p_{2}\right) = \sum_{j+k\leq 5} \alpha_{jk}p_{1}^{j}p_{2}^{k}
+\end{equation}
+$\alpha_{jk}$ պարամետրերը որոշվում են գագաթներում ֆունկցիայի և նրա մինչև երկրորդ կարգի բոլոր ածանցյալների արժեքներով և կողերի միջնակետերում նորմալի ուղղությամբ ածանցյալի արժեքներով։ Միջնակետերը կհամարակելենք հետևյալ կերպ։ $j$-րդ գագաթին համապատասխանող միջնակետին կհամապատասխանեցնենք այն կողի միջնակետը, որին այն չի պատկանում։
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{images/argyris_element}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.11. Արգիրիսի եռանկյան սխեմատիկ ներկայացում։}
+\end{figure}
+
+Ստորև ներկայացվում են բազիսային ֆունկցիաները։
+
+Առաջին գագաթի համար՝
+\begin{equation}
+\begin{aligned}
+&\varphi_{1}^{(0,0)}=- 6 p_{1}^{5} + 15 p_{1}^{4} + 30 p_{1}^{3} p_{2}^{2} - 10 p_{1}^{3} + 30 p_{1}^{2} p_{2}^{3} - 30 p_{1}^{2} p_{2}^{2} - 6 p_{2}^{5} + 15 p_{2}^{4} - 10 p_{2}^{3} + 1 \\
+&\varphi_{1}^{(1,0)}=p_{1} \left(- 3 p_{1}^{4} + 8 p_{1}^{3} + p_{1}^{2} p_{2}^{2} - 6 p_{1}^{2} - 10 p_{1} p_{2}^{3} + 10 p_{1} p_{2}^{2} - 8 p_{2}^{4} + 18 p_{2}^{3} - 11 p_{2}^{2} + 1\right) \\
+&\varphi_{1}^{(0,1)}=p_{2} \left(- 8 p_{1}^{4} - 10 p_{1}^{3} p_{2} + 18 p_{1}^{3} + p_{1}^{2} p_{2}^{2} + 10 p_{1}^{2} p_{2} - 11 p_{1}^{2} - 3 p_{2}^{4} + 8 p_{2}^{3} - 6 p_{2}^{2} + 1\right) \\
+&\varphi_{1}^{(2,0)}=\frac{p_{1}^{2} \left(- p_{1}^{3} + 3 p_{1}^{2} + 3 p_{1} p_{2}^{2} - 3 p_{1} + 2 p_{2}^{3} - 3 p_{2}^{2} + 1\right)}{2} \\
+&\varphi_{1}^{(1,1)}=p_{1} p_{2} \left(- 2 p_{1}^{3} - 6 p_{1}^{2} p_{2} + 5 p_{1}^{2} - 6 p_{1} p_{2}^{2} + 10 p_{1} p_{2} - 4 p_{1} - 2 p_{2}^{3} + 5 p_{2}^{2} - 4 p_{2} + 1\right) \\
+&\varphi_{1}^{(0,2)}=\frac{p_{2}^{2} \cdot \left(2 p_{1}^{3} + 3 p_{1}^{2} p_{2} - 3 p_{1}^{2} - p_{2}^{3} + 3 p_{2}^{2} - 3 p_{2} + 1\right)}{2} \\
+\end{aligned}
+\end{equation}
+Երկրորդ գագաթի համար՝
+\begin{equation}
+\begin{aligned}
+&\varphi_{2}^{(0,0)}=p_{1}^{2} \cdot \left(6 p_{1}^{3} - 15 p_{1}^{2} - 15 p_{1} p_{2}^{2} + 10 p_{1} - 15 p_{2}^{3} + 15 p_{2}^{2}\right) \\
+&\varphi_{2}^{(1,0)}=\frac{p_{1}^{2} \left(- 6 p_{1}^{3} + 14 p_{1}^{2} + 7 p_{1} p_{2}^{2} - 8 p_{1} + 7 p_{2}^{3} - 7 p_{2}^{2}\right)}{2} \\
+&\varphi_{2}^{(0,1)}=\frac{p_{1}^{2} p_{2} \left(- 16 p_{1}^{2} - 37 p_{1} p_{2} + 28 p_{1} - 27 p_{2}^{2} + 37 p_{2} - 10\right)}{2} \\
+&\varphi_{2}^{(2,0)}=\frac{p_{1}^{2} \cdot \left(2 p_{1}^{3} - 4 p_{1}^{2} - p_{1} p_{2}^{2} + 2 p_{1} - p_{2}^{3} + p_{2}^{2}\right)}{4} \\
+&\varphi_{2}^{(1,1)}=\frac{p_{1}^{2} p_{2} \left(4 p_{1}^{2} + 7 p_{1} p_{2} - 6 p_{1} + 5 p_{2}^{2} - 7 p_{2} + 2\right)}{2} \\
+&\varphi_{2}^{(0,2)}=\frac{p_{1}^{2} p_{2}^{2} \left(- 3 p_{1} - 5 p_{2} + 5\right)}{4} \\
+\end{aligned}
+\end{equation}
+Երրորդ գագաթի համար՝
+\begin{equation}
+\begin{aligned}
+&\varphi_{3}^{(0,0)}=p_{2}^{2} \left(- 15 p_{1}^{3} - 15 p_{1}^{2} p_{2} + 15 p_{1}^{2} + 6 p_{2}^{3} - 15 p_{2}^{2} + 10 p_{2}\right) \\
+&\varphi_{3}^{(1,0)}=\frac{p_{1} p_{2}^{2} \left(- 27 p_{1}^{2} - 37 p_{1} p_{2} + 37 p_{1} - 16 p_{2}^{2} + 28 p_{2} - 10\right)}{2} \\
+&\varphi_{3}^{(0,1)}=\frac{p_{2}^{2} \cdot \left(7 p_{1}^{3} + 7 p_{1}^{2} p_{2} - 7 p_{1}^{2} - 6 p_{2}^{3} + 14 p_{2}^{2} - 8 p_{2}\right)}{2} \\
+&\varphi_{3}^{(2,0)}=\frac{p_{1}^{2} p_{2}^{2} \left(- 5 p_{1} - 3 p_{2} + 5\right)}{4} \\
+&\varphi_{3}^{(1,1)}=\frac{p_{1} p_{2}^{2} \cdot \left(5 p_{1}^{2} + 7 p_{1} p_{2} - 7 p_{1} + 4 p_{2}^{2} - 6 p_{2} + 2\right)}{2} \\
+&\varphi_{3}^{(0,2)}=\frac{p_{2}^{2} \left(- p_{1}^{3} - p_{1}^{2} p_{2} + p_{1}^{2} + 2 p_{2}^{3} - 4 p_{2}^{2} + 2 p_{2}\right)}{4} \\
+\end{aligned}
+\end{equation}
+Միջնակետերի համար՝
+\begin{equation}
+\begin{aligned}
+&\hat{\varphi_{1}}=8 \sqrt{2} p_{1}^{2} p_{2}^{2} \left(p_{1} + p_{2} - 1\right) \\
+&\hat{\varphi_{2}}=16 p_{1} p_{2}^{2} \left(- p_{1}^{2} - 2 p_{1} p_{2} + 2 p_{1} - p_{2}^{2} + 2 p_{2} - 1\right) \\
+&\hat{\varphi_{3}}=16 p_{1}^{2} p_{2} \left(- p_{1}^{2} - 2 p_{1} p_{2} + 2 p_{1} - p_{2}^{2} + 2 p_{2} - 1\right)
+\end{aligned}
+\end{equation}
+
+Այսպիսով, ինտերպոլացնող ֆունկցիան ստանդարտ եռանկյան վրա կունենա հետևյալ տեսքը.
+\begin{equation}
+U\left(p_{1}, p_{2}\right) = \sum_{i=1}^{3}\sum_{|j|\leq 2}D^{j}U_{i} \varphi_{i}^{j} \left(p_{1}, p_{2}\right) + \sum_{i=1}^{3} \dfrac{\partial U_{i}}{\partial n}\hat{\varphi_{i}}\left(p_{1}, p_{2}\right)
+\end{equation}
+
+որտեղ 
+
+$$D^{j}U_{i} = \dfrac{\partial^{|i|}U}{\partial p_{1}^{i_{1}} \partial p_{2}^{i_{2}}}, \; \left|i\right| = i_{1}+i_{2}$$
+ածանցյալի մուլտիինդեքսային ներկայացման եղանակն է։
+
+%TODO: Add reference to A general .....
+Ստանդարտ եռանկյունից ցանկացած եռանկյան վրա արտապատկերելու համար կօգտվենք Պիոլայի ձևափոխությունից։ Կատարենք ձևափոխության համար անհրաժեշտ սահամները:
+
+$\hat{\Psi}$-ով նշանակենք ստանդարտ եռանկյան բազիսները, $\Psi$ -ով՝ արտապարկերված եռանկյան վրա։
+
+Նշանակենք
+
+%This command allow to increase the max number of matrix cols
+\setcounter{MaxMatrixCols}{20}
+\begin{equation}
+V = \begin{bmatrix}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & J^{-T} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & \Theta^{-1} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & J^{-T} & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & \Theta^{-1} & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & J^{-T} & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \Theta^{-1} & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & B^{1} & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & B^{2} & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & B^{3}\\
+\end{bmatrix}
+\end{equation}
+որտեղ՝
+\begin{equation}
+J = \dfrac{\partial \left(p_{1}, p_{2}\right)}{\partial \left(x, y\right)}
+\end{equation}
+\begin{equation}
+\Theta = \begin{bmatrix}
+						\left(\dfrac{\partial p_{1}}{\partial x}\right)^{2} & 2\dfrac{\partial p_{1}}{\partial x}\dfrac{\partial p_{2}}{\partial x} & \left(\dfrac{\partial p_{2}}{\partial x}\right)^{2}\\
+						\dfrac{\partial p_{1}}{\partial y}\dfrac{\partial p_{1}}{\partial x} & \dfrac{\partial p_{1}}{\partial y}\dfrac{\partial p_{2}}{\partial x} + \dfrac{\partial p_{1}}{\partial x}\dfrac{\partial p_{2}}{\partial y} & \dfrac{\partial p_{2}}{\partial y}\dfrac{\partial p_{2}}{\partial y}\\
+						\left(\dfrac{\partial p_{1}}{\partial y}\right)^{2} & 2\dfrac{\partial p_{1}}{\partial y}\dfrac{\partial p_{2}}{\partial y} & \left(\dfrac{\partial p_{2}}{\partial y}\right)^{2}\\
+		\end{bmatrix}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&B^{i} = \hat{G_{i}}J^{-T}G_{i}^{T} \\
+&\hat{G_{i}} = \begin{bmatrix}
+			\hat{n_{i}} & \hat{t_{i}}
+		     \end{bmatrix}^{T}\\
+&G_{i} = \begin{bmatrix}
+			n_{i} & t_{i}
+	    \end{bmatrix}^{T}
+\end{aligned}
+\end{equation}
+
+$\hat{n}_{1}, \hat{n}_{2}, \hat{n}_{3}$-ը ստանդարտ եռանկյան կողերի միջնակետերի արտաքին նորմալներն են, իսկ $\hat{t}_{1}, \hat{t}_{2}, \hat{t}_{3}$-ը՝ ուղղորդ վեկտորները։ Ավելի կոնկրետ՝
+\begin{equation}
+\begin{aligned}
+				&\hat{n}_{1}=\left[\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}\right], \; \hat{n}_{2}=\left[-1, 0\right], \; \hat{n}_{3}=\left[0, -1\right] \\
+				&\hat{t}_{1}=\left[-\dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{2}}{2}\right], \; \hat{t}_{2}=\left[0, -1\right], \; \hat{t}_{3}=\left[1, 0\right]
+\end{aligned}
+\end{equation}
+$n_{i}$-ն և $t_{i}$-ն արտապարկերված եռանկյան համապատասխան միջնակետերի նորմալներն ու ուղղորդ վեկտորներն են (տես նկ. 2.11., 2.12)։
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{images/standard_triangle_vecs}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.12. Նորմալ և ուղղորդ վեկտորները ստանդարտ եռանկյան համար։}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{images/arb_triangle_vecs}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.13. Նորմալ և ուղղորդ վեկտորները կամայական եռանկյան համար։}
+\end{figure}
+\begin{equation}
+D = \left[\begin{array}{cccccccccccc}1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & I_{2} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & I_{3} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & I_{2} & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & I_{3} & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & I_{2} & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & I_{3} & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & - \frac{15}{8 l_{1}} & - \frac{7 t_{1}}{16} & - \frac{\tau_{1} l_{1}}{32} & \frac{15}{8 l_{1}} & - \frac{7 t_{1}}{16} & \frac{\tau_{1} l_{1}}{32} & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+\frac{15}{8 l_{2}} & - \frac{7 t_{2}}{16} & \frac{\tau_{2} l_{2}}{32} & 0 & 0 & 0 & - \frac{15}{8 l_{2}} & - \frac{7 t_{2}}{16} & - \frac{\tau_{2} l_{2}}{32} & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\- \frac{15}{8 l_{3}} & - \frac{7 t_{3}}{16} & - \frac{\tau_{3} l_{3}}{32} & \frac{15}{8 l_{3}} & - \frac{7 t_{3}}{16} & \frac{\tau_{3} l_{3}}{32} & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]
+\end{equation}
+որտեղ $l_{j}$-ն $j$-րդ տողի երկարությունն է, իսկ $\tau_{j}$-ն սահմանվում է հետևյալ կերպ։
+\begin{equation}
+				\tau_{i}=\left[\left(t_{i}^{x}\right)^{2},  2t_{i}^{x}t_{i}^{y},  \left(t_{i}^{x}\right)^{2} \right]
+\end{equation}
+\begin{equation}
+E = E_{ij} = \begin{cases}
+1, 1\leq i=j\leq19 \; \text{կամ} \; (i,j) \in \left\{(20, 21), (21, 23)\right\}, \\
+0, \; \text{հակառակ դեպքում}
+\end{cases}
+\end{equation}
+%TODO: change to \circ
+Նշանակենք նաև
+\begin{equation}
+\begin{aligned}
+			&M = \left(EVD\right)^{T}\\
+			&F(f) = f \circ \left(\begin{bmatrix}
+							\xi_{23} & \xi_{31} \\
+							\eta_{23} & \eta_{31} \\
+				\end{bmatrix}\begin{bmatrix}
+							x \\
+							y \\
+							\end{bmatrix} + \begin{bmatrix}
+							x_{1} \\
+							y_{1} \\
+							\end{bmatrix}\right)
+\end{aligned}
+\end{equation}
+Այժմ, ունենալով ստանդարտ եռանկյան $\hat{\Psi}$ բազիսները, կարող ենք ստանալ արտապատկերված եռանկյան բազիսները հետևյալ բանաձևով։
+\begin{equation}
+\Psi = MF\left(\hat{\Psi}\right)
+\end{equation} 
+Ստորև ներկայացված են կառուցված բազիսային ֆունկցիաներ չորս եռանկյուն էլեմենտների վրա $U, \dfrac{\partial U}{\partial x}, \dfrac{\partial U}{\partial y}, \dfrac{\partial^{2} U}{\partial x^{2}}, \dfrac{\partial^{2} U}{\partial x\partial y}, \dfrac{\partial^{2} U}{\partial y^{2}}$ հերթականությամբ։
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/argyris_basis_func_value}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/argyris_basis_fx_value}
+  \end{minipage}
+\\
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/argyris_basis_fy_value}
+  \end{minipage}
+\hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/argyris_basis_fxx_value}
+  \end{minipage}
+\\
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/argyris_basis_fxy_value}
+  \end{minipage}
+\hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/argyris_basis_fyy_value}
+  \end{minipage}
+\\
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/argyris_basis_fn_value}
+  \end{minipage}
+\captionsetup{labelformat=empty}
+\caption{Նկար 2.14. Արգիրիսի բազիսային ֆունկցիաները կառուցված չորս եռանկյունների վրա։}
+\end{figure}
+
+\newpage
+\section*{\centering {\addfontfeatures{FakeBold=2.0}Գլուխ 3 \\ Եռաչափ մոտարկում}}
 \setcounter{equation}{0}
 
-Ինչպես նախորդ գլխում, ասյ գլխում ևս կդիտարկենք Լագրանժի և Էրմիթի ինտերպոլյացիաները։
+Այժմ դիտարկենք երեք փոփոխականի ֆունկցիայի մոտարկման խնդիրը: Ինչպես նախորդ գլխում, այս դեպքում տիրույթի տրոհումը կարելի է իրականացնել կամայական ձևով։
+
+\subsection*{{\addfontfeatures{FakeBold=2.0}3.1 Ուղղանկյունանիստ տիրույթ}}
+
+Դիցուք տրված են $f:\Omega\mapsto \Theta$,  $\Theta \subset \mathbb{R}$, $\Omega \subset \mathbb{R}^{3} = \left[x_{0}, x_{M}\right] \times \left[y_{0}, y_{N}\right] \times \left[z_{0}, z_{K}\right]$  ուղղանկյունանիստ տիրույթը, որը տրոհված է $\left[x_{i}, x_{i+1}\right] \times \left[y_{j}, y_{j+1}\right] \times \left[z_{k}, z_{k+1}\right]$, ուղղանկյունանիստ էլեմենտների:
+$$x_{i+1}-x_{i}=h_{1}, \; y_{j+1}-y_{j}=h_{2}, \;z_{k+1}-z_{k}=h_{3}, \; i=\overline{0, M-1}, j=\overline{0, N-1},  =\overline{0, K-1}$$
+
+\subsubsection*{ {\addfontfeatures{FakeBold=2.0}3.1.1. Լագրանժի մոտարկում}}
+Լագրանժի մոտարկման բանաձևերը ստանալու համար հարմար է տրված ուղղանկյունը արտապատկերել միավոր խորանարդի վրա, ինչպես արել էինք երկչափ դեպքում։ Միավոր խորանարդի կոորդինատական համակարգը նշանակենք $(p, q, r)$-ով։
+
+\begin{equation}
+\begin{aligned}
+&\varphi_^{(1)}_{1} = pqr \\
+&\varphi_^{(1)}_{2} = (1-p)qr \\
+&\varphi_^{(1)}_{3} = (1-p)(1-q)r \\
+&\varphi_^{(1)}_{4} = (1-p)(1-q)r \\
+&\varphi_^{(1)}_{5} = p(qr \\
 
 
-Լագրանժի ինտերպոլյացիա։
+
+\end{equation}
+\end{aligned}
+
+Ստորև ներկայացված է գագաթների համարակալման հաջորդականությունը.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{images/unit_cube}
+\captionsetup{labelformat=empty}
+\caption{Նկար 3.1. Գագաթների համարակալման հաջորդականությունը միավոր խորանարդի վրա։}
+\end{figure}
 
 
 
+\subsubsection*{ {\addfontfeatures{FakeBold=2.0}3.1.2. Էրմիթյան մոտարկում}}
 
-\section*{\centering Գլուխ 3 \\ Վարիացիոն մեթոդ}
+{\addfontfeatures{FakeBold=2.0}{Եռգծային մոտարկում}}
+Որպես բազիսային ֆունկցիա վերցնենք $(1.3)$-ում տրված ֆունկցիաների թենզորական արտադրյալները։
+\begin{equation}
+			 \varphi^{(ijk)}\left(x,y,z\right)=\varphi^{(i)}(x)\varphi^{(j)}(y)\varphi^{(k)}(z)
+\end{equation}
+Ավելի բարձր կարգի էրմիթյան ինտերպոլյացիա ստանալու համար անհրաժեշտ է ստանալ համապատասխան բազիսային ֆունկցիաների թենզորական արտադրյալները (տես գլուխ 2)։
+
+
+
+\newpage
+\section*{\centering {\addfontfeatures{FakeBold=2.0}Գլուխ 4 \\ Վարիացիոն մեթոդ}}
 \setcounter{equation}{0}
 
 Մաթեմատիկական ֆիզիկայի բազմաթիվ խնդիրներ կապված են վարիոցիոն մեթոդի հետ, որը մաթեմատիկական անալիզի գլխավոր մեթոդներից է։
@@ -631,13 +957,13 @@ To be continued
 Այս  մեթոդի հիմնական դժվարությունը կայանում է նրանում, որ խնդիրները, որոնք կարող են ձևակերպվել որպես վարիացիոն, հնարավոր է, որ լուծում չունենան այն պատճառով, որ ֆունկցիոնալ տարածություները  կոմպակտ չեն։
 Սակայն վարիացիոն մեթոդի հիմնական առավելությունն այն է, որ դրա կիրառման համար դրվող պահանջները ավելի թույլ են:
 \newpage
-\subsection*{Օրինակներ}
+\subsection*{{\addfontfeatures{FakeBold=2.0}Օրինակներ}}
 \hspace{\parindent}Որպես օրինակ դիտարկենք հետևյալ կրկնակի ինտեգրալը.
 \begin{equation}
 I\left(f\right)=\iint \limits_{\Omega} F\left(x, y, f, f_{x}, f_{y}\right)dxdy
 \end{equation}
 որտեղ $f \in C^{2}(\Omega)$,  $\Omega\subset \mathbb{R}^{2}$ և որի արժեքները որոշված են $\partial \Omega$ ում:
-Այս դեպքում, որպեսզի $f$ ֆունկցիան $\left(1\right)$ ֆունկցիոնալի համարա հանդիսանա մինիմում, անհրաժեշտ է, որ $f(x,y)$ ֆունկցիան բավարարի Էյլեր֊Լագրանժի հավասարմանը, հավելելով համապատասխան եզրային պայմանները։
+Այս դեպքում, որպեսզի $f$ ֆունկցիան $\left(1\right)$ ֆունկցիոնալի համարա հանդիսանա մինիմում, անհրաժեշտ է, որ $f(x,y)$ ֆունկցիան բավարարի Էյլեր-Լագրանժի հավասարմանը, հավելելով համապատասխան եզրային պայմանները։
 \begin{equation}
 \dfrac{\partial}{\partial x}F_{u_{x}} + \dfrac{\partial}{\partial y}F_{u_{y}} - F_{u} = 0
 \end{equation}
@@ -645,12 +971,15 @@ I\left(f\right)=\iint \limits_{\Omega} F\left(x, y, f, f_{x}, f_{y}\right)dxdy
 \begin{equation}
 \dfrac{\partial^{2}f}{\partial x^{2}} + \dfrac{\partial^{2}f}{\partial y^{2}} = 0
 \end{equation}
-Այժմ պարզ է, որ երկրորդ կարգի ածանցյալների անընդհատությունը անհրաժեշտ է Էյլեր֊Լագրանժի հավասարման գոյության համար։ Բայց վարիացիոն մեթոդը պահանջում է միայն $f$ ի անընդհատություն և առաջին կարգի մասնակի ածանցյալների կտոր առ կտոր անընդհատություն։
+Այժմ պարզ է, որ երկրորդ կարգի ածանցյալների անընդհատությունը անհրաժեշտ է Էյլեր-Լագրանժի հավասարման գոյության համար։ Բայց վարիացիոն մեթոդը պահանջում է միայն $f$ ի անընդհատություն և առաջին կարգի մասնակի ածանցյալների կտոր առ կտոր անընդհատություն։
 
-Դիֆերենցիալ հավասարումը, որը կապված է վարիացիոն խնդրի հետ, կոչվում է Էյլեր֊Լագրանժի հավասարում։ Այս միայն անհրաժեշտ պայման է, որին պետք է բավարարի ֆունկցիան, որը մինիմիզացնում (մաքսիմիզացնում) է ֆունկցիոնալը։
+Դիֆերենցիալ հավասարումը, որը կապված է վարիացիոն խնդրի հետ, կոչվում է Էյլեր-Լագրանժի հավասարում։ Այս միայն անհրաժեշտ պայման է, որին պետք է բավարարի ֆունկցիան, որը մինիմիզացնում (մաքսիմիզացնում) է ֆունկցիոնալը։
 
 \newpage
-Ստորև դիտարկվում են խնդիրների մի քանի տարբերակներ.
+\noindent Ստորև դիտարկվում են խնդիրների մի քանի տարբերակներ.
+%This command allows to indent only the first line of enumeration
+\setlist[enumerate]{itemindent=\dimexpr\labelwidth+\labelsep\relax,leftmargin=0pt}
+
 \begin{enumerate}
 \item Մեկ փոփոխականի ֆունկցիա.
 $$f \in \Omega \mapsto \Theta, \; \Omega, \Theta \subset \mathbb{R}$$
@@ -685,14 +1014,14 @@ $$f \in \Omega \mapsto \Theta, \; \Omega \subset \mathbb{R}^{n}, \Theta \subset 
 
 \noindent Այս դեպքում ֆունկցիոնալն ընդունում է հետևյալ տեսքը.
 $$I\left(f\right) = \idotsint \limits_{\Omega} F\left(x, f, f_{x_{1}}, f_{x_{2}}, \dots f_{x_{n} }\right)d\Omega$$
-\noindent որտեղ $f$ ֆունկցիայի արժեքները $\partial \Omega$֊ի վրա տրված են։
+\noindent որտեղ $f$ ֆունկցիայի արժեքները $\partial \Omega$-ի վրա տրված են։
 
 \noindent Մինիմիմում գոյության անհրաժեշտ պայման է հետևյալ դիֆերենցիալ հավասարումը.
 
 $$\dfrac{\partial F}{\partial f} - \dfrac{d}{dx_{1}}\dfrac{\partial F}{\partial f_{x_{1}}} - \dots -\dfrac{d}{dx_{n}}\dfrac{\partial F}{\partial f_{x_{n}}}=0$$
 \end{enumerate}
 \newpage
-\subsubsection*{Եզրային պայմաններ}
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}Եզրային պայմաններ}}
 Նախորդիվ դիտարկել էինք այնպիսի խնդիրներ, որտեղ ֆունկցիան արժեքները տրված տիրույթի եզրի տրված են։Սակայն որոշ խնդիրնորում ֆունկցիան տիրույթի եզրում տրված չէ, և տրվում են այլ տիպի եզրային պայմաններ։Նման դեպքերում որպես եզրային պայման դիտարկվում են հետևյալ պայմանները.
 
 \noindent Մեկ փոփոխականի ֆունկցիա
@@ -704,13 +1033,13 @@ $$F_{u_{x}}\dfrac{dy}{ds}-F_{u_{y}}\dfrac{dx}{ds}=0$$
 
 \noindent որոնք հայտնի են որպես \emph{բնական կամ գլխավոր}  եզրային պայմաններ։
 
-\subsubsection*{Պայմանական էքստրեմում}
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}Պայմանական էքստրեմում}}
 Այսպիսի վարիացիոն խնդիրներում անհրաշետ է մինիմիզացնել (մաքսիմիզացնել) տրված ֆունկցիոնալը, պայմանով, որ մեկ այլ ֆունկցիոնալ ընդունում է որևէ ֆիքսված արժեք այդ ֆունկցիայի համար։ Այսինքն, եթե դիտարկենք ֆունկցիանալ, որի արժեքների բազմությունը մեկ փոփոխականի ֆունկցիաներ են, ապա կունենանք.
 
 $$I\left(f\right)=\int \limits_{x_{0}}^{x_{1}} F\left(x, f, f^{'}\right)dx $$
 $$\int \limits_{x_{0}}^{x_{1}} G\left(x, f, f^{'}\right)dx = C$$
 
-Այս խնդրի համար Էյլեր֊Լագրանժի հավասարումը հետևյալն է.
+Այս խնդրի համար Էյլեր-Լագրանժի հավասարումը հետևյալն է.
 
 $$\dfrac{\partial \left(F+\lambda G\right)}{\partial f} - \dfrac{d}{dx} \dfrac{\partial \left(F+\lambda G\right)}{\partial f^{'}} = 0$$
 
@@ -719,11 +1048,11 @@ $$\dfrac{\partial \left(F+\lambda G\right)}{\partial f} - \dfrac{d}{dx} \dfrac{\
 
 %TODO: add description of finite elements
 
-\section*{\centering Գլուխ 4 \\ Մոտավոր մեթոդներ։ Վերջավոր էլեմենտների մեթոդ}
+\section*{\centering {\addfontfeatures{FakeBold=2.0}Գլուխ 5 \\ Մոտավոր մեթոդներ։ Վերջավոր էլեմենտների մեթոդ}}
 \setcounter{equation}{0}
 Խնդիրների վարիացիոն մեթոդով ձևակերպումը, և վարիացիոն մեթոդների ավելի թույլ պայմանները թույլ են տալիս այդ խնդիրները լուծել մոտավոր մեթոդներով, որոնք հաճախ անվանվում են ուղիղ մեթոդներ։ Ուղիղ մեթոդներից է Ռիտցի մինիմիզացնող հաջորդականության մեթոդը, որը քննության կառնենք։ 
 
-\subsection*{Ռիտցի մեթոդ}
+\subsection*{{\addfontfeatures{FakeBold=2.0}Ռիտցի մինիմիզացնող հաջորդականության մեթոդ}}
 Դիտարկենք որևէ վարիացիոն մեթոդով տրված մինիմիզացիայի խնդիր.
 		$$I\left(f\right) \longrightarrow min, \; f \in \Gamma$$
 որտեղ $I$ ֆունկցիոնալը տրված տիրույթում որոշյալ ինտեգրալ է։
@@ -745,7 +1074,7 @@ f_{0}=\sum_{j=1}^{N}\gamma_{j}\varphi_{j}, \; \gamma_{j} \in \mathbb{R}
 \dfrac{\partial I}{\partial \gamma_{i}} = \dfrac{\partial}{\partial \gamma_{i}} I \left(\sum_{j=1}^{N}\gamma_{j}\varphi_{j}\right) = 0
 \end{equation}
 \newpage
-\subsection*{4.1 Պուասոնի հավասարման լուծում ուղղանկյուն տիրույթում}
+\subsection*{{\addfontfeatures{FakeBold=2.0}5.1 Պուասոնի հավասարման լուծում ուղղանկյուն տիրույթում}}
 
 Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
 \begin{equation}
@@ -760,7 +1089,7 @@ f_{0}=\sum_{j=1}^{N}\gamma_{j}\varphi_{j}, \; \gamma_{j} \in \mathbb{R}
 \begin{equation}
 I(u) = \frac{1}{2}\iint \limits_{D} \left[u_x^2 + u_y^2 \right]dxdy + \iint \limits_{D} fudxdy \longrightarrow min
 \end{equation}
-D տիրույթը տրոհենք ուղղանկյուն եղանկյունների, և որպես բազիսային ֆունկցիաներ վերցնենք Կուրանտի ֆունկցիաները $\left(2.7\right)$։
+D տիրույթը տրոհենք ուղղանկյուն եղանկյունների, և որպես բազիսային ֆունկցիաներ վերցնենք Կուրանտի ֆունկցիաները $\left(2.6\right)$։
 Որոնելի ֆունկցիան կփնտրենք բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
 \begin{equation}
 u(x,y) = \sum_{i=0}^{N} \sum_{j=0}^{M} u_{ij}\varphi^{(ij)}(x,y)
@@ -835,7 +1164,7 @@ $$u_{0, l} = u_{N, l} = u_{k, 0} = u_{k, M} = 0$$
 \end{cases}
 \end{equation}
 \newpage
-\subsubsection*{Ծրագրային իրականացում}
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}Ծրագրային իրականացում}}
 
 Պուասոնի հավասարման մոտավուր լուծումը իրականացնելու համար օգտվենք Python ծրագրավորմալ լեզվից, օգտագործելով Numpy գրադարանը, որը հարմար է բազմաչափ զանգվածների հետ մաթեմատիկական գործողություններ իրականացնալու համար։ Վիզուալիզացիաները կառուցելու համար կօգտվենք Matplotlib գրադարանից։
 
@@ -857,10 +1186,10 @@ $$u_{0, l} = u_{N, l} = u_{k, 0} = u_{k, M} = 0$$
 \centering
 \includegraphics[width=0.7\textwidth]{images/poisson_solution}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
+\caption{Նկար 5.1. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
 \end{figure}
 \newpage
-\subsection*{4.2 Պուասոնի հավասարման լուծում եռանկյունացվող տիրույթի համար}
+\subsection*{{\addfontfeatures{FakeBold=2.0}5.2 Պուասոնի հավասարման լուծում եռանկյունացվող տիրույթում}}
 
 Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
 \begin{equation}
@@ -869,7 +1198,7 @@ $$u_{0, l} = u_{N, l} = u_{k, 0} = u_{k, M} = 0$$
 			u \Big |_{\partial D} = 0
 \end{cases}
 \end{equation}
-որտեղ $D$֊ն կամայական տիրույթ է։
+որտեղ $D$-ն կամայական կապակցված միակապ կոմպակտ տիրույթ է։
 
 Այս դիֆերենցիալ հավասարման  համապատասխան վարիացիոն խնդիրը կլինի.
 \begin{equation}
@@ -881,13 +1210,13 @@ D տիրույթը տրոհենք $N$ եռանկյունների։ Գագաթն�
 \centering
 \includegraphics[width=0.7\textwidth]{images/global_and_local_numbering}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.2. Գագաթների լոկալ (թավ տառատեսակ) և գլոբալ համարակալման օրինակ։}
+\caption{Նկար 5.2. Գագաթների լոկալ (թավ տառատեսակ) և գլոբալ համարակալման օրինակ։}
 \end{figure}
-Յուրաքանչյուր $\Delta_{n}$ եռանկյան վրա ($n=\overline{1, N}$) որպես բազիսային ֆունկցիաներ վերցնենք $\left(2.13\right)$֊ում ներկայացված ֆունկցիաները, և որոնելի ֆունկցիան կփնտրենք բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
+Յուրաքանչյուր $\Delta_{n}$ եռանկյան վրա ($n=\overline{1, N}$) որպես բազիսային ֆունկցիաներ վերցնենք $\left(2.18\right)$-ում ներկայացված ֆունկցիաները, և որոնելի ֆունկցիան փնտրենք բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
 \begin{equation}
 u(x, y) = \dfrac{1}{S_{n}}\sum_{i=1}^{3}u_{ni}p^{(ni)}(x,y)
 \end{equation}
-որտեղ $ni$֊ն $n$֊րդ եռանկյան $i$֊րդ գագաթի համապատասխան ինդեքսն է, իսկ $p^{(ni)}(x,y)$֊ն այդ գագաթի համապատասխան բազիսային ֆունկցիան է։
+որտեղ $ni$-ն $n$-րդ եռանկյան $i$-րդ գագաթի համապատասխան ինդեքսն է, իսկ $p^{(ni)}(x,y)$-ն այդ գագաթի համապատասխան բազիսային ֆունկցիան է։
 Ուստի ինտեգրալային ֆունկցիոնալը կունենա հետևյալ տեսքը.
 \begin{equation}
 $$\scalemath{0.95}{\frac{1}{2S_{n}^{2}} \iint \limits_{\Delta_{n}}\left[\left(\sum_{i=1}^{3}u_{ni}p^{(ni)}_{x}(x,y)\right)^2 + \left(\sum_{i=1}^{3}u_{ni}p^{(ni)}_{y}(x,y)\right)^2 +2S_{n}f(x,y)\left(\sum_{i=1}^{3}u_{ni}p^{(ni)}(x,y)\right)\right]dxdy}
@@ -904,7 +1233,7 @@ $$\scalemath{0.95}{\frac{1}{2S_{n}^{2}} \iint \limits_{\Delta_{n}}\left[\left(\s
 \end{aligned}
 \end{equation}
 
-\noindent որտեղ $k, l, m$֊ը գագաթների հաջորդականությունն է լոկալ համարակալման մեջ։
+\noindent որտեղ $k, l, m$-ը գագաթների հաջորդականությունն է լոկալ համարակալման մեջ։
 
 Այսպիսով ավելի պարզեցված տեսքով համակարգը ունի հետևյալ տեսքը.
 \begin{equation}
@@ -936,26 +1265,26 @@ x_{ni}-y_{nj} = x_{nij} \\
 {
 \begin{cases}
 2u_{nk}S_{n}\left(y_{nlm}^{2}+x_{nlm}^{2}\right)+2u_{nl}S_{n}\left(y_{nlm}y_{nmk}+x_{nlm}x_{nmk}\right)+2u_{nm}S_{n}\left(y_{nlm}y_{nkl}+x_{nlm}x_{nkl}\right)=-\dfrac{2}{3}u_{nk} S_{n}^{2}f_{nk} \\
-u_{nk} = 0, \text{եթե } u_{nk}\text{֊ն տիրույթի եզրի գագաթ է}
+u_{n} = 0, \text{եթե } u_{n}\text{-ն տիրույթի եզրի գագաթ է}
 \end{cases}
 }
 \end{equation}
-Համախմբելով բոլոր եռանկյունների համար ստացված հավասարումները, կստանանք գլխավոր համակարգը, և յուրաքանչյուր $n$֊րդ գագաթի համար կունենանք.
+Համախմբելով բոլոր եռանկյունների համար ստացված հավասարումները, կստանանք գլխավոր համակարգը, և յուրաքանչյուր $n$-րդ գագաթի համար կունենանք.
 \begin{equation}
 \scalemath{0.8}
 {
 \begin{cases}
 \sum_{r: P_{n} \in \Delta{r}}u_{nk}S_{r}\left(y_{rlm}^{2}+x_{rlm}^{2}\right)+u_{nl}S_{r}\left(y_{rlm}y_{rmk}+x_{rlm}x_{rmk}\right)+u_{nm}S_{r}\left(y_{rlm}y_{rkl}+x_{rlm}x_{rkl}\right)=-\dfrac{1}{3}\sum_{r: P_{n} \in \Delta{r}}u_{nk} S_{r}^{2}f_{nk} \\
-u_{nk} = 0, \text{եթե } u_{nk}\text{֊ն տիրույթի եզրի գագաթ է}
+u_{nk} = 0, \text{եթե } u_{nk}\text{-ն տիրույթի եզրի գագաթ է}
 \end{cases}
 }
 \end{equation}
 
-\subsubsection*{Ծրագրային իրականացում}
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}Ծրագրային իրականացում}}
 
 Ինչպես ուղղանկյուն տիրույթի դեպքում, այնպես էլ այս դեպքում կօգտվենք նույն գործիքներից։ Տիրույթի եռանկյունացման համար կօգտվենք Python ծրագրավորման լեզվի triangle գրադարանից:
 
-Ծրագրի սկզբում տրվում է տիրույթի եզրագծի կետերը, եզրագծերի կետերի միացման հաջորդականությունը, եռանկյունացման պարամետրերը և $f$ ֆունկցիան։ Հաջորդիվ յուրաքանչյուր եռանկյան համար կազմվում է հավասարումների համակարգը, հընթացս կառուցելով գլխավոր հավասարումների համակարգը։ Այնուհետև կանչվում այն լուծող ֆունկցիան։ Այնուհետև բազիսային ֆունկցիաների միջոցով կառուցվում է մոտարկող ֆունկցիան։
+Ծրագրի սկզբում տրվում է տիրույթի եզրագծի կետերը, եզրագծերի կետերի միացման հաջորդականությունը, եռանկյունացման պարամետրերը և $f$ ֆունկցիան։ Հաջորդիվ յուրաքանչյուր եռանկյան համար կազմվում է հավասարումների համակարգը, հընթացս կառուցելով գլխավոր հավասարումների համակարգը։ Այնուհետև կանչվում է այն լուծող ֆունկցիան։ Այնուհետև բազիսային ֆունկցիաների միջոցով կառուցվում է մոտարկող ֆունկցիան։
 
 Օրինակ
 
@@ -972,17 +1301,17 @@ $$ D = \left\{\left(x,y\right): x^{2}+y^{2} \leq 1\right\}$$
 \centering
 \includegraphics[width=0.6\textwidth]{images/circle_mesh}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.4. Շրջանաձև տիրույթի եռանկյունացման գրաֆիկական ներկայացում։}
+\caption{Նկար 5.3. Շրջանաձև տիրույթի եռանկյունացման գրաֆիկական ներկայացում։}
 \end{figure}
 Խնդրի համար ստացված լուծումը.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{images/poisson_equation_on_unit_circle_solution}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.4. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
+\caption{Նկար 5.4. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
 \end{figure}
 \newpage
-\subsection*{4.3 Բիհարմոնիկ հավասարման լուծում ուղղանկյուն տիրույթում}
+\subsection*{{\addfontfeatures{FakeBold=2.0}5.3 Բիհարմոնիկ հավասարման լուծում ուղղանկյուն տիրույթում}}
 Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
 \begin{equation}
 \begin{dcases}
@@ -997,7 +1326,7 @@ $$ D = \left\{\left(x,y\right): x^{2}+y^{2} \leq 1\right\}$$
 I(u) = \frac{1}{2}\iint \limits_{D} \left[u_{xx}^{2} + 2u_{xy}^{2} + u_{yy}^{2} \right]dxdy - \iint \limits_{D} fudxdy \longrightarrow min
 \end{equation}
 $D$ տիրույթը տրոհենք ուղղանկյուների $h_{1}$ և $h_{2}$ քայլերով համապատասխանաբար ըստ $x$ և $y$ կոորդինատների։
-Որոնելի ֆունկցիան կփնտրենք $\left(2.9\right)$ ում ներկայացված բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
+Որոնելի ֆունկցիան կփնտրենք $\left(2.13\right)$ ում ներկայացված բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
 \begin{equation}
 u(x,y) = \sum_{i=0}^{N} \sum_{j=0}^{M} u_{ij}\varphi^{(ij)}(x,y)
 \end{equation}
@@ -1009,7 +1338,7 @@ $$\scalemath{0.7}{\frac{1}{2} \iint \limits_{D}\left[\left(\sum_{i=0}^{N} \sum_{
 \begin{equation}
 \dfrac{\partial I}{ \partial u_{kl}} = \dfrac{\partial}{\partial u_{kl}} I \left(\sum_{i=0}^{N}\sum_{j=0}^{M} u_{ij}\varphi^{(ij)}(x,y)\right) = 0
 \end{equation}
-Դիտարկենք $\left(18\right)$֊ի առաջին կրկնակի գումարը.
+Դիտարկենք $\left(29\right)$-ի առաջին կրկնակի գումարը.
 $$\left(\sum_{i=0}^{N} \sum_{j=0}^{M}u_{ij}\varphi_{xx}^{(ij)}(x,y)\right)^2 = \left[u_{kl}\varphi_{xx}^{(kl)}(x,y)\right]^{2} + 2u_{kl}\varphi_{xx}^{(kl)}(x,y)[\dots] + [\dots]^2$$
 \noindent որտեղ բազմակետերով արտահայտությունը իր մեջ չի պարունակում $u_{kl}$ ը։
 Հանգունորեն երկրորդ կրկնակի գումարի համար.
@@ -1034,7 +1363,7 @@ $\left(19\right)$ ինտեգրալը հաշվենք անդամ առ անդամ։
 \approx \dfrac{2}{9} h_{1}h_{2} \left[f_{k-1,l}+2f_{k,l}+f_{k+1,l}\right] \left[f_{k,l-1}+2f_{k,l}+f_{k,l+1}\right]
 \end{split}
 \end{equation}
-Դիտարկենք մյուս ինտեգրալները։ Քանի որ $\varphi^{(ij)}$ բազիսային ֆունկցիաները ունեն լոկալ կրողներ $4 \times 4 = 16$ ուղղանկյուն էլեմենտներում, ապա տրված $\varphi^{kl}$ ֆունկցիան հատվում է 49 այլ բազիսային ֆունկցիաների հետ։ Բացառություն են կազմում $i=2, M-2$, $j=2, N-2$ դեպքերը, որոնց համար լոկալ կրողը $6 \times 7 = 42$ է եզրին հարող հանգույցների համար, և $6 \times 6 = 36$ անկյուններին հարող հանգույցների համար։ Ստորև ներկայացվում է երեք հնարավոր դեքերը (արտակատկերման համար ներկված հանգույցները պատկերված են ուղղանկյունների տեսքով)։
+Դիտարկենք մյուս ինտեգրալները։ Քանի որ $\varphi^{(ij)}$ բազիսային ֆունկցիաները ունեն լոկալ կրողներ $4 \times 4 = 16$ ուղղանկյուն էլեմենտներում, ապա տրված $\varphi^{kl}$ ֆունկցիան հատվում է 49 այլ բազիսային ֆունկցիաների հետ։ Բացառություն են կազմում $i=2, M-2$, $j=2, N-2$ դեպքերը, որոնց համար լոկալ կրողը $6 \times 7 = 42$ է եզրին հարող հանգույցների համար, և $6 \times 6 = 36$ անկյուններին հարող հանգույցների համար։ Ստորև ներկայացվում է երեք հնարավոր դեքերը (արտապատկերման համար հանգույցները պատկերված են ներկված ուղղանկյունների տեսքով)։
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.2\textwidth}
@@ -1052,7 +1381,7 @@ $\left(19\right)$ ինտեգրալը հաշվենք անդամ առ անդամ։
     %\captionsetup{labelformat=empty}
   \end{minipage}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.2. Բազիսային ֆունկցիաների հատումների ներկայացում տիրույթի ներսում, անկյունի վրա և եզրի վրա։}
+\caption{Նկար 5.5. Բազիսային ֆունկցիաների հատումների ներկայացում տիրույթի ներսում, անկյունի վրա և եզրի վրա։}
 \end{figure}
 		$$\iint \limits_{D} 2\varphi_{xx}^{(kl)}(x,y)[\dots]dxdy, \iint \limits_{D} 4\varphi_{xy}^{(kl)}(x,y)[\dots]dxdy, \iint \limits_{D} 2\varphi_{yy}^{(kl)}(x,y)[\dots]dxdy$$
 ինտեգրալները ներկայացնենք կրկնակի ինտեգրալների տեսքով։
@@ -1219,9 +1548,9 @@ u_{k-3,l+3} & u_{k-2,l+3} & u_{k-1,l+3} & u_{k,l+3} & u_{k+1,l+3} & u_{k+2,l+3} 
 =\dfrac{2}{9} h_{1}h_{2} \left[f_{k-1,l}+2f_{k,l}+f_{k+1,l}\right] \left[f_{k,l-1}+2f_{k,l}+f_{k,l+1}\right] 
 \end{gathered}
 \end{equation}
-$k=2, M-2$, ինչպես նաև $l=2, N-2$ ֊ի համար կազմվում է նույն հավասարումը, փոխելով միայն համապասխան գործակիցները և դրանց քանակը։
+$k=2, M-2$, ինչպես նաև $l=2, N-2$ -ի համար կազմվում է նույն հավասարումը, փոխելով միայն համապասխան գործակիցները և դրանց քանակը։
 \newpage
-\subsubsection*{Ծրագրային իրականացում}
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}Ծրագրային իրականացում}}
 Ինչպես Պուասոնի հավասարման դեպքում, այնպես էլ այս դեպքում կօգտվենք նույն գործիքներից։
 Որպես օրինակ լուծենք հետևյալ հավասարումը տրված կոնկրետ տիրույթով և $f$ ֆունկցիայով։
 $$\begin{dcases}
@@ -1236,6 +1565,126 @@ $$\begin{dcases}
 \centering
 \includegraphics[width=0.9\textwidth]{images/biharmonic_equation_solution}
 \captionsetup{labelformat=empty}
-\caption{Նկար 4.3. Բիհարմոնիկ հավասարման լուծման գրաֆիկական ներկայացում։}
+\caption{Նկար 5.6. Բիհարմոնիկ հավասարման լուծման գրաֆիկական ներկայացում։}
 \end{figure}
+
+\newpage
+\subsection*{{\addfontfeatures{FakeBold=2.0}5.4 Բիհարմոնիկ հավասարման լուծում եռանկյունացվող տիրույթում}}
+Դիտարկենք հետևյալ դիֆերենցիալ հավասարումը.
+\begin{equation}
+\begin{dcases}
+&\Delta^{2} u =f \\
+&u \Big |_{\partial D} = 0\\
+&\dfrac{\partial u}{\partial n} \Big |_{\partial D} = 0
+\end{dcases}
+\end{equation}
+որտեղ $D$-ն կամայական կապակցված միակապ պոմպակտ տիրույթ է։
+Այս դիֆերենցիալ հավասարման  համապատասխան վարիացիոն խնդիրը կլինի.
+\begin{equation}
+I(u) = \frac{1}{2}\iint \limits_{D} \left[u_{xx}^{2} + 2u_{xy}^{2} + u_{yy}^{2} \right]dxdy - \iint \limits_{D} fudxdy \longrightarrow min
+\end{equation}
+Ինչպես Պուասոնի հավասարման լուծման դեպքում, այստեղ ևս տիրույթը կտրոհենք եռանկյունների, սակայն քանի որ այս դեպքում պահանջվում է բազիսային ֆունկցիաների առնվազն $C^{1}$ կարգ, ուստի որպես բազիսային ֆունկցիաներ կվերցնենք Արգիրիսի բազիսային ֆունկցիաները։
+
+Հաշվարկների և բանաձևերի ներկայացման հեշտության համար բազիսային ֆունկցիաները դասավորենք ըստ գագաթների հետևյալ հաջորդականությամբ։
+\begin{equation}
+\begin{aligned}
+&\Psi_{(p, q)}, \; p=\overline{1, 3}, \; q = \overline{1, 7} \\
+&\Psi^{(p, q)} = \left[\varphi_{p}^{(0, 0)}, \varphi_{p}^{(1, 0)}, \varphi_{p}^{(0, 1)}, \varphi_{p}^{(2, 0)}, \varphi_{p}^{(1, 1)}, \varphi_{p}^{(0, 2)}, \hat{\varphi}_{p}\right]
+\end{aligned}
+\end{equation}
+Յուրաքանչյուր $\Delta_{n}$ եռանկյան վրա ($n=\overline{1, N}$)  որոնելի ֆունկցիան փնտրենք բազիսային ֆունկցիաների գծային կոմբինացիայի տեսքով.
+\begin{equation}
+u(x, y) = \sum_{i=1}^{3}\sum_{j=1}^{7}u_{nij}\Psi^{(ni,j)}\left(x,y\right)
+\end{equation}
+որտեղ $nij$-ն $n$-րդ եռանկյան $i$-րդ գագաթի $j$-րդ ֆունկցիայի համապատասխան ինդեքսն է, իսկ $\Psi^{(ni, j)}(x,y)$-ն այդ գագաթի համապատասխան բազիսային ֆունկցիան է։
+
+Համաձայն էքստրեմումի անհրաժեշտ պայմանի.
+\begin{equation}
+\dfrac{\partial I}{ \partial u_{nkl}} = \dfrac{\partial}{\partial u_{nkl}} I \left(\sum_{i=1}^{3}\sum_{j=1}^{7}u_{nij}\Psi^{(ni,j)}\right) = 0
+\end{equation}
+
+$(5.51)$-ը հերթով տեղադրենք $(5.49)$-ի $u_{xx}^{2}, \; u_{xy}^{2}, \; u_{yy}^{2}, \; \text{և} \; f u$-ի մեջ և հաշվենք $(5.52)$-ը։
+\begin{equation}
+\begin{aligned}
+&\dfrac{\partial}{ \partial u_{nkl}}u_{xx}^2 = \dfrac{\partial}{ \partial u_{nkl}}\left[\sum_{i=1}^{3}\sum_{j=1}^{7}u_{nij}\Psi^{(ni,j)}_{xx}\right]^{2} = 2\Psi^{(ni,j)}_{xx}\left[\sum_{i=1}^{3}\sum_{j=1}^{7}u_{nij}\Psi^{(ni,j)}_{xx}\right] \\
+&\dfrac{\partial}{ \partial u_{nkl}}u_{xy}^2 = \dfrac{\partial}{ \partial u_{nkl}}\left[\sum_{i=1}^{3}\sum_{j=1}^{7}u_{nij}\Psi^{(ni,j)}_{xy}\right]^{2} = 2\Psi^{(ni,j)}_{xy}\left[\sum_{i=1}^{3}\sum_{j=1}^{7}u_{nij}\Psi^{(ni,j)}_{xy}\right] \\
+&\dfrac{\partial}{ \partial u_{nkl}}u_{yy}^2 = \dfrac{\partial}{ \partial u_{nkl}}\left[\sum_{i=1}^{3}\sum_{j=1}^{7}u_{nij}\Psi^{(ni,j)}_{yy}\right]^{2} = 2\Psi^{(ni,j)}_{yy}\left[\sum_{i=1}^{3}\sum_{j=1}^{7}u_{nij}\Psi^{(ni,j)}_{yy}\right] \\
+\end{aligned}
+\end{equation}
+
+Աջ մասի $f$ ֆունկցիան ևս ներկայացնենք բազիսային ֆունկցիաների գծային կամբինացիաների տեսքով:
+
+\begin{equation}
+\dfrac{\partial}{ \partial u_{nkl}}fu = \Psi^{(nk,l)}\left[\sum_{i=1}^{3}\sum_{j=1}^{7}f_{nij}\Psi^{(ni,j)}\right]
+\end{equation}
+Հիմնվելով $(5.53)$ և $(5.54)$-ի վրա, կունենանք.
+\begin{equation}
+\begin{gathered}
+\dfrac{\partial I}{ \partial u_{nkl}} = \frac{1}{2}\iint \limits_{\Delta_{n}} \left[\dfrac{\partial}{ \partial u_{nkl}}u_{xx}^2 + 2\dfrac{\partial}{ \partial u_{nkl}}u_{xy}^2 + \dfrac{\partial}{ \partial u_{nkl}}u_{yy}^2 \right]dxdy - \iint \limits_{\Delta_{n}} \dfrac{\partial}{ \partial u_{nkl}}fudxdy = \\
+\scalemath{0.8}{
+\sum_{i=1}^{3}\sum_{j=1}^{7}\left\{u_{nij}\iint \limits_{\Delta_{n}}\left[\Psi^{(ni,j)}_{xx}\Psi^{(nk,l)}_{xx} + 2\Psi^{(ni,j)}_{xy}\Psi^{(nk,l)}_{xy} + \Psi^{(ni,j)}_{yy}\Psi^{(nk,l)}_{yy}\right]dxdy - f_{nij}\iint \limits_{\Delta_{n}} \left[\Psi^{(nk,l)}\Psi^{(ni,j)}\right]dxdy\right\}}=0
+\end{gathered}
+\end{equation}
+
+Հաշվենք $(5.55)$-ի առաջին և երկրորդ ինտեգրալները։
+
+Նշանակենք
+\begin{equation}
+\begin{aligned}
+&\hat{A}_{ij} = \iint \limits_{\Delta_{n}} F\left(\hat{\Psi}^{(ni,j)}_{xx}\right)F\left(\hat{\Psi}^{(nk,l)}_{xx}\right) + 2F\left(\hat{\Psi}^{(ni,j)}_{xy}\right)F\left(\hat{\Psi}^{(nk,l)}_{xy}\right) + F\left(\hat{\Psi}^{(ni,j)}_{yy}\right)F\left(\hat{\Psi}^{(nk,l)}_{yy}\right)dxdy \\
+&\hat{B}_{ij} = \iint \limits_{\Delta_{n}} F\left(\hat{\Psi}^{(ni,j)}\right)F\left(\hat{\Psi}^{(nk,l)}\right)dxdy
+\end{aligned}
+\end{equation}
+ Ինտեգրալների համար կունենանք.
+\begin{equation}
+\begin{aligned}
+& A_{ij} = M\hat{A}_{ij}M^{T} \\
+& B_{ij} = M\hat{B}_{ij}
+\end{aligned}
+\end{equation}
+որտեղ $F$-ը $(2.41)$-ում սահմանված աֆինյան ձևափոխությունն է, իսկ $M$-ը՝ տրանսֆորմացիան։
+
+Համախմբելով բոլոր եռանկյունների համար ստացված հավասարումները, կստանանք գլխավոր համակարգը, և յուրաքանչյուր $n$-րդ գագաթի համար կունենանք.
+\begin{equation}
+\begin{cases}
+\sum_{r: P_{n}\in \Delta{r}}\sum_{j=1}^{7}  A_{nrj} = \sum_{r: P_{n}\in \Delta{r}}\sum_{j=1}^{7}B_{nrj}\\
+u_{n1} = 0, \text{եթե } u_{n}\text{-ն տիրույթի եզրի գագաթ է} \\
+u_{n7} = 0, \text{եթե } u_{n}\text{-ին համապատասխանող միջնակետը տիրույթի եզրի գագաթ է}
+\end{cases}
+\end{equation}
+
+\newpage
+\subsubsection*{{\addfontfeatures{FakeBold=2.0}Ծրագրային իրականացում}}
+
+Ինչպես նախորդ դեպքերում, այնպես էլ այս դեպքում կօգտվենք նույն գործիքներից։
+Հաշվարկները հեշտացնելու համար օգտագործվել է sympy գրադարանը, որը թույլ է տալիս կատարել սիմվոլիկ հաշվարկներ, ավելի կոնկրետ դիֆերենցում և ինտեգրում։ Նախորոք հաշվարկվել և ֆունկցիաների տեսքով պահպանվել են $(5.56)$ կետում նշված ինտեգրալները։ Հետագայում ծրագրի ընթացքում այդ ֆունկցիաներին տրվում են $(5.57)$ բանաձևի անհրաժեշտ փոփոխականները։ Այսպիսով, լուծումն ավելի ճշգրիտ է ստացվում, ի հաշիվ այն բանի, որ չեն օգտագործվում ինտեգրալների արժեքները մոտարկող քառակուսացման բանաձևեր։
+
+Ծրագրի սկզբում տրվում է տիրույթի եզրագծի կետերը, եզրագծերի կետերի միացման հաջորդականությունը, եռանկյունացման պարամետրերը և $f$ ֆունկցիան։ Հաջորդիվ յուրաքանչյուր եռանկյան համար կազմվում է հավասարումների համակարգը, հընթացս կառուցելով գլխավոր հավասարումների համակարգը։ Այնուհետև կանչվում է այն լուծող ֆունկցիան։ Այնուհետև բազիսային ֆունկցիաների միջոցով կառուցվում է մոտարկող ֆունկցիան։
+
+Օրինակ
+
+$$
+\begin{dcases}
+&\Delta^{2} u = 1 \\
+&u \Big |_{\partial D} = 0\\
+&\dfrac{\partial u}{\partial n} \Big |_{\partial D} = 0
+\end{dcases}
+$$
+$$ D = \left\{\left(x,y\right): x^{2}+y^{2} \leq 1\right\}$$
+Տիրույթի եռանկյունացումը
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{images/circle_mesh_quad_biharmonic}
+\captionsetup{labelformat=empty}
+\caption{Նկար 5.7. Շրջանաձև տիրույթի եռանկյունացման գրաֆիկական ներկայացում։}
+\end{figure}
+\newpage
+Խնդրի համար ստացված լուծումը.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{images/biharmonic_equation_solution_argyris_function_value}
+\captionsetup{labelformat=empty}
+\caption{Նկար 5.8. Պուասոնի հավասարման լուծման գրաֆիկական ներկայացում։}
+\end{figure}
+
 \end{document}

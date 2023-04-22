@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2023.2.15)  17 APR 2023 20:06
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2023.2.15)  22 APR 2023 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,13 +512,22 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count303
 \c@continuedfloat=\count304
 )
+(/home/kamo_sevoyan/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip63
+\enit@outerparindent=\dimen196
+\enit@toks=\toks29
+\enit@inbox=\box104
+\enit@count@id=\count305
+\enitdp@description=\count306
+)
 (/home/kamo_sevoyan/.miktex/texmfs/install/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count305
-\float@exts=\toks29
-\float@box=\box104
-\@float@everytoks=\toks30
-\@floatcapt=\box105
+\c@float@type=\count307
+\float@exts=\toks30
+\float@box=\box105
+\@float@everytoks=\toks31
+\@floatcapt=\box106
 )
 (/home/kamo_sevoyan/.miktex/texmfs/install/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -532,43 +541,43 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/home/kamo_sevoyan/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count306
-\Gm@cntv=\count307
-\c@Gm@tempcnt=\count308
-\Gm@bindingoffset=\dimen196
-\Gm@wd@mp=\dimen197
-\Gm@odd@mp=\dimen198
-\Gm@even@mp=\dimen199
-\Gm@layoutwidth=\dimen256
-\Gm@layoutheight=\dimen257
-\Gm@layouthoffset=\dimen258
-\Gm@layoutvoffset=\dimen259
-\Gm@dimlist=\toks31
+\Gm@cnth=\count308
+\Gm@cntv=\count309
+\c@Gm@tempcnt=\count310
+\Gm@bindingoffset=\dimen197
+\Gm@wd@mp=\dimen198
+\Gm@odd@mp=\dimen199
+\Gm@even@mp=\dimen256
+\Gm@layoutwidth=\dimen257
+\Gm@layoutheight=\dimen258
+\Gm@layouthoffset=\dimen259
+\Gm@layoutvoffset=\dimen260
+\Gm@dimlist=\toks32
 
 (/home/kamo_sevoyan/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
 
-Package fontspec Info: Font family 'GHEAGrapalat(0)' created for font 'GHEA
-(fontspec)             Grapalat' with options [Ligatures=TeX].
+Package fontspec Info: Could not resolve font "Sylfaen/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Sylfaen/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "Sylfaen/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Font family 'Sylfaen(0)' created for font 'Sylfaen'
+(fontspec)             with options [Ligatures=TeX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"GHEA
-(fontspec)             Grapalat/OT:script=latn;language=dflt;mapping=tex-text;"
-
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"GHEA
-(fontspec)             Grapalat/B/OT:script=latn;language=dflt;mapping=tex-text
-;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"GHEA
-(fontspec)             Grapalat/I/OT:script=latn;language=dflt;mapping=tex-text
-;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"GHEA
-(fontspec)             Grapalat/BI/OT:script=latn;language=dflt;mapping=tex-tex
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Sylfaen/OT:script=latn;language=dflt;mapping=tex-tex
 t;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
 
@@ -578,91 +587,86 @@ LaTeX Warning: Unused global option(s):
 (diploma.aux)
 \openout1 = `diploma.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
-8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
+2.
 
 (/home/kamo_sevoyan/.miktex/texmfs/install/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 68.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 68.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 68.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 68.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 68.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 68.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 68.
-LaTeX Font Info:    Redeclaring math accent \check on input line 68.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 68.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 68.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 68.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 68.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 72.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 72.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 72.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 72.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 72.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 72.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 72.
+LaTeX Font Info:    Redeclaring math accent \check on input line 72.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 72.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 72.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 72.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 72.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 68.
+(Font)              `operators' in the math version `normal' on input line 72.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/GHEAGrapalat(0)/m/n on input line 68
-.
+(Font)                  OT1/cmr/m/n --> TU/Sylfaen(0)/m/n on input line 72.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 68.
+(Font)              `operators' in the math version `bold' on input line 72.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/GHEAGrapalat(0)/m/n on input line 6
-8.
+(Font)                  OT1/cmr/bx/n --> TU/Sylfaen(0)/m/n on input line 72.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/GHEAGrapalat(0)/m/n --> TU/GHEAGrapalat(0)/m/n on in
-put line 68.
+(Font)                  TU/Sylfaen(0)/m/n --> TU/Sylfaen(0)/m/n on input line 7
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/GHEAGrapalat(0)/m/it on input line 
-68.
+(Font)                  OT1/cmr/m/it --> TU/Sylfaen(0)/m/it on input line 72.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/GHEAGrapalat(0)/b/n on input line 6
-8.
+(Font)                  OT1/cmr/bx/n --> TU/Sylfaen(0)/b/n on input line 72.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 68.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 72.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 68.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 72.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/GHEAGrapalat(0)/m/n --> TU/GHEAGrapalat(0)/b/n on in
-put line 68.
+(Font)                  TU/Sylfaen(0)/m/n --> TU/Sylfaen(0)/b/n on input line 7
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/GHEAGrapalat(0)/b/it on input line
- 68.
+(Font)                  OT1/cmr/bx/it --> TU/Sylfaen(0)/b/it on input line 72.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 68.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 72.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 68.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 72.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -701,161 +705,196 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
+
+LaTeX Font Warning: Font shape `TU/Sylfaen(0)/b/n' undefined
+(Font)              using `TU/Sylfaen(0)/m/n' instead on input line 80.
+
+
+Package fontspec Info: Could not resolve font "Sylfaen/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Sylfaen/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "Sylfaen/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Font family 'Sylfaen(1)' created for font 'Sylfaen'
+(fontspec)             with options [Ligatures=TeX,FakeBold=2.0].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Sylfaen/OT:script=latn;language=dflt;embolden=2.0;ma
+pping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+LaTeX Font Warning: Font shape `TU/Sylfaen(1)/b/n' undefined
+(Font)              using `TU/Sylfaen(1)/m/n' instead on input line 80.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
 
 (/home/kamo_sevoyan/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
 
 
 (/home/kamo_sevoyan/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1194) in paragraph at lines 80--81
-\TU/GHEAGrapalat(0)/m/n/12 համապատասխան $[][]$ արժեքները։ Յուրաքանչյուր $[]$ հա
-տվածում
+Underfull \hbox (badness 4229) in paragraph at lines 85--86
+\TU/Sylfaen(0)/b/n/12 համապատասխան $[][]$ արժեքները։ Յուրաքանչյուր $[]$ հատվածո
+ւմ
  []
 
 File: images/one_var_linear.png Graphic file (type bmp)
 <images/one_var_linear.png>
 
-Underfull \hbox (badness 3088) in paragraph at lines 106--114
-\TU/GHEAGrapalat(0)/m/n/12 տիրույթի մնացած մասերում։ Նմանատիպ բազիսային ֆունկցի
-աների հիմնական
+Underfull \hbox (badness 10000) in paragraph at lines 111--119
+\TU/Sylfaen(0)/b/n/12 տիրույթի մնացած մասերում։ Նմանատիպ բազիսային ֆունկցիաների
+ հիմնական
  []
 
-[4
+
+Underfull \hbox (badness 2245) in paragraph at lines 111--119
+\TU/Sylfaen(0)/b/n/12 հատկությունն այն է, որ դրանք հավասար են մեկի որևէ կոնկրետ
+ հանգույցում և
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 111--119
+\TU/Sylfaen(0)/b/n/12 հավասար են զրոյի մնացած բոլոր հանգույցներում։ Նշենք սակայ
+ն, որ այս տիպի
+ []
+
+[5
 
 ]
-Underfull \hbox (badness 1112) in paragraph at lines 115--116
-[]\TU/GHEAGrapalat(0)/m/n/12 Այժմ դիտարկենք հետևյալ խնդիրը. անհրաժեշտ է կառուցե
-լ կտոր առ կտոր
+Underfull \hbox (badness 3219) in paragraph at lines 120--121
+[]\TU/Sylfaen(0)/b/n/12 Այժմ դիտարկենք հետևյալ խնդիրը. անհրաժեշտ է կառուցել կտո
+ր առ կտոր
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
-\TU/GHEAGrapalat(0)/m/n/12 Յուրաքանչյուր $[]$ հատվածում ինտերպոլյացիոն ֆունկցիա
-ն իրենից
- []
-
-
-Underfull \hbox (badness 1509) in paragraph at lines 118--120
-\TU/GHEAGrapalat(0)/m/n/12 ներկայացնում է խորանարդային ֆունկցիա, որը կարելի է ն
-երկայացնել հետևյալ
- []
-
-[5]
+[6]
 File: images/one_var_quadratic.png Graphic file (type bmp)
 <images/one_var_quadratic.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--183
-[]\TU/GHEAGrapalat(0)/m/n/12 Վերը ներկայացված ինտերպոլյացիաների օրինակները էրմի
-թյան
- []
-
-[6] [7]
-Underfull \hbox (badness 4001) in paragraph at lines 189--192
-\TU/GHEAGrapalat(0)/m/n/12 Նման տիպի ինտերպոլյացիայի կառուցման պարզագույն օրինա
-կը հետևյալն է.
+[7] [8]
+Underfull \hbox (badness 1292) in paragraph at lines 194--197
+\TU/Sylfaen(0)/b/n/12 Խնդիրներում, որտեղ անհրաժեշտ է որոշել միայն տրված ֆունկից
+իան, ֆունկցիայի
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 201--203
-[]\TU/GHEAGrapalat(0)/m/n/12 Առավել կիրառելի են խորանարդային սփլայնները։ Այս դե
-պքում յուրաքանչյուր
+Underfull \hbox (badness 3068) in paragraph at lines 194--197
+[]$ \TU/Sylfaen(0)/b/n/12 ինտերվալում կառուցվում է այպիսի պարաբոլ, որ բոլոր $\O
+ML/cmm/m/it/12 x[]$ \TU/Sylfaen(0)/b/n/12 հանգուցային
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 201--203
-\TU/GHEAGrapalat(0)/m/n/12 որ հանգույցներում առաջին և երկրորդ կարգի ածանցյալներ
-ը լինեն անընդհատ։
+Underfull \hbox (badness 2582) in paragraph at lines 206--208
+[]\TU/Sylfaen(0)/b/n/12 Առավել կիրառելի են խորանարդային սփլայնները։ Այս դեպքում
+ յուրաքանչյուր
  []
 
-[8]
+
+Underfull \hbox (badness 2443) in paragraph at lines 206--208
+[]$ \TU/Sylfaen(0)/b/n/12 ինտերվալում կառուցվում են երրորդ աստիճանի բազմանդամնե
+ր այնպես,
+ []
+
+
+Underfull \hbox (badness 5681) in paragraph at lines 206--208
+\TU/Sylfaen(0)/b/n/12 որ հանգույցներում առաջին և երկրորդ կարգի ածանցյալները լին
+են անընդհատ։
+ []
+
+[9]
 File: images/quadratic_and_cubic_interploation.png Graphic file (type bmp)
 <images/quadratic_and_cubic_interploation.png>
- [9]
-Underfull \hbox (badness 4792) in paragraph at lines 236--238
-[]\TU/GHEAGrapalat(0)/m/n/12 Այժմ դիտարկենք լոկալ կրող ունեցող խորանարդային սփլ
-այները։ Այդպիսի
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
+[]\TU/Sylfaen(0)/b/n/12 Այժմ դիտարկենք լոկալ կրող ունեցող խորանարդային սփլայներ
+ը։ Այդպիսի
  []
 
 File: images/cubic_compact_support_basis.png Graphic file (type bmp)
 <images/cubic_compact_support_basis.png>
 
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 259.
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 264.
 
-[10]
+[11]
 File: images/all_cubic_compact_support_basis.png Graphic file (type bmp)
 <images/all_cubic_compact_support_basis.png>
- [11]
-Underfull \hbox (badness 7540) in paragraph at lines 291--292
-\TU/GHEAGrapalat(0)/m/n/12 Այժմ դիտարկենք երկու փոփոխականի ֆունկցիայի մոտարկման
- խնդիրը: Ի
+ [12]
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+\TU/Sylfaen(0)/b/n/12 Այժմ դիտարկենք երկու փոփոխականի ֆունկցիայի մոտարկման խնդի
+րը: Ի
  []
 
 
-Underfull \hbox (badness 3260) in paragraph at lines 291--292
-\TU/GHEAGrapalat(0)/m/n/12 տարբերություն մեկ փոփոխականի ֆունկցիայի ինտերպոլյացի
-այի, այս դեպքում
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+\TU/Sylfaen(0)/b/n/12 տարբերություն մեկ փոփոխականի ֆունկցիայի ինտերպոլյացիայի, 
+այս դեպքում
  []
 
-[12]
+
+Underfull \hbox (badness 1264) in paragraph at lines 307--308
+[]\TU/Sylfaen(0)/b/n/12 Կախված տրված տիրույթից և դրա տրոհման ձևից, առանձնացվում
+ են հետևյալ
+ []
+
 File: images/two_var_linear.png Graphic file (type bmp)
 <images/two_var_linear.png>
- [13]
+[13]
 File: images/bilinear_basis_function.png Graphic file (type bmp)
 <images/bilinear_basis_function.png>
- [14] [15]
-Underfull \hbox (badness 4954) in paragraph at lines 358--360
-\TU/GHEAGrapalat(0)/m/n/12 կառուցման այլ տարբերակ։ Այս դեպքում տիրույթը տրոհենք
- ինչպես նախորդ
+ [14]
+Underfull \hbox (badness 2205) in paragraph at lines 358--360
+[]\TU/Sylfaen(0)/b/n/12 Այժմ դիտարկենք ուղղանկյուն տիրույթի տրոհման և բազիսային
+ ֆունկցիաների
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--360
+\TU/Sylfaen(0)/b/n/12 ի հավելումն յուրաքանչյուր ուղղանկյուն էլեմենտ տրոհելով եր
+կու ուղղանկյուն
  []
 
 File: images/two_var_courant_1.png Graphic file (type bmp)
 <images/two_var_courant_1.png>
 File: images/two_var_courant_2.png Graphic file (type bmp)
 <images/two_var_courant_2.png>
-
-Underfull \hbox (badness 1533) in paragraph at lines 385--387
-[]\TU/GHEAGrapalat(0)/m/n/12 Պարզ է, որ այն $[] \OMS/cmsy/m/n/12 ^^B []$ \TU/GH
-EAGrapalat(0)/m/n/12 տիրույթում $\OML/cmm/m/it/12 C[]$ \TU/GHEAGrapalat(0)/m/n/
-12 ֆունկցիա է: Այն հայտնի
+[15]
+Underfull \hbox (badness 1946) in paragraph at lines 385--387
+[]\TU/Sylfaen(0)/b/n/12 Պարզ է, որ այն $[] \OMS/cmsy/m/n/12 ^^B []$ \TU/Sylfaen
+(0)/b/n/12 տիրույթում $\OML/cmm/m/it/12 C[]$ \TU/Sylfaen(0)/b/n/12 ֆունկցիա է: 
+Այն հայտնի է
  []
 
 
-Underfull \hbox (badness 7558) in paragraph at lines 389--391
-\TU/GHEAGrapalat(0)/m/n/12 Յուրաքանչյուր կետի համար ունենալով բազիսային ֆունկցի
-ա, $\OML/cmm/m/it/12 f$ \TU/GHEAGrapalat(0)/m/n/12 ֆունկցիայի
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+\TU/Sylfaen(0)/b/n/12 Յուրաքանչյուր կետի համար ունենալով բազիսային ֆունկցիա, $\
+OML/cmm/m/it/12 f$ \TU/Sylfaen(0)/b/n/12 ֆունկցիայի
  []
 
-[16]
 File: images/two_var_courant_3.png Graphic file (type bmp)
 <images/two_var_courant_3.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
-[]\TU/GHEAGrapalat(0)/m/n/12 Միավոր քառակուսու վրա կառուցենք մոտարկող ֆունկցիա,
- որը լրիվ
+[16]
+Underfull \hbox (badness 1286) in paragraph at lines 407--409
+\TU/Sylfaen(0)/b/n/12 ֆունկցիաների արժեքներով։ Դրանք որոշելով $[]$ գումարը կարո
+ղ ենք ներկայացնել
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
-[]\TU/GHEAGrapalat(0)/m/n/12 որտեղ $\OML/cmm/m/it/12 ^^K[]$ \TU/GHEAGrapalat(0)
-/m/n/12 գործակիցները միարժեքորեն որոշվում են գագաթների վրա
- []
-
-
-Underfull \hbox (badness 1546) in paragraph at lines 409--410
-\OML/cmm/m/it/12 f; []; []; []$ \TU/GHEAGrapalat(0)/m/n/12 ֆունկցիաների արժեքնե
-րով։ Դրանք որոշելով $[]$ գումարը կարող
- []
-
-[17]
 File: images/two_dimensional_ermite_1.png Graphic file (type bmp)
 <images/two_dimensional_ermite_1.png>
 File: images/two_dimensional_ermite_2.png Graphic file (type bmp)
@@ -865,145 +904,326 @@ File: images/two_dimensional_ermite_3.png Graphic file (type bmp)
 File: images/two_dimensional_ermite_4.png Graphic file (type bmp)
 <images/two_dimensional_ermite_4.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--468
-[]|\TU/GHEAGrapalat(0)/m/n/12 Նկար 2.2 Երկխորանարդային ինտերպոլյացիայի բազիսայի
-ն ֆունկցիաների
+Underfull \hbox (badness 10000) in paragraph at lines 461--461
+[]|\TU/Sylfaen(0)/b/n/12 Նկար 2.6 Երկխորանարդային ինտերպոլյացիայի բազիսային ֆու
+նկցիաների
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 465--467
+[]\TU/Sylfaen(0)/b/n/12 Վերը ներկայացված երկու ինտերպոլյացիաները էրմիթյան ինտեր
+պոլյացիայի
+ []
+
+
+Underfull \hbox (badness 3568) in paragraph at lines 465--467
+\TU/Sylfaen(0)/b/n/12 մասնովոր դեպքեր են։ Ընդհանուր դեպքում ցանկացած $\OML/cmm/
+m/it/12 k$ \TU/Sylfaen(0)/b/n/12 բնական թվի և տրված
  []
 
 [18]
-Underfull \hbox (badness 4739) in paragraph at lines 471--473
-[]\TU/GHEAGrapalat(0)/m/n/12 Վերը ներկայացված երկու ինտերպոլյացիաները էրմիթյան 
-ինտերպոլյացիայի
+Underfull \hbox (badness 10000) in paragraph at lines 474--476
+\TU/Sylfaen(0)/b/n/12 առաջարկված խորանարդային բազիսային սփլայնները։ Այս սփլայնն
+երը կարող
+ []
+
+
+Underfull \hbox (badness 7722) in paragraph at lines 474--476
+\TU/Sylfaen(0)/b/n/12 ենք օգտագործել երկչափ մոտարկման համար։ Յուրաքանչյուր $[]$
+ հանգույցի
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 474--476
+\TU/Sylfaen(0)/b/n/12 վրա կառուցենք բազիսային ֆունկցիա կազմելով $\OML/cmm/m/it/
+12 B[] []$ \TU/Sylfaen(0)/b/n/12 և $\OML/cmm/m/it/12 B[] []$ \TU/Sylfaen(0)/b/n
+/12 ֆունկցիաների
  []
 
 [19]
-Underfull \hbox (badness 1990) in paragraph at lines 482--484
-[]\TU/GHEAGrapalat(0)/m/n/12 Մեկ փոփոխականի մոտարկան խնդրը դիտարկելից քննարկեցի
-նք Շներբերգի
- []
-
-
-Underfull \hbox (badness 2261) in paragraph at lines 482--484
-\TU/GHEAGrapalat(0)/m/n/12 ենք օգտագործել երկչափ մոտարկման համար։ Յուրաքանչյուր
- $[]$ հանգույցի
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
-[]\TU/GHEAGrapalat(0)/m/n/12 Հաշվի առնելով ինտերպոլյացիոն պայմանները կստանանք հ
-ետևյալ
- []
-
-[20]
 File: images/two_dimensional_basis.png Graphic file (type bmp)
 <images/two_dimensional_basis.png>
 File: images/two_dimensional_basis_1.png Graphic file (type bmp)
 <images/two_dimensional_basis_1.png>
- [21]
+ [20]
 File: images/two_var_triangular.png Graphic file (type bmp)
 <images/two_var_triangular.png>
 
-Underfull \hbox (badness 2961) in paragraph at lines 535--539
-\TU/GHEAGrapalat(0)/m/n/12 որը կարող է օգտագործվել որպես ինտերպոլյացիոն ֆունկցի
-ա $[] [] []$
+Underfull \hbox (badness 10000) in paragraph at lines 527--530
+\TU/Sylfaen(0)/b/n/12 որը կարող է օգտագործվել որպես ինտերպոլյացիոն ֆունկցիա $[]
+ [] []$
  []
 
-[22]
-Underfull \hbox (badness 4531) in paragraph at lines 554--556
-\TU/GHEAGrapalat(0)/m/n/12 որտեղ $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; y[]\OT
-1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  i \OT1/cmr/m/n/12 = 1\OML/cmm/m/it/12 ; \OT1/
-cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3$ \TU/GHEAGrapalat(0)/m/n/12 տր
-ված եռանկյուն էլեմենտի գագաթներն են
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
+[]\TU/Sylfaen(0)/b/n/12 Յուրաքանչյուր եռանկյուն էլեմենտի վրա գագաթներից բացի դի
+տարկենք նաև
  []
 
 File: images/quadratic_on_triangular.png Graphic file (type bmp)
 <images/quadratic_on_triangular.png>
 
-Underfull \hbox (badness 7099) in paragraph at lines 579--580
-[]\TU/GHEAGrapalat(0)/m/n/12 Այս տեպքում յուրականչյուր կողի վրա ավելացնենք ևս ե
-րկու կետ այն
+Underfull \hbox (badness 2617) in paragraph at lines 576--577
+[]\TU/Sylfaen(0)/b/n/12 Այս տեպքում յուրականչյուր կողի վրա ավելացնենք ևս երկու 
+կետ այն տրոհելով
  []
 
-[23]
+[22]
 File: images/cubic_on_triangular.png Graphic file (type bmp)
 <images/cubic_on_triangular.png>
 
-Underfull \hbox (badness 2698) in paragraph at lines 605--606
-\TU/GHEAGrapalat(0)/m/n/12 Բնական է, որ որևէ կետի նկատմամբ լրիվ բազիսային ֆունկ
-ցիայի կառուցելու
+Underfull \hbox (badness 6961) in paragraph at lines 602--603
+\TU/Sylfaen(0)/b/n/12 Բնական է, որ որևէ կետի նկատմամբ լրիվ բազիսային ֆունկցիայի
+ կառուցելու
  []
 
-[24] [25]
-Underfull \hbox (badness 1377) in paragraph at lines 622--626
-\TU/GHEAGrapalat(0)/m/n/12 իրական վիճակի համար, համեմատած բոլոր հնարավոր վիճակն
-երի բազմության
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 622--626
-\TU/GHEAGrapalat(0)/m/n/12 հետ։ Ենթաինտեգրալային ֆունկցիան կախված է տրված կոորդ
-ինատներից,
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
+[]\TU/Sylfaen(0)/b/n/12 Այսինքն, կարող ենք ասել, որ $\OML/cmm/m/it/12 P[]P[]P[]
+$ \TU/Sylfaen(0)/b/n/12 եռանկյունը $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/
+cmr/m/n/12 )$ \TU/Sylfaen(0)/b/n/12 կոորդինատական
  []
 
 
-Underfull \hbox (badness 3713) in paragraph at lines 622--626
-\TU/GHEAGrapalat(0)/m/n/12 որոշման խնդիրը հաճախ բերվում է մի քանի դիֆերենցիալ հ
-ավասարումների,
+Underfull \hbox (badness 4713) in paragraph at lines 620--621
+\TU/Sylfaen(0)/b/n/12 են $\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 
+1)$\TU/Sylfaen(0)/b/n/12 , $\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/1
+2 0)$ \TU/Sylfaen(0)/b/n/12 և $\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/
+n/12 0)$ \TU/Sylfaen(0)/b/n/12 կետերը։ Հակադարձ ձևափոխությունը տրվում է հետևյալ
+
+ []
+
+File: images/standard_triangle_transformation.png Graphic file (type bmp)
+<images/standard_triangle_transformation.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--633
+\TU/Sylfaen(0)/b/n/12 Հաշվարկները և բանաձևրը հեշտանցնելու համար գետագայում կօգտ
+վենք այս
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 622--626
-\TU/GHEAGrapalat(0)/m/n/12 են իրենց որևէ շրջակայքում։ Վարիացիոն մեթոդում ֆունկց
-իոնալը ինտեգրալ է,
+Underfull \hbox (badness 1052) in paragraph at lines 634--635
+\TU/Sylfaen(0)/b/n/12 գագաթների համարակալման այլ հաջորդականություն, բայց անցում
+ը մի եղանակից
+ []
+
+[24]
+Underfull \hbox (badness 2050) in paragraph at lines 645--646
+\TU/Sylfaen(0)/b/n/12 9 պարամետր, որոնք միարժեքորեն որոշվում են գագաթներում ֆու
+նկցիայի և նրա
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 622--626
-\TU/GHEAGrapalat(0)/m/n/12 որը կախված է ֆուկցիայից, որի որոշման տիրույթը թույլա
-տրելի ֆունկցիաների
- []
-
-[26]
-Underfull \hbox (badness 4647) in paragraph at lines 640--642
-\TU/GHEAGrapalat(0)/m/n/12 է Էյլեր֊Լագրանժի հավասարման գոյության համար։ Բայց վա
-րիացիոն մեթոդը
- []
-
-[27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 683--684
-\TU/GHEAGrapalat(0)/m/n/12 Մինիմիմում գոյության անհրաժեշտ պայման է հետևյալ դիֆե
-րենցիալ
- []
-
-[29]
-Underfull \hbox (badness 1838) in paragraph at lines 701--702
-\TU/GHEAGrapalat(0)/m/n/12 Այսպիսի վարիացիոն խնդիրներում անհրաշետ է մինիմիզացնե
-լ (մաքսիմիզացնել)
+Underfull \hbox (badness 1142) in paragraph at lines 645--646
+\TU/Sylfaen(0)/b/n/12 առաջին կարգի ածանցյալների արժեքներով։ Ըստ այդմ ինտերպոլաց
+նող ֆունկցիան
  []
 
 
-Underfull \hbox (badness 4205) in paragraph at lines 701--702
-\TU/GHEAGrapalat(0)/m/n/12 տրված ֆունկցիոնալը, պայմանով, որ մեկ այլ ֆունկցիոնալ
- ընդունում է որևէ
+Underfull \hbox (badness 10000) in paragraph at lines 660--662
+\TU/Sylfaen(0)/b/n/12 Ստորև ներկայացված են կառուցված բազիսային ֆունկցիաներ հինգ
+ եռանկյուն
  []
 
-[30]
-Underfull \hbox (badness 1348) in paragraph at lines 724--727
-\TU/GHEAGrapalat(0)/m/n/12 նշանակենք այն $\OML/cmm/m/it/12 ^^K[]$ \TU/GHEAGrapa
-lat(0)/m/n/12 ով։ Այդ դեպքում գոյություն ունի $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/
-12 f[]\OMS/cmsy/m/n/12 g[]$ \TU/GHEAGrapalat(0)/m/n/12 հաջորդականություն
+File: images/hermite_cubic_func.png Graphic file (type bmp)
+<images/hermite_cubic_func.png>
+File: images/hermite_cubic_fx.png Graphic file (type bmp)
+<images/hermite_cubic_fx.png>
+File: images/hermite_cubic_fy.png Graphic file (type bmp)
+<images/hermite_cubic_fy.png>
+
+Underfull \hbox (badness 4518) in paragraph at lines 677--677
+[]|\TU/Sylfaen(0)/b/n/12 Նկար 2.10. Երրորդ կարգի Էրմիթի ինտերպոլյացիոն բազիսայի
+ն ֆունկցիաները
  []
 
-[31] [32] [33]
-Underfull \hbox (badness 1168) in paragraph at lines 801--802
-[]\TU/GHEAGrapalat(0)/m/n/12 Քանի որ $\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML
-/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$ \TU/GHEAGrapalat(0)/m/n/12 և $\OML/cmm/m/it
-/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$ \TU/GHEAGrapala
-t(0)/m/n/12 ֆունկցիաները ոչ զրոյական են $[] \OMS/cmsy/m/n/12 ^^B
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 682--683
+[]\TU/Sylfaen(0)/b/n/12 Այս դեպքում ստանդարտ եռանյան գագաթների համարակալման
+ []
+
+File: images/argyris_element.png Graphic file (type bmp)
+<images/argyris_element.png>
+
+Underfull \hbox (badness 2245) in paragraph at lines 687--694
+\TU/Sylfaen(0)/b/n/12 բոլոր ածանցյալների արժեքներով և կողերի միջնակետերում նորմ
+ալի ուղղությամբ
+ []
+
+[26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
+[]\TU/Sylfaen(0)/b/n/12 Այսպիսով, ինտերպոլացնող ֆունկցիան ստանդարտ եռանկյան վրա
+ կունենա
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 751--752
+[]\TU/Sylfaen(0)/b/n/12 Ստանդարտ եռանկյունից ցանկացած եռանկյան վրա արտապատկերել
+ու համար
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 753--754
+[]$[]$\TU/Sylfaen(0)/b/n/12 -ով նշանակենք ստանդարտ եռանկյան բազիսները, $\OT1/cm
+r/m/n/12 ^^I$ \TU/Sylfaen(0)/b/n/12 -ով՝ արտապարկերված
+ []
+
+[28]
+File: images/standard_triangle_vecs.png Graphic file (type bmp)
+<images/standard_triangle_vecs.png>
+ [29]
+File: images/arb_triangle_vecs.png Graphic file (type bmp)
+<images/arb_triangle_vecs.png>
+ [30]
+Underfull \hbox (badness 10000) in paragraph at lines 861--863
+\TU/Sylfaen(0)/b/n/12 Այժմ, ունենալով ստանդարտ եռանկյան $[]$ բազիսները, կարող ե
+նք ստանալ
+ []
+
+File: images/argyris_basis_func_value.png Graphic file (type bmp)
+<images/argyris_basis_func_value.png>
+File: images/argyris_basis_fx_value.png Graphic file (type bmp)
+<images/argyris_basis_fx_value.png>
+File: images/argyris_basis_fy_value.png Graphic file (type bmp)
+<images/argyris_basis_fy_value.png>
+File: images/argyris_basis_fxx_value.png Graphic file (type bmp)
+<images/argyris_basis_fxx_value.png>
+File: images/argyris_basis_fxy_value.png Graphic file (type bmp)
+<images/argyris_basis_fxy_value.png>
+File: images/argyris_basis_fyy_value.png Graphic file (type bmp)
+<images/argyris_basis_fyy_value.png>
+File: images/argyris_basis_fn_value.png Graphic file (type bmp)
+<images/argyris_basis_fn_value.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--898
+\TU/Sylfaen(0)/b/n/12 Ստորև ներկայացված են կառուցված բազիսային ֆունկցիաներ չորս
+ եռանկյուն
+ []
+
+[31] [32]
+Underfull \hbox (badness 3547) in paragraph at lines 904--905
+\TU/Sylfaen(0)/b/n/12 Այժմ դիտարկենք երեք փոփոխականի ֆունկցիայի մոտարկման խնդիր
+ը: Ինչպես
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 908--909
+\TU/Sylfaen(0)/b/n/12 Դիցուք տրված են $\OML/cmm/m/it/12 f \OT1/cmr/m/n/12 : 
+ \OMS/cmsy/m/n/12 7! \OT1/cmr/m/n/12 ^^B$\TU/Sylfaen(0)/b/n/12 , $\OT1/cmr/m/n/
+12 ^^B \OMS/cmsy/m/n/12 ^^Z \U/msb/m/n/12 R$\TU/Sylfaen(0)/b/n/12 , $\OT1/cmr/m
+/n/12 
+ \OMS/cmsy/m/n/12 ^^Z \U/msb/m/n/12 R[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^
+^B [] ^^B
+ []
+
+File: images/unit_cube.png Graphic file (type bmp)
+<images/unit_cube.png>
+
+Underfull \hbox (badness 2903) in paragraph at lines 912--919
+\TU/Sylfaen(0)/b/n/12 արտապատկերել միավոր խորանարդի վրա, ինչպես արել էինք երկչա
+փ դեպքում։
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 925--927
+\TU/Sylfaen(1)/b/n/12 Եռգծային մոտարկում \TU/Sylfaen(0)/b/n/12 Որպես բազիսային 
+ֆունկցիա վերցնենք $\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 3)$\TU/S
+ylfaen(0)/b/n/12 -ում տրված
+ []
+
+[33]
+Underfull \hbox (badness 3128) in paragraph at lines 929--931
+\TU/Sylfaen(0)/b/n/12 Ավելի բարձր կարգի էրմիթյան ինտերպոլյացիա ստանալու համար ա
+նհրաժեշտ է
  []
 
 [34]
-Overfull \hbox (2.54005pt too wide) detected at line 812
+Underfull \hbox (badness 3657) in paragraph at lines 941--945
+ \TU/Sylfaen(0)/b/n/12 Վարիացիոն մեթոդի սկզբունքն այն է, որ դիտարկվող ֆունկցիայ
+ի ինտեգրալը
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 941--945
+\TU/Sylfaen(0)/b/n/12 տրված տիրույթում ընդունում է մեծագույն (փոքրագույն) արժեք
+ տվյալ համակարգի
+ []
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 941--945
+\TU/Sylfaen(0)/b/n/12 Ենթաինտեգրալային ֆունկցիան կախված է տրված կոորդինատներից,
+ ֆունկցիայի
+ []
+
+
+Underfull \hbox (badness 7415) in paragraph at lines 941--945
+\TU/Sylfaen(0)/b/n/12 հաճախ բերվում է մի քանի դիֆերենցիալ հավասարումների, համապ
+ատասխան
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 941--945
+\TU/Sylfaen(0)/b/n/12 անհրաժեշտ է գտնել այպիսի կետեր, որոնք մինիմում (մաքսիմում
+) են իրենց որևէ
+ []
+
+
+Underfull \hbox (badness 5637) in paragraph at lines 941--945
+\TU/Sylfaen(0)/b/n/12 շրջակայքում։ Վարիացիոն մեթոդում ֆունկցիոնալը ինտեգրալ է, 
+որը կախված է
+ []
+
+[35] [36] [37] [38]
+Underfull \hbox (badness 1803) in paragraph at lines 1011--1012
+\TU/Sylfaen(0)/b/n/12 տիրույթի եզրի տրված են։Սակայն որոշ խնդիրնորում ֆունկցիան 
+տիրույթի եզրում
+ []
+
+
+LaTeX Font Warning: Font shape `TU/Sylfaen(0)/m/it' undefined
+(Font)              using `TU/Sylfaen(0)/m/n' instead on input line 1020.
+
+
+Underfull \hbox (badness 5533) in paragraph at lines 1023--1024
+\TU/Sylfaen(0)/b/n/12 Այսպիսի վարիացիոն խնդիրներում անհրաշետ է մինիմիզացնել (մա
+քսիմիզացնել)
+ []
+
+[39]
+Underfull \hbox (badness 2126) in paragraph at lines 1039--1040
+\TU/Sylfaen(0)/b/n/12 պայմանները թույլ են տալիս այդ խնդիրները լուծել մոտավոր մե
+թոդներով, որոնք
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 1043--1046
+\TU/Sylfaen(0)/b/n/12 որտեղ $\OML/cmm/m/it/12 I$ \TU/Sylfaen(0)/b/n/12 ֆունկցիո
+նալը տրված տիրույթում որոշյալ ինտեգրալ է։ Մոտավոր լուծում
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 1046--1049
+\TU/Sylfaen(0)/b/n/12 Ենթադրենք, որ $\OML/cmm/m/it/12 I$ \TU/Sylfaen(0)/b/n/12 
+ֆունկցիոնալի արժեքների տիրույթը ունի ճշգրիտ ստորին եզր,
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 1046--1049
+\TU/Sylfaen(0)/b/n/12 նշանակենք այն $\OML/cmm/m/it/12 ^^K[]$ \TU/Sylfaen(0)/b/n
+/12 ով։ Այդ դեպքում գոյություն ունի $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 f[]\OMS
+/cmsy/m/n/12 g[]$ \TU/Sylfaen(0)/b/n/12 հաջորդականություն
+ []
+
+[40] [41] [42]
+Underfull \hbox (badness 3492) in paragraph at lines 1123--1124
+[]\TU/Sylfaen(0)/b/n/12 Քանի որ $\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/
+m/it/12 x; y\OT1/cmr/m/n/12 )$ \TU/Sylfaen(0)/b/n/12 և $\OML/cmm/m/it/12 '[]\OT
+1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$ \TU/Sylfaen(0)/b/n/12 ֆու
+նկցիաները ոչ զրոյական են $[] \OMS/cmsy/m/n/12 ^^B
+ []
+
+[43]
+Overfull \hbox (2.54005pt too wide) detected at line 1134
  $[] \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; 
 y\OT1/cmr/m/n/12 )[[] ]\OML/cmm/m/it/12 dxdy \OT1/cmr/m/n/12 = 2 [] [] \OML/cmm
 /m/it/12 dxdy \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2\OML/cmm/m
@@ -1011,60 +1231,73 @@ y\OT1/cmr/m/n/12 )[[] ]\OML/cmm/m/it/12 dxdy \OT1/cmr/m/n/12 = 2 [] [] \OML/cmm
  []
 
 
-Overfull \hbox (2.54005pt too wide) detected at line 816
+Overfull \hbox (2.54005pt too wide) detected at line 1138
  $[] \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; 
 y\OT1/cmr/m/n/12 )[[] ]\OML/cmm/m/it/12 dxdy \OT1/cmr/m/n/12 = 2 [] [] \OML/cmm
 /m/it/12 dxdy \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2\OML/cmm/m
 /it/12 u[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 u[][]$  
  []
 
-[35]
-Underfull \hbox (badness 1558) in paragraph at lines 833--834
-\TU/GHEAGrapalat(0)/m/n/12 զանգվածների հետ մաթեմատիկական գործողություններ իրակա
-նացնալու համար։
+[44]
+Underfull \hbox (badness 5696) in paragraph at lines 1155--1156
+\TU/Sylfaen(0)/b/n/12 զանգվածների հետ մաթեմատիկական գործողություններ իրականացնա
+լու համար։
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 835--836
-\TU/GHEAGrapalat(0)/m/n/12 կանչվում այն լուծող ֆունկցիան։ Այսնուհետև բազիսային 
-ֆունկցիաների միջոցով
+Underfull \hbox (badness 4805) in paragraph at lines 1157--1158
+\TU/Sylfaen(0)/b/n/12 կանչվում այն լուծող ֆունկցիան։ Այսնուհետև բազիսային ֆունկ
+ցիաների միջոցով
  []
 
 File: images/poisson_solution.png Graphic file (type bmp)
 <images/poisson_solution.png>
-[36]
-Underfull \hbox (badness 5331) in paragraph at lines 856--856
-[]\TU/GHEAGrapalat(0)/b/n/14.4 4.2 Պուասոնի հավասարման լուծում եռանկյունացվող տ
-իրույթի
- []
-
+[45]
 File: images/global_and_local_numbering.png Graphic file (type bmp)
 <images/global_and_local_numbering.png>
-[37]
-Underfull \hbox (badness 1527) in paragraph at lines 882--885
-\TU/GHEAGrapalat(0)/m/n/12 այդ գագաթի համապատասխան բազիսային ֆունկցիան է։ Ուստի
- ինտեգրալային
+
+Underfull \hbox (badness 3460) in paragraph at lines 1194--1200
+\TU/Sylfaen(0)/b/n/12 միևնույն ժամանակ գագաթները համարակալելով ամբողջ տիրույթի 
+համար, որին
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 891--893
-\TU/GHEAGrapalat(0)/m/n/12 Դիտարկենք $[]$ ինտեգրալի ենթաինտեգրալային արտահայտու
-թյան ձախ մասի
+Underfull \hbox (badness 1509) in paragraph at lines 1201--1202
+[]\TU/Sylfaen(0)/b/n/12 Յուրաքանչյուր $\OT1/cmr/m/n/12 ^^A[]$ \TU/Sylfaen(0)/b/
+n/12 եռանկյան վրա ($\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 = []$\TU/Sylfaen(0)/b/n/
+12 ) որպես բազիսային ֆունկցիաներ
  []
 
-[38]
-Underfull \hbox (badness 1052) in paragraph at lines 949--950
-\TU/GHEAGrapalat(0)/m/n/12 Ինչպես ուղղանկյուն տիրույթի դեպքում, այնպես էլ այս դ
-եպքում կօգտվենք նույն
+
+Underfull \hbox (badness 2617) in paragraph at lines 1201--1202
+\TU/Sylfaen(0)/b/n/12 վերցնենք $[]$-ում ներկայացված ֆունկցիաները, և որոնելի ֆու
+նկցիան փնտրենք
  []
 
-[39]
+[46]
+Underfull \hbox (badness 1661) in paragraph at lines 1204--1207
+\TU/Sylfaen(0)/b/n/12 ն այդ գագաթի համապատասխան բազիսային ֆունկցիան է։ Ուստի ին
+տեգրալային
+ []
+
+[47]
+Underfull \hbox (badness 2903) in paragraph at lines 1271--1272
+\TU/Sylfaen(0)/b/n/12 Ինչպես ուղղանկյուն տիրույթի դեպքում, այնպես էլ այս դեպքու
+մ կօգտվենք նույն
+ []
+
+[48]
+Underfull \hbox (badness 2189) in paragraph at lines 1273--1274
+\TU/Sylfaen(0)/b/n/12 հաջորդականությունը, եռանկյունացման պարամետրերը և $\OML/cm
+m/m/it/12 f$ \TU/Sylfaen(0)/b/n/12 ֆունկցիան։ Հաջորդիվ
+ []
+
 File: images/circle_mesh.png Graphic file (type bmp)
 <images/circle_mesh.png>
 File: images/poisson_equation_on_unit_circle_solution.png Graphic file (type bm
 p)
 <images/poisson_equation_on_unit_circle_solution.png>
- [40] [41] [42]
+[49] [50] [51]
 File: images/two_dimensional_basis_intersection.png Graphic file (type bmp)
 <images/two_dimensional_basis_intersection.png>
 File: images/two_dimensional_basis_intersection_edge_1.png Graphic file (type b
@@ -1073,42 +1306,107 @@ mp)
 File: images/two_dimensional_basis_intersection_edge_2.png Graphic file (type b
 mp)
 <images/two_dimensional_basis_intersection_edge_2.png>
- [43] [44] [45] [46] [47]
-LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 1211.
+ [52] [53] [54] [55]
+Underfull \hbox (badness 1661) in paragraph at lines 1447--1449
+\TU/Sylfaen(0)/b/n/12 Հաշվի առնելով նախորդիվ հաշվարկված ինտեգրալները, ինչպես նա
+և Դիրիխլեի և
+ []
+
+[56]
+LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 1533.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.2> not available
-(Font)              size <5> substituted on input line 1211.
+(Font)              size <5> substituted on input line 1533.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 1211.
+(Font)              size <5> substituted on input line 1533.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.2> not available
-(Font)              size <5> substituted on input line 1211.
+(Font)              size <5> substituted on input line 1533.
 
-[48]
-Underfull \hbox (badness 3260) in paragraph at lines 1218--1220
-\TU/GHEAGrapalat(0)/m/n/12 Ինչպես Պուասոնի հավասարման դեպքում, այնպես էլ այս դե
-պքում կօգտվենք
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 1540--1542
+\TU/Sylfaen(0)/b/n/12 գործիքներից։ Որպես օրինակ լուծենք հետևյալ հավասարումը տրվ
+ած կոնկրետ
  []
 
 File: images/biharmonic_equation_solution.png Graphic file (type bmp)
 <images/biharmonic_equation_solution.png>
-[49] (diploma.aux)
+[58]
+Underfull \hbox (badness 3009) in paragraph at lines 1571--1573
+\TU/Sylfaen(0)/b/n/12 առնվազն $\OML/cmm/m/it/12 C[]$ \TU/Sylfaen(0)/b/n/12 կարգ
+, ուստի որպես բազիսային ֆունկցիաներ կվերցնենք Արգիրիսի
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1574--1575
+[]\TU/Sylfaen(0)/b/n/12 Հաշվարկների և բանաձևերի ներկայացման հեշտության համար բա
+զիսային
+ []
+
+[59]
+Underfull \hbox (badness 7925) in paragraph at lines 1601--1602
+[]\TU/Sylfaen(0)/b/n/12 Աջ մասի $\OML/cmm/m/it/12 f$ \TU/Sylfaen(0)/b/n/12 ֆուն
+կցիան ևս ներկայացնենք բազիսային ֆունկցիաների գծային
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1630--1632
+\TU/Sylfaen(0)/b/n/12 որտեղ $\OML/cmm/m/it/12 F$\TU/Sylfaen(0)/b/n/12 -ը $\OT1/
+cmr/m/n/12 (2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 41)$\TU/Sylfaen(0)/b/n/12 -ում ս
+ահմանված աֆինյան ձևափոխությունն է, իսկ $\OML/cmm/m/it/12 M$\TU/Sylfaen(0)/b/n/1
+2 -ը՝
+ []
+
+[60] [61]
+Underfull \hbox (badness 6675) in paragraph at lines 1645--1647
+\TU/Sylfaen(0)/b/n/12 ինտեգրալները։ Հետագայում ծրագրի ընթացքում այդ ֆունկցիաներ
+ին տրվում են
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 1645--1647
+\OT1/cmr/m/n/12 (5\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 57)$ \TU/Sylfaen(0)/b/n/12 
+բանաձևի անհրաժեշտ փոփոխականները։ Այսպիսով, լուծումն ավելի ճշգրիտ
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 1645--1647
+\TU/Sylfaen(0)/b/n/12 է ստացվում, ի հաշիվ այն բանի, որ չեն օգտագործվում ինտեգրա
+լների արժեքները
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 1648--1649
+\TU/Sylfaen(0)/b/n/12 հաջորդականությունը, եռանկյունացման պարամետրերը և $\OML/cm
+m/m/it/12 f$ \TU/Sylfaen(0)/b/n/12 ֆունկցիան։ Հաջորդիվ
+ []
+
+File: images/circle_mesh_quad_biharmonic.png Graphic file (type bmp)
+<images/circle_mesh_quad_biharmonic.png>
+[62]
+File: images/biharmonic_equation_solution_argyris_function_value.png Graphic fi
+le (type bmp)
+<images/biharmonic_equation_solution_argyris_function_value.png>
+ [63] (diploma.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.90001pt have occurred.
 
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 10333 strings out of 411566
- 237818 string characters out of 2820793
+ 10967 strings out of 411566
+ 254335 string characters out of 2820793
  1883979 words of memory out of 3000000
- 30298 multiletter control sequences out of 15000+600000
- 525578 words of font info for 120 fonts, out of 8000000 for 9000
+ 30911 multiletter control sequences out of 15000+600000
+ 525570 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  70i,28n,76p,781b,529s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on diploma.pdf (46 pages).
+Output written on diploma.pdf (59 pages).

@@ -1,0 +1,104 @@
+%Set the document class and font size
+\documentclass[fleqn, bachelor,subf,12pt,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{mathtools} 
+\usepackage{amssymb}
+\usepackage{systeme}
+\usepackage[english]{babel}
+\usepackage{xparse}
+\usepackage{xfrac}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{bigints}
+\usepackage{fontspec}
+\usepackage{chngcntr}
+\usepackage{caption}
+
+%This package allows to modify enumerations
+\usepackage{enumitem}
+
+
+%This package allows to change figure insertion mode (H, etc.)
+\usepackage{float}
+
+%This package is used for big sum symbol
+\usepackage{relsize}
+
+
+%This command puts section number after section name
+%\usepackage[explicit]{titlesec}
+%\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\ \thesection}
+
+%This command allows to add section number in figure caption
+%\counterwithin{figure}{section}
+
+%This command help to keep counting but allows not to print the number of the section, etc.
+%\renewcommand\thesection{}
+%\renewcommand\thesubsection{}
+
+%Change command to armenian
+%\addto\captionsenglish{\renewcommand{\figurename}{Նկար}}
+
+%This is a command for creating new command for reducing the size of the given math equation
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
+\usepackage
+[
+ 	a4paper,
+ 	left=30mm,
+	right = 10mm,
+ 	top=20mm,
+	bottom=25mm
+ ]
+{geometry}
+
+%This command sets the font
+\setmainfont{Sylfaen}
+
+%These commands change line spacing
+%\onehalfspacing
+\linespread{1.5}
+
+\usepackage{titletoc}
+\usepackage{titlesec}
+
+
+% Customize the format of section titles in the table of contents
+\titlecontents{section}
+  [2.3em] % Left margin
+  {\vspace{0.5em}} % Above code
+  {\contentslabel{2.3em}} % Numbered entry format
+  {\hspace*{-2.3em}} % Numberless entry format
+  {\hfill\contentspage} % Filler and page format
+% Redefine the format of section headings to remove the number
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{}{0em}{}
+
+\renewcommand{\contentsname}{My Custom Table of Contents}
+
+
+\begin{document}
+
+% Create a custom title for the table of contents
+\renewcommand{\contentsname}{My Custom Table of Contents}
+
+% Print the table of contents
+\tableofcontents
+
+% Add sections and subsections to the document
+% Add sections to the document
+\section{First Section}
+\section{Second Section}
+\section{Third Section}
+
+\end{document}
+
+
+
+
+
+
