@@ -1,4 +1,5 @@
-# This repository contains my Thesis. The topic is multidimensional interpolation and its appliance to PDE solutions.
+# This repository contains my Thesis. 
+The topic is multidimensional interpolation and its appliance to PDE solutions.
 
 ## Requirements
 - Python 3.9.12

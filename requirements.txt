@@ -1,0 +1,8 @@
+numpy==1.21.5
+sympy==1.10.1
+matplotlib==3.5.1
+symfem==2023.1.1
+triangle==20220202
+jupyter==Lab 3.3.2
+dill==0.3.6
+meshpy==2022.1.3
